@@ -1,0 +1,313 @@
+/* ==========================================================
+   Сфера.Знания — страница продукта внутри кейса Сферы.
+   Основа — case.css (подписи, контейнер, «Назад», ленты).
+   Размеры из макета 1920: контейнер 1198, колонки 481 / 584.
+   ========================================================== */
+.case-page { --kb-tag: #968fa8; }
+
+html { scroll-padding-top: 110px; }      /* якоря кейсов не уезжают под шапку */
+
+/* ---------- Первый экран ---------- */
+.kb-hero {
+  position: relative;
+  isolation: isolate;
+  padding: 140px var(--pad-x) 50px;
+  text-align: center;
+}
+.kb-hero .back-link {
+  position: absolute;
+  left: var(--pad-x);
+  top: 120px;
+}
+
+.kb-hero__bg {
+  position: absolute;
+  inset: 0 0 -600px;
+  z-index: -1;
+  overflow: hidden;
+  overflow: clip;
+  pointer-events: none;
+}
+/* размытые волны: позиции от кадра 1920 */
+.kb-hero__wave,
+.kb-hero__blob {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+.kb-hero__wave { left: -16.54vw; top: -14.39vw; width: 153.85vw; }
+.kb-hero__blob { left: -0.63vw;  top: -14.29vw; width: 98.77vw; }
+
+.kb-hero__title {
+  font-weight: 500;
+  font-size: clamp(32px, 3.33vw, 64px);
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+}
+.kb-hero__lead {
+  max-width: 788px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.kb-ribbon {
+  --shot-w: clamp(280px, 62.4vw, 1198px);
+}
+.kb-ribbon .ribbon__shot { aspect-ratio: 1198 / 678; }
+
+/* ---------- Общая типографика ---------- */
+.kb-section { padding: 0 var(--pad-x) 100px; }
+
+.kb-h2 {
+  font-weight: 500;
+  font-size: clamp(28px, 2.08vw, 40px);
+  line-height: 1.325;
+}
+.kb-h3 {
+  max-width: 788px;
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: clamp(20px, 1.25vw, 24px);
+  line-height: 1.33;
+}
+.kb-h3--wide { max-width: none; }
+
+.kb-body {
+  font-size: var(--fs-caption);
+  line-height: 24px;
+}
+.kb-body p + p { margin-top: 24px; }
+
+.kb-list {
+  max-width: 788px;
+  margin-top: 10px;
+  padding-left: 21px;
+  list-style: disc;
+  font-size: var(--fs-caption);
+  line-height: 24px;
+}
+.kb-list--wide { max-width: 993px; }
+.kb-body + .kb-list { margin-top: 20px; }
+
+.kb-results {
+  padding-left: 30px;
+  list-style: disc;
+  font-weight: 500;
+  font-size: clamp(18px, 1.25vw, 24px);
+  line-height: 1.33;
+}
+.kb-results--text { padding-left: 0; }
+
+/* ---------- Задачи ---------- */
+.kb-tasks { padding-top: 101px; }
+.kb-tasks__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 788px) 277px;
+  justify-content: space-between;
+  gap: 40px;
+}
+.kb-tasks .kb-h2 + .kb-body { margin-top: 20px; }
+
+.kb-cases { padding-top: 145px; }        /* «Кейсы» на одной линии с «Проблемами продукта» */
+.kb-cases .kb-h3 { margin-top: 50px; }
+.kb-cases__list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+  font-size: var(--fs-caption);
+  line-height: 24px;
+}
+.kb-cases__list li { display: flex; gap: 12px; color: var(--kb-tag); }
+.kb-cases__list span { flex: none; width: 16px; }
+.kb-cases__list a { color: var(--case-accent); }
+.kb-cases__list a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Кейс ---------- */
+.kb-case .case-container {
+  padding-top: 50px;
+  border-top: 1px solid var(--case-line);
+}
+
+.kb-case__head {
+  display: grid;
+  grid-template-columns: 307px minmax(0, 891px);
+  justify-content: space-between;
+}
+.kb-case__tag {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--case-accent);
+  word-spacing: 72px;                    /* «Кейс» и «#1» на расстоянии, как в макете */
+}
+.kb-case__title {
+  font-weight: 500;
+  font-size: clamp(26px, 2.08vw, 40px);
+  line-height: 1.325;
+}
+
+.kb-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #1d1f31;
+}
+.kb-img--lg { margin-top: 30px; border-radius: 20px; }
+.kb-cols + .kb-img--lg,
+.kb-img--lg + .kb-img--lg { margin-top: 50px; }
+.kb-img--md { margin-top: 30px; }
+
+.kb-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 481px) minmax(0, 584px);
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 50px;
+}
+.kb-img--lg + .kb-results { margin-top: 50px; }
+
+.kb-subtitle {
+  max-width: 686px;
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: clamp(22px, 1.67vw, 32px);
+  line-height: 1.34;
+}
+
+.kb-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+  margin-top: 30px;
+}
+.kb-grid-2 .kb-img { aspect-ratio: 584 / 328; object-fit: cover; object-position: top; }
+.kb-grid-2--tall .kb-img { aspect-ratio: 584 / 540; }
+.kb-grid-2--short .kb-img { aspect-ratio: 584 / 280; }
+
+.kb-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.kb-compare figure { margin: 0; }
+.kb-compare figcaption {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--kb-tag);
+}
+.kb-compare .kb-img { aspect-ratio: 584 / 329; object-fit: cover; object-position: top; }
+
+.kb-case__line + .kb-h3 { margin-top: 20px; }
+.kb-stack {
+  display: grid;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* ---------- Метрики ---------- */
+.kb-metric { margin: 26px 0 0; }
+.kb-metric + .kb-metric { margin-top: 50px; }
+.kb-metric figcaption {
+  margin-bottom: 10px;
+  font-size: var(--fs-caption);
+  line-height: 24px;
+}
+.kb-metric img { width: 100%; height: auto; }
+
+/* ---------- Следующий продукт ---------- */
+.kb-next { padding: 100px var(--pad-x) 0; }
+.kb-next__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1198px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-text);
+}
+.kb-next__title {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: clamp(32px, 3.33vw, 64px);
+  line-height: 1.33;
+  transition: color .2s ease;
+}
+.kb-next__lead {
+  max-width: none;                       /* перенос строки задан вручную, как в макете */
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.kb-next__btn {
+  margin-top: 20px;
+  transition: transform .35s var(--ease-out);
+}
+/* превью продукта: видна верхняя часть (428 из 678 px), затемнена градиентом
+   в цвет фона, а футер ложится поверх её нижних 129px — как в макете */
+.kb-next__preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1198 / 428;
+  margin-top: 50px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  transition: transform .6s var(--ease-out);
+}
+.kb-next__preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(22, 23, 33, 0.35), rgba(22, 23, 33, 0.72) 70%, #161721);
+  pointer-events: none;
+}
+.kb-next__preview img {
+  width: 100%;
+  height: auto;
+}
+body:has(.kb-next) .site-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: -129px;
+}
+.kb-next__link:hover .kb-next__title { color: var(--case-accent); }
+.kb-next__link:hover .kb-next__btn { transform: rotate(45deg); }
+.kb-next__link:hover .kb-next__preview { transform: translateY(-12px); }   /* поднимается весь скриншот, а не картинка внутри рамки */
+
+/* ==========================================================
+   Адаптив
+   ========================================================== */
+@media (max-width: 1199px) {
+  .kb-case__head { grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
+  .kb-case__tag { word-spacing: 24px; }
+}
+
+@media (max-width: 899px) {
+  .kb-hero { padding-top: 130px; }
+  .kb-hero .back-link { top: 86px; }
+  .kb-tasks { padding-top: 72px; }
+  .kb-tasks__grid { grid-template-columns: 1fr; gap: 0; }
+  .kb-cases { padding-top: 0; }
+  .kb-case__head { grid-template-columns: 1fr; gap: 12px; }
+  .kb-cols { grid-template-columns: 1fr; gap: 32px; }
+  .kb-section { padding-bottom: 72px; }
+}
+
+@media (max-width: 599px) {
+  .kb-hero__title br,
+  .kb-br { display: none; }              /* на телефоне строка переносится сама */
+  body:has(.kb-next) .site-footer { margin-top: -48px; }
+  .kb-grid-2,
+  .kb-compare { grid-template-columns: 1fr; gap: 16px; }
+  .kb-img--lg { border-radius: 12px; }
+  .kb-stack { gap: 16px; }
+  .kb-ribbon { --shot-w: 86vw; }
+}

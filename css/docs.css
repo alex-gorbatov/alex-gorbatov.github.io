@@ -1,0 +1,168 @@
+/* ==========================================================
+   Сфера.Документы — дополнение к knowledge.css.
+   Тот же каркас страницы продукта; здесь только блоки,
+   которых нет на странице Сфера.Знания.
+   ========================================================== */
+
+/* вводный абзац под заголовком кейса — во второй колонке */
+.kb-case__lead {
+  grid-column: 2;
+  margin-top: 20px;
+}
+
+/* «Кейсы» на одной линии с первым абзацем задач, как в макете */
+.dc-cases { padding-top: 73px; }
+.dc-cases .kb-h3 { margin-top: 0; }
+
+/* подпись над скриншотом: «Было / Стало» слева, название сценария справа */
+.dc-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 50px 0 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--kb-tag);
+}
+.dc-label + .kb-img--lg { margin-top: 0; }
+.kb-img--lg + .dc-label { margin-top: 30px; }
+
+/* «Было»: высокий скриншот слева, два — справа друг под другом */
+.dc-before {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: 30px;
+}
+.dc-before .kb-img { height: 100%; object-fit: cover; object-position: top; }
+.dc-before .kb-img:first-child { grid-row: span 2; }
+
+/* мелкая подпись на всю ширину под картинками */
+.dc-note {
+  margin-top: 20px;
+  font-size: var(--fs-caption);
+  line-height: 24px;
+}
+
+/* крупный подзаголовок на всю ширину контейнера */
+.kb-subtitle--wide { max-width: none; }
+.kb-subtitle + .kb-cols { margin-top: 50px; }
+.kb-cols + .kb-subtitle { margin-top: 70px; }
+
+/* блок списков: абзац и списки идут подряд */
+.dc-text p + .kb-list,
+.dc-text .kb-list + p { margin-top: 24px; }
+.dc-text .kb-list { margin-top: 0; }
+.dc-text .kb-list + p { margin-top: 24px; }
+
+/* «Итоги работы» */
+.dc-lead-h3 { max-width: 891px; margin-top: 20px; }
+.dc-lead-body { max-width: 993px; margin-top: 50px; }
+.dc-lead-body .kb-list { margin-top: 0; }
+.kb-list + .kb-img,
+.dc-lead-body + .kb-img { margin-top: 30px; }
+.kb-img + .kb-list--wide { margin-top: 50px; }
+.kb-img--flat { border-radius: 0; background: none; }
+
+/* прототипы: два скриншота слева, один высокий справа */
+.dc-protos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.dc-protos__col { display: grid; gap: 30px; align-content: start; }
+.dc-protos > .kb-img { height: 100%; object-fit: cover; object-position: top; }
+
+.dc-research-note { margin-top: 10px; }
+.dc-research-note + .kb-grid-2 { margin-top: 20px; }
+.kb-grid-2--research .kb-img { aspect-ratio: 584 / 299; }
+
+/* ==========================================================
+   Адаптив
+   ========================================================== */
+@media (max-width: 899px) {
+  .kb-case__lead { grid-column: auto; margin-top: 8px; }
+}
+
+@media (max-width: 599px) {
+  .dc-before,
+  .dc-protos { grid-template-columns: 1fr; gap: 16px; }
+  .dc-before .kb-img:first-child { grid-row: auto; }
+  .dc-protos__col { gap: 16px; }
+  .dc-label { margin-top: 32px; }
+}
+
+/* ==========================================================
+   Сфера.Согласования
+   ========================================================== */
+
+/* «Посмотреть как было»: миниатюра старого экрана, открывается поверх страницы */
+.dc-was {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--case-accent);
+}
+.dc-was img {
+  flex: none;
+  width: 88px;
+  height: 50px;
+  object-fit: cover;
+  border: 2px solid var(--case-accent);
+  border-radius: 4px;
+  transition: transform .25s var(--ease-out);
+}
+.dc-was:hover img { transform: scale(1.06); }
+.dc-was:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.kb-case__lead .dc-was { margin-top: 10px; }
+
+.dc-result { max-width: 1138px; }
+.kb-img--lg + .dc-result { margin-top: 50px; }
+.dc-result + .kb-img--lg { margin-top: 50px; }
+.dc-result p + p { margin-top: 0; }
+.kb-case__head + .dc-result { margin-top: 50px; }
+
+/* итоги дизайн-лида */
+.dc-lead-sub { max-width: 788px; }
+.kb-grid-2 + .kb-list--wide { margin-top: 50px; }
+.kb-img--flat + .kb-list--wide { margin-top: 30px; }
+.kb-grid-2--debt .kb-img { aspect-ratio: 584 / 294; }
+.kb-grid-2--research-sm .kb-img { aspect-ratio: 584 / 264; }
+.kb-img--transparent { background: none; }
+
+/* окно просмотра */
+.lightbox {
+  max-width: min(1600px, 94vw);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  background: none;
+  overflow: visible;
+}
+.lightbox::backdrop { background: rgba(10, 11, 18, .86); backdrop-filter: blur(4px); }
+.lightbox__img {
+  display: block;
+  max-width: 100%;
+  max-height: 92vh;
+  border-radius: 10px;
+}
+.lightbox__close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}

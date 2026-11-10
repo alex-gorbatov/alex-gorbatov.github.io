@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сфера.Знания — кейс Александра Горбатова</title>
+  <meta name="description" content="Сфера.Знания — wiki-система платформы Сфера: дизайн-система, оптимизация макросов, шаблоны, календари и итоги работы в роли дизайн-лида.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="kb-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="sfera.html">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="kb-title">Сфера.Знания</h1>
+        <p class="kb-hero__lead">Wiki-система позволяет легко собирать, агрегировать и&nbsp;управлять знаниями компании, экономя время и&nbsp;ускоряя процессы разработки продуктов за&nbsp;счёт принципа единого источника.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны продукта Сфера.Знания" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot" src="assets/img/sfera/knowledge/hero-1.jpg" alt="Редактор статьи" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/knowledge/hero-2.jpg" alt="Статья с таблицей и оглавлением" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/knowledge/hero-3.jpg" alt="Статья с графиком" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задачи ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задачи:</h2>
+          <p class="kb-body" data-scroll-reveal>Банку был необходим отечественный инструмент для формализации знаний в&nbsp;командах продуктов, полностью замещающий зарубежные аналоги. К&nbsp;моему приходу на&nbsp;роль дизайн-лида был проработан MVP, который во&nbsp;многом не&nbsp;удовлетворял стейкхолдеров:</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Проблемы продукта:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Согласно метрикам и&nbsp;обратной связи от&nbsp;пользователей, существовал ряд критичных проблем юзабилити, которые необходимо было решить;</li>
+            <li>Неоднородный интерфейс, замедляющий работу пользователей;</li>
+            <li>Отсутствие критически важного функционала;</li>
+            <li>Отсутствовала практика проверки разрабатываемых решений на&nbsp;пользователях;</li>
+            <li>Отсутствовал формализованный процесс фронт-ревью;</li>
+            <li>Команда дизайнеров и&nbsp;PO, которые разработали MVP, ушли на&nbsp;другие проекты.</li>
+          </ul>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="cases-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="cases-title">Кейсы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#case-1">Создание дизайн-системы</a></li>
+            <li><span>#2</span><a href="#case-2">Оптимизация макросов</a></li>
+            <li><span>#3</span><a href="#case-3">Функционал шаблонов</a></li>
+            <li class="is-static"><span>#4</span>Улучшение навигации по&nbsp;продукту</li>
+            <li><span>#5</span><a href="#case-5">Новый функционал</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #1: дизайн-система ========== -->
+    <section class="kb-section kb-case" id="case-1" aria-labelledby="case-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#1</span></p>
+          <h2 class="kb-case__title" id="case-1-title">Создана дизайн-система, Time to Market разработки макетов уменьшен на&nbsp;20%, Defect Density снижен до&nbsp;0,2</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/knowledge/ds-structure.jpg" alt="Структура библиотеки компонентов дизайн-системы" width="2400" height="1973" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Библиотека компонентов была без чёткой структуры, статусов готовности и&nbsp;гибких настроек. Часть компонентов имели дубли и&nbsp;неконсистентный UI. Это замедляло работу, увеличивало число ошибок и&nbsp;усложняло создание пользовательских сценариев.</p>
+            <p>Я&nbsp;и&nbsp;моя команда дизайнеров реорганизовали библиотеку, чтобы ускорить разработку, повысить гибкость и&nbsp;упростить контроль корректной реализации:</p>
+          </div>
+          <ul class="kb-list">
+            <li>Добавлены компоненты уровня экранов и&nbsp;шаблонов (layout).</li>
+            <li>Оптимизирован список компонентов, убраны дубли.</li>
+            <li>Внедрён консистентный UI с&nbsp;единой системой стилей, отступов и&nbsp;скруглений.</li>
+            <li>Компоненты распределены по&nbsp;категориям, добавлены статусы готовности.</li>
+            <li>Упорядочена вложенность и&nbsp;настройки.</li>
+            <li>Внедрены токены (variables).</li>
+            <li>Описаны паттерны использования компонентов.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/knowledge/ds-components.jpg" alt="Компоненты дизайн-системы в светлой и тёмной теме" width="1440" height="900" loading="lazy" data-scroll-reveal>
+
+        <ul class="kb-results" data-scroll-reveal>
+          <li>Разработка флоу стала быстрее за&nbsp;счёт готовых мастер-экранов.</li>
+          <li>Отступы и&nbsp;размеры теперь управляются токенами.</li>
+          <li>Гибкость настройки возросла благодаря переработанной структуре мастер-компонентов.</li>
+          <li>Тёмная тема применяется автоматически через токены.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #2: макросы ========== -->
+    <section class="kb-section kb-case" id="case-2" aria-labelledby="case-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#2</span></p>
+          <h2 class="kb-case__title" id="case-2-title">Оптимизированы макросы, создан общий компонент, Lead Time сокращён на&nbsp;7%, Bug Rate&nbsp;— на&nbsp;12% для всех последующих макросов</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/knowledge/macros-container.jpg" alt="Универсальный контейнер для макросов" width="2400" height="958" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Макросы разрабатывались разрозненно, хотя их настройки и&nbsp;использование были схожи. Это увеличивало время разработки и&nbsp;тестирования, вызывало проблемы совместимости и&nbsp;отсутствие единого стандарта. Чтобы решить проблему:</p>
+            <ul class="kb-list">
+              <li>Макросы классифицированы, прописаны паттерны их поведения.</li>
+              <li>Создан универсальный контейнер, который подойдёт для любого макроса.</li>
+              <li>Проработан единый паттерн управления макросами.</li>
+              <li>Разработана таблица совместимости для минимизации конфликтов.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Сократилось время разработки за&nbsp;счёт общего паттерна.</li>
+            <li>Меньше багов благодаря стандартизации.</li>
+            <li>Ускорилось создание макетов в&nbsp;Figma на&nbsp;22% (T2M).</li>
+            <li>Улучшилась совместимость макросов, уменьшено количество конфликтов.</li>
+          </ul>
+        </div>
+
+        <h3 class="kb-subtitle" data-scroll-reveal>Новые макросы регулярно создаются по&nbsp;разработанным паттернам:</h3>
+        <div class="kb-grid-2">
+          <img class="kb-img" src="assets/img/sfera/knowledge/macro-poll.jpg" alt="Макрос «Опрос»" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/macro-toc.jpg" alt="Макрос «Оглавление»" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/macro-master.jpg" alt="Мастер-макрос" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/macro-columns.jpg" alt="Макрос «Колонки»" loading="lazy" data-scroll-reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #3: шаблоны ========== -->
+    <section class="kb-section kb-case" id="case-3" aria-labelledby="case-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#3</span></p>
+          <h2 class="kb-case__title" id="case-3-title">Доработка шаблонов по&nbsp;результатам глубинного исследования: Usage Rate повышен с&nbsp;12 до&nbsp;34%</h2>
+        </header>
+
+        <div class="kb-compare">
+          <figure data-scroll-reveal>
+            <figcaption>Было</figcaption>
+            <img class="kb-img" src="assets/img/sfera/knowledge/templates-before.jpg" alt="Шаблоны до доработки" loading="lazy">
+          </figure>
+          <figure data-scroll-reveal>
+            <figcaption>Стало</figcaption>
+            <img class="kb-img" src="assets/img/sfera/knowledge/hero-1.jpg" alt="Шаблоны после доработки" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Шаблонами пользовались лишь 12% авторов: большинство создавали статьи с&nbsp;нуля или копировали старые страницы вместе с&nbsp;устаревшим содержимым. Глубинные интервью с&nbsp;авторами из&nbsp;разных команд показали, что шаблоны сложно найти в&nbsp;момент создания статьи, по&nbsp;названию непонятно, что внутри, а&nbsp;после применения приходится вручную удалять лишние блоки. По&nbsp;итогам исследования:</p>
+            <ul class="kb-list">
+              <li>Выбор шаблона встроен прямо в&nbsp;создание статьи, а&nbsp;не&nbsp;спрятан в&nbsp;отдельном разделе.</li>
+              <li>Добавлен предпросмотр структуры шаблона до&nbsp;применения.</li>
+              <li>Шаблоны сгруппированы по&nbsp;сценариям команд: требования, протоколы встреч, инструкции, отчёты.</li>
+              <li>Подсказки-заглушки в&nbsp;блоках объясняют, что заполнить, и&nbsp;исчезают при вводе текста.</li>
+              <li>Команды могут сохранять свои статьи как шаблоны пространства.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Usage Rate шаблонов вырос с&nbsp;12 до&nbsp;34%.</li>
+            <li>Статьи одного типа получили единую структуру&nbsp;— их проще читать и&nbsp;искать.</li>
+            <li>Авторы быстрее начинают работу над статьёй: не&nbsp;нужно собирать структуру с&nbsp;нуля.</li>
+            <li>Командам меньше времени уходит на&nbsp;вычитку и&nbsp;приведение статей к&nbsp;стандарту.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #5: календари ========== -->
+    <section class="kb-section kb-case" id="case-5" aria-labelledby="case-5-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#5</span></p>
+          <h2 class="kb-case__title" id="case-5-title">Расширение функционала для выхода на&nbsp;новых клиентов, увеличение Revenue Growth</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/knowledge/calendar-1.jpg" alt="Макрос календаря в статье" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Спроектировали и&nbsp;внедрили в&nbsp;систему макрос календарей, который автоматически синхронизирует сроки проектов с&nbsp;реальными календарями команд, исключая ручное обновление данных. Главным результатом стало не&nbsp;только снижение ошибок, но&nbsp;и&nbsp;возврат доверия команд к&nbsp;wiki как к&nbsp;единому источнику правды.</p>
+            <p>Внедрение календарей также сократило Time-to-Sync&nbsp;— время, которое команды тратят на&nbsp;сбор и&nbsp;сверку актуальных сроков,&nbsp;— с&nbsp;3,5&nbsp;часов до&nbsp;20&nbsp;минут в&nbsp;неделю на&nbsp;одного менеджера проекта.</p>
+            <p>Новый функционал закрыл потребность крупных enterprise-клиентов с&nbsp;распределёнными командами&nbsp;— для них возможность синхронизировать сроки прямо в&nbsp;wiki была критическим критерием выбора. Благодаря этому функционалу мы увеличили revenue growth в&nbsp;B2B-сегменте.</p>
+          </div>
+          <p class="kb-results kb-results--text">Решили проблему устаревающей информации: за&nbsp;квартал количество инцидентов, вызванных срывом дедлайнов из-за неверных дат в&nbsp;документации, сократилось на&nbsp;18%.</p>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/knowledge/calendar-2.jpg" alt="Настройки календаря" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Итоги в роли дизайн-лида ========== -->
+    <section class="kb-section kb-case" id="case-lead" aria-labelledby="lead-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="lead-title" data-scroll-reveal>Итоги работы в&nbsp;роли дизайн-лида:</h2>
+
+        <h3 class="kb-h3" data-scroll-reveal>Проведён аудит и&nbsp;оптимизация процессов команды:</h3>
+        <ul class="kb-list kb-list--wide" data-scroll-reveal>
+          <li>Команда дизайнеров заменена на&nbsp;новую через найм под задачи конкретного продукта.</li>
+          <li>Выстроенные процессы позволяют валидировать решения на&nbsp;предмет оптимального пользовательского пути и&nbsp;корректной реализации.</li>
+          <li>Совместно с&nbsp;новым PO проработана верхнеуровневая архитектура с&nbsp;базовой функциональностью:</li>
+        </ul>
+        <div class="kb-grid-2 kb-grid-2--tall">
+          <img class="kb-img" src="assets/img/sfera/knowledge/lead-architecture-1.jpg" alt="Карта функциональности продукта" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/lead-architecture-2.jpg" alt="Верхнеуровневая архитектура продукта" loading="lazy" data-scroll-reveal>
+        </div>
+
+        <h3 class="kb-h3" data-scroll-reveal>Проведено глобальное ревью продукта с&nbsp;целью выявления проблем реализации и&nbsp;юзабилити:</h3>
+        <ul class="kb-list kb-list--wide" data-scroll-reveal>
+          <li>Определены проблемные точки, сформирован бэклог на&nbsp;дизайн-задачи и&nbsp;дизайн-долг.</li>
+          <li>Проведён редизайн ключевого функционала продукта&nbsp;— редактора статей.</li>
+          <li>Унифицирован опыт работы пользователей с&nbsp;продуктом.</li>
+        </ul>
+        <img class="kb-img kb-img--md" src="assets/img/sfera/knowledge/lead-review.jpg" alt="Таблица ревью продукта" loading="lazy" data-scroll-reveal>
+        <div class="kb-grid-2 kb-grid-2--short">
+          <img class="kb-img" src="assets/img/sfera/knowledge/lead-chart-1.jpg" alt="Оценка частоты редактирования статей" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/lead-chart-2.jpg" alt="Оценка реакции на редизайн панели редактирования" loading="lazy" data-scroll-reveal>
+        </div>
+
+        <h3 class="kb-h3 kb-h3--wide" data-scroll-reveal>Спроектированы интерфейсы с&nbsp;учётом требований дизайн-системы платформы, технических ограничений, бизнес-требований, а&nbsp;также с&nbsp;учётом прошлого опыта пользователей:</h3>
+        <div class="kb-stack">
+          <img class="kb-img" src="assets/img/sfera/knowledge/ui-1.jpg" alt="Главная страница пространства" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/ui-2.jpg" alt="Статья «Возможности Сфера.Знания»" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/ui-3.jpg" alt="Диаграмма по данным в статье" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/ui-4.jpg" alt="Сводная таблица в статье" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/knowledge/ui-5.jpg" alt="Администрирование групп" loading="lazy" data-scroll-reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Метрики ========== -->
+    <section class="kb-section kb-case" aria-labelledby="metrics-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="metrics-title" data-scroll-reveal>Общие метрики удовлетворённости пользователей стабильно растут:</h2>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Оценка удовлетворённости 1–5</figcaption>
+          <img src="assets/img/sfera/knowledge/metric-satisfaction.jpg" alt="Рост оценки удовлетворённости по кварталам" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика CSAT</figcaption>
+          <img src="assets/img/sfera/knowledge/metric-csat.jpg" alt="Рост метрики CSAT по кварталам" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика UMUX</figcaption>
+          <img src="assets/img/sfera/knowledge/metric-umux.jpg" alt="Рост метрики UMUX по кварталам" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="sfera-docs.html">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">Сфера.Документы</span>
+        <span class="kb-next__lead">Создание и&nbsp;систематизация документов, их&nbsp;переиспользование <br class="kb-br">и&nbsp;поддержка в&nbsp;актуальном состоянии.</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/sfera/shots/row1-6.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js" defer></script>
+</body>
+</html>

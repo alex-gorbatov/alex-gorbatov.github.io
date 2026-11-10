@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# временные копии файлов от инструментов обработки
+*.sb-*
+
+# личные настройки Claude Code (общий launch.json остаётся в репозитории)
+.claude/settings.local.json

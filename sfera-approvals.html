@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сфера.Согласования — кейс Александра Горбатова</title>
+  <meta name="description" content="Сфера.Согласования — единый хаб согласований платформы Сфера: редизайн агрегатора и экрана согласования, делегирование и итоги работы в роли дизайн-лида.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="kb-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="sfera.html">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="kb-title">Сфера.Согласования</h1>
+        <p class="kb-hero__lead">Единый хаб, унифицирующий процессы утверждения документов, знаний, задач и&nbsp;заявок.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны продукта Сфера.Согласования" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot" src="assets/img/sfera/approvals/hero-sent.jpg" alt="Отправленные мной на согласование" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/approvals/hero-aggregator.jpg" alt="Агрегатор согласований" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/approvals/hero-statuses.jpg" alt="Настройка статусов" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задачи ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задачи:</h2>
+          <p class="kb-body" data-scroll-reveal>Банку был необходим отечественный инструмент для унификации согласований в&nbsp;различных производственных процессах. К&nbsp;моему приходу на&nbsp;роль дизайн-лида был проработан MVP, продукт стабильно развивался, но&nbsp;существовало несколько проблем:</p>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>На&nbsp;продукте часто менялись дизайнеры, из-за этого были нарушены процессы разработки дизайна и&nbsp;авторского контроля;</li>
+            <li>Из-за отсутствия корректного авторского контроля в&nbsp;прод просачивались решения, отличающиеся от&nbsp;разработанного дизайна;</li>
+            <li>Отсутствовала практика исследований и&nbsp;проверки разрабатываемых решений на&nbsp;пользователях.</li>
+          </ul>
+        </div>
+
+        <nav class="kb-cases dc-cases" aria-labelledby="cases-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="cases-title">Кейсы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#case-1">Редизайн агрегатора согласований</a></li>
+            <li><span>#2</span><a href="#case-2">Редизайн интерфейса согласования</a></li>
+            <li><span>#3</span><a href="#case-3">Добавление функции делегирования</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #1: агрегатор ========== -->
+    <section class="kb-section kb-case" id="case-1" aria-labelledby="case-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#1</span></p>
+          <h2 class="kb-case__title" id="case-1-title">Уменьшили долю просроченных согласований на&nbsp;70%</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Мы&nbsp;провели анализ пользовательских сессий, 15 глубинных интервью и&nbsp;опрос 50 активных участников согласований, которые показали ряд проблем старого интерфейса:</p>
+            <ul class="kb-list">
+              <li>Неизвестный источник: задачи из&nbsp;wiki и&nbsp;документов выглядели одинаково&nbsp;— невозможно было понять, где открывать материал и&nbsp;какие правила согласования действуют.</li>
+              <li>Плановые vs фактические сроки: в&nbsp;карточке отображались только плановые даты, но&nbsp;реальные задержки не&nbsp;подсвечивались. Пользователи не&nbsp;видели, что процесс уже идёт с&nbsp;опозданием.</li>
+              <li>Циклические процессы: в&nbsp;методологии согласования некоторых артефактов были заложены круги. Агрегатор не&nbsp;отражал эту логику, и&nbsp;участники теряли понимание, на&nbsp;каком этапе они находятся.</li>
+              <li>Слабая фильтрация: нельзя было отфильтровать задачи по&nbsp;проекту, типу документа или инициатору.</li>
+              <li>Путаница между исходящими и&nbsp;входящими: интерфейс не&nbsp;различал задачи, которые пользователь сам отправил на&nbsp;согласование, и&nbsp;те, которые пришли ему. Люди пропускали важные запросы, думая, что это их собственные поручения.</li>
+            </ul>
+            <a class="dc-was" href="assets/img/sfera/approvals/aggregator-before.jpg" data-lightbox="Агрегатор согласований до редизайна">
+              <img src="assets/img/sfera/approvals/aggregator-before.jpg" alt="" loading="lazy">
+              <span>Посмотреть как было<br>← до&nbsp;редизайна</span>
+            </a>
+          </div>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Мы&nbsp;провели редизайн агрегатора согласований: добавили метки источника задач, отображение фактических сроков, визуализацию кругов, разделили входящие и&nbsp;исходящие задачи.</h3>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/approvals/aggregator-after.jpg" alt="Агрегатор согласований после редизайна" loading="lazy" data-scroll-reveal>
+        <p class="kb-subtitle dc-result" data-scroll-reveal>В&nbsp;результате доля просроченных согласований упала с&nbsp;40% до&nbsp;12%, время обработки согласования сократилось на&nbsp;36%, а&nbsp;CSAT вырос с&nbsp;51% до&nbsp;66%.</p>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #2: экран согласования ========== -->
+    <section class="kb-section kb-case" id="case-2" aria-labelledby="case-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#2</span></p>
+          <h2 class="kb-case__title" id="case-2-title">Спроектировали новый экран согласования, полностью переработав структуру, визуальную иерархию и&nbsp;добавив недостающие элементы.</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Экран согласования&nbsp;— место, где участники принимают решение, а&nbsp;автор следит за&nbsp;ходом процесса. По&nbsp;обратной связи и&nbsp;записям пользовательских сессий мы&nbsp;увидели, что люди подолгу ищут на&nbsp;нём главное: на&nbsp;каком этапе согласование, кто сейчас должен принять решение и&nbsp;что от&nbsp;них ждут. Чтобы разобраться в&nbsp;причинах, мы&nbsp;провели серию интервью с&nbsp;авторами и&nbsp;согласующими и&nbsp;юзабилити-тестирование старого экрана.</p>
+            <p>Выявили ключевые боли пользователей:</p>
+            <ul class="kb-list">
+              <li>Информационный перекос&nbsp;— шапка с&nbsp;идентификационными данными (номер, автор, дата создания) занимала половину первого экрана, хотя нужна была только один раз за&nbsp;весь цикл. Полезная информация (ход, этапы, ответственные) оказывалась ниже «сгиба».</li>
+              <li>Ход согласования нечитаем&nbsp;— прогресс был представлен абстрактно, перемешан с&nbsp;визуализацией циклических процессов.</li>
+              <li>Ответственные скрыты&nbsp;— список согласующих и&nbsp;их зоны ответственности задавались при создании, но&nbsp;на&nbsp;экране не&nbsp;отображались. Пользователи не&nbsp;видели, кто за&nbsp;что отвечает, и&nbsp;были вынуждены переходить в&nbsp;настройки или писать в&nbsp;чат.</li>
+              <li>Нет обсуждений&nbsp;— нельзя было задать вопрос по&nbsp;конкретному этапу или согласующему. Люди уходили в&nbsp;мессенджеры, теряя контекст и&nbsp;создавая информационный хаос.</li>
+              <li>Визуальный шум&nbsp;— отсутствие чёткой иерархии, перегруженность элементами, слабая типографика.</li>
+            </ul>
+            <a class="dc-was" href="assets/img/sfera/approvals/approval-before.jpg" data-lightbox="Экран согласования до редизайна">
+              <img src="assets/img/sfera/approvals/approval-before.jpg" alt="" loading="lazy">
+              <span>Посмотреть как было<br>← до&nbsp;редизайна</span>
+            </a>
+          </div>
+        </header>
+
+        <p class="kb-subtitle dc-result" data-scroll-reveal>Мы&nbsp;провели глубокий редизайн экрана согласования: убрали информационный шум, сделали прозрачным ход и&nbsp;список ответственных, добавили комментарии. В&nbsp;результате время понимания статуса сократилось, а&nbsp;CSAT вырос с&nbsp;34% до&nbsp;45%.</p>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/approvals/approval-after.jpg" alt="Новый экран согласования: маршрут и список согласующих" loading="lazy" data-scroll-reveal>
+        <p class="kb-subtitle dc-result" data-scroll-reveal>Внутренние опросы показали, что 88% пользователей считают новый экран «понятным и&nbsp;удобным».</p>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #3: делегирование ========== -->
+    <section class="kb-section kb-case" id="case-3" aria-labelledby="case-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#3</span></p>
+          <h2 class="kb-case__title" id="case-3-title">Снизили просрочки из-за отсутствия сотрудников с&nbsp;помощью добавления функции делегирования</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Мы&nbsp;проанализировали метрики за&nbsp;полгода и&nbsp;провели опрос 50 активных пользователей и&nbsp;заметили повторяющуюся проблему: когда ключевой сотрудник уходил в&nbsp;отпуск или на&nbsp;больничный, связанные с&nbsp;ним согласования зависали. Процессы останавливались, сроки срывались, а&nbsp;администраторам приходилось вручную переназначать задачи.</p>
+            <p>Выявили ключевые боли:</p>
+            <ul class="kb-list">
+              <li>Отсутствие механизма автоматической передачи задач на&nbsp;период отпуска.</li>
+              <li>Сложность настройки заместителей под разные роли и&nbsp;продукты (например, в&nbsp;одном продукте заместитель один, в&nbsp;другом&nbsp;— другой).</li>
+              <li>После возвращения из&nbsp;отпуска задачи, которые заместитель не&nbsp;успел решить, терялись или продолжали висеть на&nbsp;заместителе.</li>
+            </ul>
+          </div>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/approvals/delegation.jpg" alt="Настройка делегирования в агрегаторе согласований" loading="lazy" data-scroll-reveal>
+        <div class="kb-subtitle dc-result" data-scroll-reveal>
+          <p>В&nbsp;результате доля просрочек из-за отсутствия сотрудников снизилась на&nbsp;68%, время на&nbsp;ручное переназначение сократилось на&nbsp;83%.</p>
+          <p>72% пользователей активно используют делегирование, экономя компании десятки часов в&nbsp;год.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Итоги в роли дизайн-лида ========== -->
+    <section class="kb-section kb-case" id="case-lead" aria-labelledby="lead-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="lead-title" data-scroll-reveal>Итоги работы в&nbsp;роли дизайн-лида:</h2>
+        <h3 class="kb-h3 dc-lead-sub" data-scroll-reveal>Проведено глобальное ревью продукта с&nbsp;целью выявления проблем реализации и&nbsp;юзабилити:</h3>
+        <ul class="kb-list kb-list--wide" data-scroll-reveal>
+          <li>Под задачи продукта нанял и&nbsp;адаптировал нового дизайнера.</li>
+          <li>Проработал верхнеуровневую архитектуру с&nbsp;базовой функциональностью для различных ролей пользователя:</li>
+        </ul>
+        <img class="kb-img kb-img--flat" src="assets/img/sfera/approvals/lead-architecture.png" alt="Верхнеуровневая архитектура Сфера.Согласования" loading="lazy" data-scroll-reveal>
+
+        <ul class="kb-list kb-list--wide" data-scroll-reveal>
+          <li>Выявил список проблем в&nbsp;реализации, определил дизайн-долг. За&nbsp;год свёл его к&nbsp;минимуму.</li>
+        </ul>
+        <div class="kb-grid-2 kb-grid-2--debt">
+          <img class="kb-img" src="assets/img/sfera/approvals/lead-debt-1.jpg" alt="Список проблем реализации" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/approvals/lead-debt-2.jpg" alt="Таблица дизайн-долга со статусами" loading="lazy" data-scroll-reveal>
+        </div>
+
+        <ul class="kb-list kb-list--wide" data-scroll-reveal>
+          <li>Ввёл практику регулярных пользовательских исследований при разработке нового или доработках старого функционала:</li>
+        </ul>
+        <img class="kb-img kb-img--md" src="assets/img/sfera/approvals/lead-research.jpg" alt="Результат исследования: проблема с переключателем стадий" loading="lazy" data-scroll-reveal>
+        <div class="kb-grid-2 kb-grid-2--research-sm">
+          <img class="kb-img" src="assets/img/sfera/approvals/lead-research-1.jpg" alt="Таблица результатов исследования" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/approvals/lead-research-2.jpg" alt="Как пользователи понимают «Делегирование»" loading="lazy" data-scroll-reveal>
+        </div>
+
+        <h3 class="kb-h3 kb-h3--wide" data-scroll-reveal>Привели в&nbsp;порядок админку:</h3>
+        <div class="kb-stack">
+          <img class="kb-img kb-img--transparent" src="assets/img/sfera/approvals/admin-routes.png" alt="Маршруты согласования" loading="lazy" data-scroll-reveal>
+          <img class="kb-img kb-img--transparent" src="assets/img/sfera/approvals/admin-route-edit.png" alt="Настройка маршрута: этапы, группы и круги" loading="lazy" data-scroll-reveal>
+          <img class="kb-img kb-img--transparent" src="assets/img/sfera/approvals/admin-delegation.png" alt="Настройка ролей заместителей" loading="lazy" data-scroll-reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Метрики ========== -->
+    <section class="kb-section kb-case" aria-labelledby="metrics-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="metrics-title" data-scroll-reveal>Общие метрики удовлетворённости пользователей стабильно растут:</h2>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Оценка удовлетворённости 1–5</figcaption>
+          <img src="assets/img/sfera/approvals/metric-satisfaction.jpg" alt="Рост оценки удовлетворённости по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика CSAT</figcaption>
+          <img src="assets/img/sfera/approvals/metric-csat.jpg" alt="Рост метрики CSAT по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика UMUX</figcaption>
+          <img src="assets/img/sfera/approvals/metric-umux.jpg" alt="Рост метрики UMUX по волнам опроса" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="#">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">Сфера.Архив</span>
+        <span class="kb-next__lead">Система хранения ПО и&nbsp;документации в&nbsp;разрезе информационных систем и&nbsp;подсистем.</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/sfera/approvals/next-archive.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=2" defer></script>
+</body>
+</html>

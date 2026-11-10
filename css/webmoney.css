@@ -1,0 +1,690 @@
+/* ==========================================================
+   Кейс WebMoney. Основа — case.css (подписи, контейнер, первый экран,
+   ленты). Здесь только то, чего нет на странице Сферы.
+   ========================================================== */
+.case-page {
+  --wm-2019: #3987e5;                    /* цвета серий диаграммы — проверены валидатором */
+  --wm-2020: #d95926;                    /* на тёмной карточке (CVD ΔE 26.8, контраст ≥3:1) */
+  --wm-card: #1d1f31;
+}
+
+/* ---------- Первый экран ---------- */
+.wm-hero { padding-bottom: 96px; }
+
+.wm-hero__glow {
+  position: absolute;
+  left: 72%;
+  top: 46%;
+  width: max(90vw, 1000px);
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.wm-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr);
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: clamp(32px, 4vw, 64px) auto 0;
+}
+
+.wm-hero__title {
+  margin: 20px 0 24px;
+  font-weight: 500;
+  font-size: var(--fs-display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.wm-hero__lead {
+  max-width: 560px;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--case-text-2);
+}
+
+.wm-facts {
+  display: grid;
+  gap: 14px;
+  margin: 40px 0 0;
+}
+.wm-facts dd {
+  margin: 0;
+  font-size: var(--fs-caption);
+  line-height: 22px;
+}
+
+.wm-hero__phone {
+  justify-self: center;
+  width: min(100%, 360px);
+  margin: 0;
+}
+.wm-hero__phone img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, .45));
+}
+
+/* ---------- Общие секции ---------- */
+.wm-section {
+  position: relative;
+  padding: 0 var(--pad-x) 150px;
+}
+.wm-section--wide { padding-bottom: 150px; }
+
+.wm-split {
+  display: grid;
+  grid-template-columns: 307px minmax(0, 891px);
+  justify-content: space-between;
+  padding-top: 50px;
+  border-top: 1px solid var(--case-line);
+}
+
+.wm-lead,
+.wm-h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+.wm-h2 {
+  margin-bottom: 24px;
+  font-size: clamp(28px, 2.3vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.wm-text {
+  margin-top: 20px;
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--case-text-2);
+}
+.wm-text--accent { color: var(--color-text); }
+
+.wm-source {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--case-muted);
+}
+
+.wm-card {
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--wm-card);
+}
+.wm-card__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+
+/* ---------- Процесс ---------- */
+.wm-process {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 50px;
+  counter-reset: none;
+}
+.wm-process__phase {
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--wm-card);
+}
+.wm-process__title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+.wm-process__title span {
+  font-size: 12px;
+  color: var(--case-accent);
+}
+.wm-process ul {
+  display: grid;
+  gap: 8px;
+  font-size: var(--fs-caption);
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+.wm-process ul li::before { content: "- "; }
+
+/* ---------- Цифры рынка ---------- */
+.wm-figures {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+.wm-figures li { display: flex; flex-direction: column; gap: 10px; }
+.wm-figures__value {
+  font-size: clamp(48px, 4.6vw, 88px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--case-accent);
+}
+.wm-figures li + li .wm-figures__value { color: var(--color-text); }
+.wm-figures__label {
+  max-width: 300px;
+  font-size: var(--fs-caption);
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+
+.wm-pill {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 20px;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 600;
+}
+
+.wm-audience {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+.wm-card--wide { grid-column: 1 / -1; }
+
+/* 100%-полоса: мужчины/женщины */
+.wm-split-bar {
+  display: flex;
+  gap: 2px;
+  font-size: var(--fs-caption);
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+.wm-split-bar li {
+  flex: var(--v) 1 0;
+  min-width: 0;
+}
+.wm-split-bar li::before {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background: var(--wm-2019);
+}
+.wm-split-bar li + li::before { background: var(--wm-2020); }
+.wm-split-bar__value {
+  display: block;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--color-text);
+}
+
+/* столбики возраста */
+.wm-columns {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  gap: 8px;
+  height: 160px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--case-text-2);
+  text-align: center;
+}
+.wm-columns li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  height: 100%;
+}
+.wm-columns span { font-size: 16px; color: var(--color-text); }
+.wm-columns i {
+  display: block;
+  height: calc(var(--v) / 33 * 90px);  /* максимум 33% = 90px */
+  border-radius: 4px 4px 0 0;
+  background: var(--wm-2019);
+}
+
+.wm-tiles {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--case-text-2);
+}
+.wm-tiles b {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--color-text);
+}
+
+/* ---------- Диаграмма 2019 / 2020 ---------- */
+.wm-chart {
+  margin: 30px 0 0;
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--wm-card);
+}
+.wm-chart__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+.wm-chart__sub {
+  max-width: 620px;
+  margin-top: 8px;
+  font-size: var(--fs-caption);
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+.wm-chart__legend {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--case-text-2);
+}
+.wm-chart__legend li { display: flex; align-items: center; gap: 8px; }
+.wm-chart__legend i { width: 12px; height: 12px; border-radius: 3px; }
+.wm-chart__legend .is-2019 { background: var(--wm-2019); }
+.wm-chart__legend .is-2020 { background: var(--wm-2020); }
+
+.wm-bars { display: grid; }
+.wm-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  border-radius: 10px;
+  transition: background-color .2s ease;
+}
+.wm-bar:hover { background: rgba(255, 255, 255, 0.05); }
+.wm-bar__label {
+  font-size: var(--fs-caption);
+  line-height: 20px;
+}
+.wm-bar__track {
+  display: grid;
+  gap: 2px;                              /* 2px зазор между сериями */
+}
+.wm-bar__track i {
+  display: block;
+  height: 8px;
+  width: calc(var(--v) * 1%);
+  border-radius: 0 4px 4px 0;            /* скругление только у конца данных */
+  background: var(--wm-2019);
+}
+.wm-bar__track i + i { background: var(--wm-2020); }
+/* значение 2020 — прямо у конца полосы (2019 — в подсказке и таблице) */
+.wm-bar__line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wm-bar__line i { flex: none; background: var(--wm-2020); }
+.wm-bar__line b {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 8px;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* подсказка при наведении: изменение за год */
+.wm-bar__tip {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #2b2d45;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(6px, -50%);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.wm-bar:hover .wm-bar__tip { opacity: 1; transform: translate(0, -50%); }
+
+/* ---------- Интервью ---------- */
+.wm-interview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.wm-problems {
+  display: grid;
+  gap: 16px;
+  counter-reset: problem;
+  font-size: 16px;
+  line-height: 24px;
+}
+.wm-problems li {
+  position: relative;
+  padding-left: 44px;
+  counter-increment: problem;
+}
+.wm-problems li::before {
+  content: counter(problem, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 12px;
+  color: var(--case-accent);
+}
+
+.wm-quote {
+  position: relative;
+  margin: 0;
+  padding: 40px 30px 30px;
+  border-radius: 25px;
+  background: var(--wm-card);
+  font-size: var(--fs-caption);
+  line-height: 22px;
+  color: var(--case-text-2);
+}
+.wm-quote::before {
+  content: "“";
+  position: absolute;
+  left: 26px;
+  top: -6px;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--case-accent);
+}
+.wm-quote p + p { margin-top: 12px; }
+.wm-quote footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wm-quote footer b { font-weight: 500; font-size: 14px; color: var(--color-text); }
+
+.wm-ratings {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  color: var(--case-text-2);
+}
+.wm-ratings b {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--color-text);
+}
+.wm-ratings span {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+/* ---------- Видео ---------- */
+.wm-media-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.wm-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  aspect-ratio: 16 / 9;
+  background: #1d1f31;
+}
+.wm-video__el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wm-video__toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+.wm-video__toggle::before,
+.wm-video__toggle::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  width: 5px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--color-on-accent);
+}
+.wm-video__toggle::before { left: 20px; }
+.wm-video__toggle::after { left: 31px; }
+.wm-video__toggle.is-paused::before {                 /* значок «играть» */
+  left: 22px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  background: none;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent var(--color-on-accent);
+}
+.wm-video__toggle.is-paused::after { display: none; }
+.wm-video__toggle:hover { transform: scale(1.06); }
+
+/* ---------- Цели проектирования ---------- */
+.wm-goals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 40px;
+  counter-reset: goal;
+}
+.wm-goals li {
+  min-height: 170px;
+  padding: 30px;
+  border-radius: 25px;
+  background: var(--wm-card);
+  font-size: 16px;
+  line-height: 24px;
+  counter-increment: goal;
+}
+.wm-goals li::before {
+  content: counter(goal, decimal-leading-zero);
+  display: block;
+  margin-bottom: 28px;
+  font-size: 12px;
+  color: var(--case-accent);
+}
+
+/* ---------- Экраны с телефоном ---------- */
+.wm-showcase__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  align-items: center;
+  gap: 80px;
+  padding-top: 50px;
+  border-top: 1px solid var(--case-line);
+}
+.wm-showcase--reverse .wm-showcase__text { order: 2; }
+.wm-showcase--reverse .wm-showcase__inner { grid-template-columns: 340px minmax(0, 1fr); }
+.wm-showcase__text .case-label { margin-bottom: 20px; }
+
+.wm-checks {
+  display: grid;
+  gap: 14px;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.wm-checks li {
+  position: relative;
+  padding-left: 32px;
+}
+.wm-checks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-accent), inset 0 0 0 16px var(--color-on-accent);
+}
+
+/* телефон: рамка поверх видео, экран по маске макета */
+.wm-device {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 300px);
+  aspect-ratio: 528 / 1069;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, .5));
+}
+.wm-device__screen {
+  position: absolute;
+  inset: 2.37% 5.37% 2.36% 5.6%;
+  width: 89.03%;
+  height: 95.27%;
+  border-radius: 13.56% / 6.26%;
+  object-fit: cover;
+  background: #fff;
+}
+.wm-device__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ---------- Экраны аналитики ---------- */
+.wm-screens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+.wm-screens img {
+  width: 100%;
+  border-radius: 10% / 4.6%;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+}
+.wm-screens img:nth-child(2) { margin-top: 80px; }
+.wm-screens img:nth-child(3) { margin-top: 160px; }
+
+/* ---------- Ещё решения ---------- */
+.wm-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.wm-features p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ---------- Тёмная тема: лента экранов ---------- */
+.wm-dark {
+  --shot-w: clamp(150px, 14.3vw, 274px);
+}
+.wm-dark .ribbon__shot {
+  aspect-ratio: 1125 / 2436;
+  border-radius: 12% / 5.5%;
+  background: #0f1018;
+}
+
+/* ---------- Финал ---------- */
+.wm-outro .case-container {
+  padding-top: 50px;
+  border-top: 1px solid var(--case-line);
+}
+.wm-outro__title {
+  font-weight: 400;
+  font-size: var(--fs-display);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.wm-outro__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 40px;
+  margin-top: 40px;
+}
+
+/* ==========================================================
+   Адаптив
+   ========================================================== */
+@media (max-width: 1199px) {
+  .wm-split { grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+  .wm-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 20px; }
+  .wm-showcase__inner,
+  .wm-showcase--reverse .wm-showcase__inner { gap: 48px; }
+}
+
+@media (max-width: 899px) {
+  .wm-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+  .wm-hero__phone { width: min(70vw, 300px); }
+  .wm-section, .wm-section--wide { padding-bottom: 96px; }
+  .wm-split { grid-template-columns: 1fr; gap: 16px; padding-top: 32px; }
+  .wm-lead { font-size: 20px; line-height: 28px; }
+  .wm-process, .wm-goals, .wm-features { grid-template-columns: 1fr; }
+  .wm-goals li { min-height: 0; }
+  .wm-figures { grid-template-columns: 1fr; gap: 24px; }
+  .wm-audience { grid-template-columns: 1fr; }
+  .wm-interview { grid-template-columns: 1fr; }
+  .wm-bar { grid-template-columns: 140px minmax(0, 1fr); gap: 10px; }
+  .wm-bar__tip { display: none; }
+  .wm-showcase__inner,
+  .wm-showcase--reverse .wm-showcase__inner { grid-template-columns: 1fr; padding-top: 32px; }
+  .wm-showcase--reverse .wm-showcase__text { order: 0; }
+  .wm-device { width: min(70vw, 280px); }
+  .wm-screens { gap: 12px; margin-top: 40px; }
+  .wm-screens img:nth-child(2) { margin-top: 40px; }
+  .wm-screens img:nth-child(3) { margin-top: 80px; }
+  .wm-dark { --shot-w: 38vw; }
+}
+
+@media (max-width: 599px) {
+  .wm-card, .wm-process__phase, .wm-goals li, .wm-chart { padding: 20px; border-radius: 20px; }
+  .wm-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wm-bar { grid-template-columns: 1fr; gap: 6px; }
+  .wm-bar__label { grid-column: 1 / -1; }
+  .wm-ratings { gap: 32px; }
+  .wm-media-head { flex-direction: column; gap: 4px; }
+  .wm-video__toggle { width: 48px; height: 48px; right: 12px; bottom: 12px; }
+}
+
+/* нумерованные списки: цифры рисуем сами, системные маркеры убираем */
+.wm-process,
+.wm-problems,
+.wm-goals {
+  list-style: none;
+  padding-left: 0;
+}
