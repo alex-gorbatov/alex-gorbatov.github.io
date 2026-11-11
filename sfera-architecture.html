@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сфера.Архитектура — кейс Александра Горбатова</title>
+  <meta name="description" content="Сфера.Архитектура — инструменты для работы с архитектурой предприятия: устранение дизайн-долга, комментарии и нормализация BPMN-диаграмм, итоги работы дизайн-лида.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="kb-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="sfera.html">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="kb-title">Сфера.Архитектура</h1>
+        <p class="kb-hero__lead dc-hero-lead--wide">Набор инструментов для создания архитектуры на&nbsp;разных уровнях, от&nbsp;корпоративной архитектуры до&nbsp;архитектуры конкретных сервисов, компонентов и&nbsp;процессов.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны продукта Сфера.Архитектура" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot" src="assets/img/sfera/architecture/hero-editor.jpg" alt="Графический редактор диаграмм" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/architecture/hero-repository.jpg" alt="Репозиторий архитектурных артефактов" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/architecture/hero-data.jpg" alt="Архитектура данных" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задачи ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задачи:</h2>
+          <p class="kb-body" data-scroll-reveal>Банку был необходим отечественный инструмент для совместной работы с&nbsp;архитектурой в&nbsp;различных областях, включая архитектуру предприятия, системную архитектуру, управление и&nbsp;оптимизацию бизнес-процессов и&nbsp;т.&nbsp;д., полностью замещающий зарубежные аналоги. Продукт включает в&nbsp;себя два модуля: архитектура и&nbsp;архитектура данных. К&nbsp;моему приходу на&nbsp;роль дизайн-лида был проработан MVP, который во&nbsp;многом не&nbsp;удовлетворял стейкхолдеров:</p>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Согласно метрикам и&nbsp;обратной связи от&nbsp;пользователей, существовал ряд критичных проблем юзабилити, которые необходимо было решить;</li>
+            <li>Неоднородный интерфейс, замедляющий работу пользователей;</li>
+            <li>Отсутствовала практика проверки разрабатываемых решений на&nbsp;пользователях;</li>
+            <li>Отсутствовал формализованный процесс фронт-ревью;</li>
+            <li>Большой накопленный тех- и&nbsp;дизайн-долг.</li>
+          </ul>
+        </div>
+
+        <nav class="kb-cases dc-cases" aria-labelledby="cases-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="cases-title">Кейсы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#case-1">Устранение дизайн-долга</a></li>
+            <li><span>#2</span><a href="#case-2">Комментарии на&nbsp;диаграммах</a></li>
+            <li><span>#3</span><a href="#case-3">Нормализация BPMN-схем</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #1: дизайн-долг ========== -->
+    <section class="kb-section kb-case" id="case-1" aria-labelledby="case-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#1</span></p>
+          <h2 class="kb-case__title" id="case-1-title">Устранение дизайн-долга</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Продукт «Архитектура» долгое время развивался изолированно, накопив огромный техдолг и&nbsp;дизайн-долг. Интерфейс разошёлся с&nbsp;общей дизайн-системой платформы, из-за чего пользователи теряли консистентность между продуктами (wiki, документы, согласования) и&nbsp;испытывали трудности с&nbsp;навигацией.</p>
+            <p>Ключевой экран&nbsp;— работа с&nbsp;репозиторием архитектурных артефактов&nbsp;— страдал от&nbsp;множества расхождений:</p>
+            <ul class="kb-list">
+              <li>Левый навигационный сайдбар с&nbsp;деревом репозиториев не&nbsp;соответствовал паттернам дизайн-системы. Время на&nbsp;ориентацию в&nbsp;репозитории было на&nbsp;35% выше, чем на&nbsp;аналогичных экранах wiki.</li>
+              <li>На&nbsp;странице не&nbsp;было хедера и&nbsp;хлебных крошек&nbsp;— пользователи теряли контекст, не&nbsp;понимали, где находятся внутри иерархии репозитория.</li>
+              <li>Интерфейс работы с&nbsp;выбранным элементом был собран из&nbsp;разрозненных компонентов, не&nbsp;унифицированных с&nbsp;другими продуктами платформы.</li>
+            </ul>
+            <a class="dc-was" href="assets/img/sfera/architecture/repository-before.jpg" data-lightbox="Экран репозитория до редизайна">
+              <img src="assets/img/sfera/architecture/repository-before.jpg" alt="" loading="lazy">
+              <span>Посмотреть как было<br>← до&nbsp;редизайна</span>
+            </a>
+          </div>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Мы&nbsp;провели редизайн ключевого экрана репозитория, приведя его к&nbsp;единым паттернам дизайн-системы:</h3>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/architecture/repository-after.png" alt="Экран репозитория после редизайна" loading="lazy" data-scroll-reveal>
+        <p class="kb-subtitle dc-result" data-scroll-reveal>В&nbsp;результате соответствие дизайн-системе выросло с&nbsp;42% до&nbsp;88%, а&nbsp;время ориентации в&nbsp;репозитории сократилось на&nbsp;57%.</p>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #2: комментарии ========== -->
+    <section class="kb-section kb-case" id="case-2" aria-labelledby="case-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#2</span></p>
+          <h2 class="kb-case__title" id="case-2-title">Добавление функционала комментариев</h2>
+          <p class="kb-body kb-case__lead">Продукт «Архитектура» включает редактор BPMN-диаграмм, который используется для моделирования бизнес-процессов, сервисов и&nbsp;компонентов. Диаграммы часто создаются и&nbsp;дорабатываются командами, но&nbsp;долгое время в&nbsp;редакторе отсутствовала возможность оставлять комментарии прямо на&nbsp;диаграмме. Вся обратная связь собиралась в&nbsp;мессенджерах, почте или на&nbsp;устных встречах, терялась привязка к&nbsp;актуальной версии диаграммы, что приводило к&nbsp;потере контекста и&nbsp;затягивало цикл согласования.</p>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Мы&nbsp;добавили в&nbsp;редактор BPMN-диаграмм возможность комментировать элементы и&nbsp;общаться прямо на&nbsp;диаграмме.</h3>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/architecture/comments-editor.jpg" alt="Комментарии к элементам BPMN-диаграммы" loading="lazy" data-scroll-reveal>
+        <p class="kb-subtitle dc-result" data-scroll-reveal>Проработали все состояния и&nbsp;сценарии инлайн-комментариев в&nbsp;виде универсального паттерна, который теперь переиспользуется в&nbsp;других продуктах платформы.</p>
+        <img class="kb-img kb-img--lg kb-img--transparent" src="assets/img/sfera/architecture/comments-states.png" alt="Состояния и сценарии инлайн-комментариев" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #3: нормализация схем ========== -->
+    <section class="kb-section kb-case" id="case-3" aria-labelledby="case-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#3</span></p>
+          <h2 class="kb-case__title" id="case-3-title">Нормализация BPMN-схем</h2>
+          <p class="kb-body kb-case__lead">В&nbsp;продукте «Архитектура» пользователи строят сложные BPMN-диаграммы, описывающие бизнес-процессы, сервисные ландшафты и&nbsp;компоненты. Со&nbsp;временем схемы неизбежно «разрастались»: элементы хаотично разбросаны по&nbsp;холсту, связи пересекаются, визуальная читаемость падает. Не&nbsp;было инструмента для автоматического выравнивания&nbsp;— только ручное перетаскивание и&nbsp;«глазомер». При доработках схемы хаос накапливался, и&nbsp;исправлять становилось сложнее, чем создать новую. Ручная «уборка» отнимала часы и&nbsp;отвлекала архитекторов от&nbsp;содержательной работы.</p>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Мы&nbsp;сделали функцию «сделать красиво»: спроектировали нормализацию схем&nbsp;— автоматическое приведение диаграммы к&nbsp;читаемому виду:</h3>
+        <div class="kb-compare dc-compare--bpmn">
+          <figure data-scroll-reveal>
+            <figcaption>До нормализации</figcaption>
+            <img class="kb-img" src="assets/img/sfera/architecture/bpmn-before.jpg" alt="BPMN-схема до нормализации: элементы разбросаны, связи пересекаются" loading="lazy">
+          </figure>
+          <figure data-scroll-reveal>
+            <figcaption>После нормализации</figcaption>
+            <img class="kb-img" src="assets/img/sfera/architecture/bpmn-after.jpg" alt="BPMN-схема после нормализации: элементы выровнены по сетке" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Итоги в роли дизайн-лида ========== -->
+    <section class="kb-section kb-case" id="case-lead" aria-labelledby="lead-title">
+      <div class="case-container">
+        <h2 class="kb-h2 dc-lead-title" id="lead-title" data-scroll-reveal>Проработана верхнеуровневая архитектура<br class="kb-br"> с&nbsp;базовой функциональностью</h2>
+        <div class="kb-body dc-lead-body" data-scroll-reveal>
+          <p>Определены проблемные точки, сформирован беклог на&nbsp;дизайн-задачи и&nbsp;дизайн-долг. Выстроенные процессы позволяют валидировать решения на&nbsp;предмет оптимального пользовательского пути и&nbsp;корректной реализации.</p>
+        </div>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/architecture/lead-architecture.jpg" alt="Верхнеуровневая архитектура продукта: разделы и экраны" loading="lazy" data-scroll-reveal>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Спроектированы интерфейсы с&nbsp;учётом требований дизайн-системы платформы, технических ограничений, бизнес-требований, а&nbsp;также с&nbsp;учётом прошлого опыта пользователей:</h3>
+        <div class="dc-shots">
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/architecture/ui-filter.jpg" alt="Фильтрация сущностей в репозитории" loading="lazy">
+            <figcaption>Фильтрация сущностей в&nbsp;репозитории</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/architecture/ui-admin.jpg" alt="Администрирование: типы папок и репозиториев" loading="lazy">
+            <figcaption>Администрирование репозиториев</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/architecture/ui-edit.jpg" alt="Редактирование объекта в репозитории" loading="lazy">
+            <figcaption>Редактирование объектов в&nbsp;репозитории</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/architecture/ui-report.jpg" alt="Отчёт: просмотр процесса" loading="lazy">
+            <figcaption>Анализ процессов: отчёт</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Метрики ========== -->
+    <section class="kb-section kb-case" aria-labelledby="metrics-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="metrics-title" data-scroll-reveal>Общие метрики удовлетворённости пользователей стабильно растут:</h2>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Оценка удовлетворённости 1–5</figcaption>
+          <img src="assets/img/sfera/architecture/metric-satisfaction.jpg" alt="Рост оценки удовлетворённости по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика CSAT</figcaption>
+          <img src="assets/img/sfera/architecture/metric-csat.jpg" alt="Рост метрики CSAT по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика UMUX</figcaption>
+          <img src="assets/img/sfera/architecture/metric-umux.jpg" alt="Рост метрики UMUX по волнам опроса" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="#">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">Сфера.Реестр API</span>
+        <span class="kb-next__lead">Набор инструментов для проектирования синхронных и&nbsp;асинхронных API, <br class="kb-br">база знаний для хранения реализованных API.</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/sfera/architecture/next-api.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=2" defer></script>
+</body>
+</html>
