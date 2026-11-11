@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сфера.Архив — кейс Александра Горбатова</title>
+  <meta name="description" content="Сфера.Архив — система хранения ПО и документации платформы Сфера: проработка MVP, интерфейсы и метрики удовлетворённости.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="kb-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="sfera.html">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="kb-title">Сфера.Архив</h1>
+        <p class="kb-hero__lead dc-hero-lead--wide">Система для хранения ПО и&nbsp;документации&nbsp;— дистрибутивов, актов и&nbsp;других документов в&nbsp;разрезе информационных систем с&nbsp;автоматической выгрузкой по&nbsp;результатам релизов и&nbsp;контролем полноты состава хранимых артефактов.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны продукта Сфера.Архив" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot" src="assets/img/sfera/archive/hero-delivery.jpg" alt="Редактирование поставки" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/archive/hero-object.jpg" alt="Карточка документа" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/archive/hero-auto-card.jpg" alt="Карточка, добавленная автоматически" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Кейс #1: MVP ========== -->
+    <section class="kb-section kb-case dc-first-case" id="case-1" aria-labelledby="case-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#1</span></p>
+          <h2 class="kb-case__title" id="case-1-title">Проработка MVP</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Банку было необходимо решение, покрывающее функциональность зарубежных систем хранения программ и&nbsp;программной документации. Команда формировалась с&nbsp;нуля, требовалось подобрать дизайнера под задачи продукта и&nbsp;организовать процессы для оперативного начала работы.</p>
+            <ul class="kb-list">
+              <li>Спроектировал информационную архитектуру продукта.</li>
+              <li>Провели интервью со&nbsp;стейкхолдерами и&nbsp;пользователями с&nbsp;целью определения Scope MVP.</li>
+              <li>Провели первичные исследования: конкурентный анализ, анализ рынка, изучение лучших практик и&nbsp;недостатков похожих продуктов.</li>
+              <li>Подобрал дизайнера с&nbsp;нужными навыками через внутренний найм.</li>
+              <li>Сформировали гипотезы решения пользовательских задач и&nbsp;создали прототипы для проверки решений.</li>
+              <li>Определили основные интерфейсные решения.</li>
+            </ul>
+          </div>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Спроектированы интерфейсы с&nbsp;учётом требований дизайн-системы платформы, технических ограничений, бизнес-требований, а&nbsp;также с&nbsp;учётом прошлого опыта пользователей:</h3>
+        <div class="kb-stack">
+          <img class="kb-img" src="assets/img/sfera/archive/ui-1.jpg" alt="Список документов узла с привязкой к нескольким узлам" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/archive/ui-2.jpg" alt="Документы: карточка, добавленная автоматически" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/archive/hero-delivery.jpg" alt="Покупное ПО: редактирование поставки" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/sfera/archive/ui-4.jpg" alt="Покупное ПО: информация о поставке" loading="lazy" data-scroll-reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Метрики ========== -->
+    <section class="kb-section kb-case" aria-labelledby="metrics-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="metrics-title" data-scroll-reveal>Общие метрики удовлетворённости пользователей стабильно растут:</h2>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Оценка удовлетворённости 1–5</figcaption>
+          <img src="assets/img/sfera/archive/metric-satisfaction.jpg" alt="Рост оценки удовлетворённости по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика CSAT</figcaption>
+          <img src="assets/img/sfera/archive/metric-csat.jpg" alt="Рост метрики CSAT по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика UMUX</figcaption>
+          <img src="assets/img/sfera/archive/metric-umux.jpg" alt="Рост метрики UMUX по волнам опроса" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="#">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">Сфера.Архитектура</span>
+        <span class="kb-next__lead">Набор инструментов для создания архитектуры на&nbsp;разных уровнях, от&nbsp;корпоративной архитектуры <br class="kb-br">до&nbsp;архитектуры конкретных сервисов, компонентов и&nbsp;процессов.</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/sfera/archive/next-architecture.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js" defer></script>
+</body>
+</html>
