@@ -200,3 +200,11 @@
 @media (max-width: 599px) {
   .dc-shots { gap: 32px; }
 }
+
+/* ==========================================================
+   Сфера.Реестр API
+   ========================================================== */
+.dc-tasks-after { margin-top: 24px; }
+.dc-stack > .kb-img + .kb-img { margin-top: 20px; }
+.kb-case__title.dc-case-title--wide { max-width: 891px; }
+.dc-shots + .dc-shots-title { margin-top: 70px; }

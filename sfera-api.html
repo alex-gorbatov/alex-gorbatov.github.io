@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сфера.Реестр API — кейс Александра Горбатова</title>
+  <meta name="description" content="Сфера.Реестр API — инструменты для проектирования синхронных и асинхронных API: оптимизация процессов дизайна и редизайн карточки API.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="kb-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="sfera.html">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="kb-title">Сфера.Реестр API</h1>
+        <p class="kb-hero__lead dc-hero-lead--wide">Набор инструментов для проектирования синхронных и&nbsp;асинхронных API, <br class="kb-br">база знаний для хранения реализованных API.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны продукта Сфера.Реестр API" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot" src="assets/img/sfera/api/card-nft.jpg" alt="Проектирование нефункциональных требований" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/api/card-code.jpg" alt="Редактор кода API" decoding="async">
+          <img class="ribbon__shot" src="assets/img/sfera/api/hero-settings.jpg" alt="Настройки API" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задачи ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задачи:</h2>
+          <p class="kb-body" data-scroll-reveal>Банку был необходим отечественный инструмент для работы с&nbsp;API. К&nbsp;моменту, когда продукт был передан в&nbsp;мой стрим, в&nbsp;дизайне существовал ряд проблем:</p>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Дизайнер, работавший в&nbsp;проекте, был переведён в&nbsp;другой стрим;</li>
+            <li>Дизайн не&nbsp;рассматривался как часть продуктового процесса&nbsp;— не&nbsp;было планирования задач на&nbsp;дизайн и&nbsp;учёта нагрузки дизайнера;</li>
+            <li>Задачи на&nbsp;дизайн ставились без требований от&nbsp;аналитики, «на&nbsp;словах»;</li>
+            <li>Продукт разрабатывался без учёта требований дизайн-системы, дизайн-долг никак не&nbsp;отслеживался и&nbsp;не&nbsp;исправлялся;</li>
+            <li>Отсутствовал процесс фронт-ревью, реализованные интерфейсы сильно отличались от&nbsp;разработанных макетов;</li>
+            <li>В&nbsp;рабочих файлах был беспорядок&nbsp;— не&nbsp;было системности в&nbsp;отрисовке пользовательских флоу, не&nbsp;использовались компоненты, файлы были перегружены;</li>
+            <li>Отсутствовала практика проверки разрабатываемых решений на&nbsp;пользователях.</li>
+          </ul>
+          <p class="kb-body dc-tasks-after" data-scroll-reveal>Результатом этих проблем стал неоднородный интерфейс, замедляющий работу пользователей.</p>
+        </div>
+
+        <nav class="kb-cases dc-cases" aria-labelledby="cases-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="cases-title">Кейсы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#case-1">Оптимизация процессов дизайна</a></li>
+            <li><span>#2</span><a href="#case-2">Проработка дизайна</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #1: процессы дизайна ========== -->
+    <section class="kb-section kb-case" id="case-1" aria-labelledby="case-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#1</span></p>
+          <h2 class="kb-case__title" id="case-1-title">Оптимизация процессов дизайна</h2>
+          <div class="kb-body kb-case__lead dc-text">
+            <p>Проведены аудит и&nbsp;оптимизация процессов работы дизайнера в&nbsp;команде:</p>
+            <ul class="kb-list">
+              <li>Проведено глобальное ревью продукта с&nbsp;целью выявления проблем реализации и&nbsp;юзабилити;</li>
+              <li>Дизайнер заменён через внутренний найм под задачи конкретного продукта и&nbsp;для решения выявленных проблем.</li>
+            </ul>
+          </div>
+        </header>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>В&nbsp;продуктовой команде были отлажены новые процессы, Time to&nbsp;Market разработки макетов уменьшен на&nbsp;60%</h3>
+        <div class="dc-stack" data-scroll-reveal>
+          <img class="kb-img kb-img--lg" src="assets/img/sfera/api/process-1.jpg" alt="Схема долгосрочного планирования и планирования по спринтам" loading="lazy">
+          <img class="kb-img kb-img--lg" src="assets/img/sfera/api/process-2.jpg" alt="Процесс работы в командах: этапы от планирования до закрытия спринта" loading="lazy">
+        </div>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Введён процесс обязательного фронт-ревью со&nbsp;стороны дизайна, снизили Defect Density:</h3>
+        <img class="kb-img kb-img--lg" src="assets/img/sfera/api/front-review.jpg" alt="Процесс прохождения фронт-ревью при тестировании поставки" loading="lazy" data-scroll-reveal>
+
+        <h3 class="kb-subtitle kb-subtitle--wide" data-scroll-reveal>Проведён ряд исследований для формирования гипотез для решения выявленных проблем:</h3>
+        <div class="dc-stack" data-scroll-reveal>
+          <img class="kb-img kb-img--lg" src="assets/img/sfera/api/research-1.jpg" alt="Проблемы по процессу подключения и частота их упоминания" loading="lazy">
+          <img class="kb-img kb-img--lg" src="assets/img/sfera/api/research-2.jpg" alt="Выводы юзабилити-тестирования редактора кода" loading="lazy">
+        </div>
+
+        <p class="kb-subtitle dc-result" data-scroll-reveal>Выстроенные процессы позволяют валидировать решения на&nbsp;предмет оптимального пользовательского пути и&nbsp;корректной реализации.</p>
+      </div>
+    </section>
+
+    <!-- ========== Кейс #2: карточка API ========== -->
+    <section class="kb-section kb-case" id="case-2" aria-labelledby="case-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Кейс <span>#2</span></p>
+          <h2 class="kb-case__title dc-case-title--wide" id="case-2-title">Проведён редизайн ключевого функционала продукта&nbsp;— карточки API</h2>
+        </header>
+
+        <div class="dc-shots">
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-versions.jpg" alt="Список версий API" loading="lazy">
+            <figcaption>Список версий API</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-contracts.jpg" alt="Экран контрактов" loading="lazy">
+            <figcaption>Экран контрактов</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-code.jpg" alt="Редактор кода API с подсветкой ошибок" loading="lazy">
+            <figcaption>Редактор кода API</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-low.jpg" alt="Low-редактор API" loading="lazy">
+            <figcaption>Low-редактор API</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-nft.jpg" alt="Проектирование нефункциональных требований" loading="lazy">
+            <figcaption>Проектирование НФТ</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-settings.jpg" alt="Настройки API" loading="lazy">
+            <figcaption>Настройки API</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/card-plugins.jpg" alt="Настройки плагинов" loading="lazy">
+            <figcaption>Настройки плагинов</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="kb-subtitle kb-subtitle--wide dc-shots-title" data-scroll-reveal>В&nbsp;процессе развития из&nbsp;продукта выделился один из&nbsp;сервисов, ставший самостоятельным продуктом,&nbsp;— хранилище внешних информационных систем</h3>
+        <div class="dc-shots">
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/systems-list.jpg" alt="Список внешних систем" loading="lazy">
+            <figcaption>Список внешних систем</figcaption>
+          </figure>
+          <figure data-scroll-reveal>
+            <img class="kb-img" src="assets/img/sfera/api/systems-card.jpg" alt="Сведения о внешней системе" loading="lazy">
+            <figcaption>Сведения о&nbsp;внешней системе</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Метрики ========== -->
+    <section class="kb-section kb-case" aria-labelledby="metrics-title">
+      <div class="case-container">
+        <h2 class="kb-h2 kb-case__line" id="metrics-title" data-scroll-reveal>Общие метрики удовлетворённости пользователей стабильно растут:</h2>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Оценка удовлетворённости 1–5</figcaption>
+          <img src="assets/img/sfera/api/metric-satisfaction.jpg" alt="Рост оценки удовлетворённости по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика CSAT</figcaption>
+          <img src="assets/img/sfera/api/metric-csat.jpg" alt="Рост метрики CSAT по волнам опроса" loading="lazy">
+        </figure>
+        <figure class="kb-metric" data-scroll-reveal>
+          <figcaption>Метрика UMUX</figcaption>
+          <img src="assets/img/sfera/api/metric-umux.jpg" alt="Рост метрики UMUX по волнам опроса" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="webmoney.html">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">WebMoney Keeper</span>
+        <span class="kb-next__lead">Обновлённый визуал, упрощённая структура и&nbsp;новые функции</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/sfera/api/next-webmoney.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=2" defer></script>
+</body>
+</html>
