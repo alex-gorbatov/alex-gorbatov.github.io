@@ -221,4 +221,5 @@
   border-radius: 0;
 }
 .kb-next__preview--wide::after { content: none; }
-.kb-next:has(.kb-next__preview--wide) .kb-next__btn { position: relative; z-index: 1; }
+/* текст и кнопка всегда поверх превью: при наведении оно поднимается на 12px */
+.kb-next:has(.kb-next__preview--wide) :is(.case-label, .kb-next__title, .kb-next__lead, .kb-next__btn) { position: relative; z-index: 1; }
