@@ -208,3 +208,17 @@
 .dc-stack > .kb-img + .kb-img { margin-top: 20px; }
 .kb-case__title.dc-case-title--wide { max-width: 891px; }
 .dc-shots + .dc-shots-title { margin-top: 70px; }
+
+/* «Следующий продукт» WebMoney: композиция шире контейнера (1615 из 1198),
+   начинается на уровне кнопки и без рамки/затемнения — как в макете */
+.kb-next:has(.kb-next__preview--wide) { overflow-x: clip; }
+.kb-next__preview--wide {
+  width: calc(1615 / 1198 * 100%);
+  max-width: none;
+  aspect-ratio: 1615 / 657;
+  margin: calc(-65 / 1198 * 100%) 0 0 calc(-417 / 2 / 1198 * 100%);
+  align-self: flex-start;
+  border-radius: 0;
+}
+.kb-next__preview--wide::after { content: none; }
+.kb-next:has(.kb-next__preview--wide) .kb-next__btn { position: relative; z-index: 1; }
