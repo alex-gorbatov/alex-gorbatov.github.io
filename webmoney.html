@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WebMoney Keeper — кейс Александра Горбатова</title>
-  <meta name="description" content="Концепт редизайна мобильного приложения WebMoney Keeper: исследование рынка, интервью, персоны, новая структура, UI-дизайн и анимации.">
+  <meta name="description" content="Новое мобильное приложение WebMoney: исследование рынка, интервью, персоны, новая структура, UI-дизайн, анимации и тёмная тема.">
   <meta name="theme-color" content="#161721">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/case.css">
   <link rel="stylesheet" href="css/webmoney.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+  <link rel="stylesheet" href="css/webmoney-v2.css">
 </head>
 <body class="case-page">
 
@@ -42,307 +44,199 @@
     </nav>
   </header>
 
-  <main>
+  <main class="wm2">
     <!-- ========== Первый экран ========== -->
-    <section class="case-hero wm-hero" aria-labelledby="case-title">
-      <div class="case-hero__bg" aria-hidden="true">
-        <img class="case-hero__wave" src="assets/img/sfera/wave.svg" alt="">
-        <img class="wm-hero__glow" src="assets/img/sfera/hero-glow.svg" alt="">
+    <section class="wm2-art" style="--bg:#272d3b" aria-labelledby="case-title">
+      <div class="wm2-art__text">
+        <a class="back-link wm2-back" href="index.html#works">
+          <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+          Назад
+        </a>
+        <h1 class="wm2-sr" id="case-title">Новое мобильное приложение WebMoney App</h1>
+        <p class="wm2-t wm2-role" style="--x:2030;--y:770;--w:760"><span>Роль:</span><br>Дизайнер&nbsp;— исследование, проектирование, UI, UX, анимации<br><span>Результат:</span><br>Обновлённый визуал, упрощённая структура и&nbsp;новые функции</p>
       </div>
-
-      <a class="back-link" href="index.html#works">
-        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
-        Назад
-      </a>
-
-      <div class="wm-hero__inner">
-        <div class="wm-hero__text" data-reveal>
-          <p class="case-label case-label--accent">Концепт редизайна · Мобильное приложение</p>
-          <h1 class="wm-hero__title" id="case-title">Редизайн мобильного приложения WebMoney&nbsp;Keeper</h1>
-          <p class="wm-hero__lead">Обновлённый визуал, упрощённая структура и&nbsp;новые функции для одной из&nbsp;крупнейших платёжных систем.</p>
-
-          <dl class="wm-facts">
-            <div><dt class="case-label">Роль:</dt><dd>Дизайнер — исследование, проектирование, UI, анимации</dd></div>
-            <div><dt class="case-label">Формат:</dt><dd>Концепт, выполнен в учебных целях</dd></div>
-            <div><dt class="case-label">Платформы:</dt><dd>iOS, Android · светлая и тёмная темы</dd></div>
-          </dl>
-        </div>
-
-        <figure class="wm-hero__phone" data-reveal>
-          <img src="assets/img/webmoney/hero-phone.png" alt="Приветственный экран обновлённого приложения WebMoney" width="600" height="1203">
-        </figure>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/a.jpg?v=2" alt="Новое мобильное приложение WebMoney App: экраны кошелька, расходов и истории операций" width="1419" height="1803">
       </div>
     </section>
 
     <!-- ========== Идея и процесс ========== -->
-    <section class="wm-section" aria-labelledby="idea-title">
-      <div class="case-container wm-split">
-        <h2 class="case-label case-label--accent" id="idea-title" data-scroll-reveal>Идея</h2>
-        <div>
-          <p class="wm-lead" data-scroll-reveal>Идея пришла при использовании приложения: устаревший визуал и&nbsp;запутанная структура текущего дизайна натолкнули на&nbsp;мысль о&nbsp;необходимости редизайна.</p>
-
-          <ol class="wm-process">
-            <li class="wm-process__phase" data-scroll-reveal>
-              <h3 class="wm-process__title"><span>01</span> Исследование</h3>
-              <ul><li>Анализ рынка</li><li>Пользовательские интервью, персоны, CJM</li><li>Конкурентный анализ</li></ul>
-            </li>
-            <li class="wm-process__phase" data-scroll-reveal>
-              <h3 class="wm-process__title"><span>02</span> Проектирование</h3>
-              <ul><li>User Flow</li><li>Разработка структуры</li><li>Прототипирование</li></ul>
-            </li>
-            <li class="wm-process__phase" data-scroll-reveal>
-              <h3 class="wm-process__title"><span>03</span> Дизайн</h3>
-              <ul><li>UI-дизайн и анимации</li><li>Создание дизайн-системы</li><li>Презентация</li></ul>
-            </li>
-          </ol>
-        </div>
+    <section class="wm2-art" style="--bg:#272d3b">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--h" style="--x:150;--y:70;--w:1458">Идея пришла при использовании приложения: устаревший визуал и&nbsp;запутанная структура текущего дизайна натолкнули на&nbsp;мысль о&nbsp;необходимости редизайна, и&nbsp;понеслась...</p>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/b.jpg" alt="План работ: анализ рынка, интервью и персоны, конкурентный анализ, user flow, структура, прототипирование, дизайн, дизайн-система, презентация" width="1419" height="892" loading="lazy">
       </div>
     </section>
 
     <!-- ========== Анализ рынка ========== -->
-    <section class="wm-section" aria-labelledby="market-title">
-      <div class="case-container wm-split">
-        <h2 class="case-label case-label--accent" id="market-title" data-scroll-reveal>Анализ рынка</h2>
-        <div>
-          <p class="wm-lead" data-scroll-reveal>Согласно исследованиям Mediascope 2020&nbsp;года, самые активные пользователи электронных денег в&nbsp;крупных городах России:</p>
-
-          <ul class="wm-figures" data-scroll-reveal>
-            <li><span class="wm-figures__value">93,7%</span><span class="wm-figures__label">респондентов хотя бы раз в&nbsp;год оплачивают в&nbsp;интернете товары или услуги</span></li>
-            <li><span class="wm-figures__value">81,7%</span><span class="wm-figures__label">люди 25–34&nbsp;лет</span></li>
-            <li><span class="wm-figures__value">82,2%</span><span class="wm-figures__label">люди 35–44&nbsp;лет</span></li>
-          </ul>
-          <p class="wm-source">Источник: mediascope.net</p>
-
-          <p class="wm-text" data-scroll-reveal>Данные подтверждаются статистикой <strong class="wm-pill">733 тыс.</strong> аудитории социальных сетей WebMoney и&nbsp;сервисов-конкурентов:</p>
-
-          <div class="wm-audience" data-scroll-reveal>
-            <div class="wm-card">
-              <h3 class="wm-card__title">Пол</h3>
-              <ul class="wm-split-bar" aria-label="Пол пользователей">
-                <li style="--v:79"><span class="wm-split-bar__value">79%</span> мужчин</li>
-                <li style="--v:21"><span class="wm-split-bar__value">21%</span> женщин</li>
-              </ul>
-            </div>
-            <div class="wm-card">
-              <h3 class="wm-card__title">Возраст</h3>
-              <ul class="wm-columns" aria-label="Возраст пользователей">
-                <li style="--v:7"><span>7%</span><i></i>до 18</li>
-                <li style="--v:20"><span>20%</span><i></i>18–25</li>
-                <li style="--v:29"><span>29%</span><i></i>25–35</li>
-                <li style="--v:33"><span>33%</span><i></i>35–45</li>
-                <li style="--v:11"><span>11%</span><i></i>45+</li>
-              </ul>
-            </div>
-            <div class="wm-card wm-card--wide">
-              <h3 class="wm-card__title">Профессии пользователей</h3>
-              <ul class="wm-tiles">
-                <li><b>39%</b>Руководитель</li>
-                <li><b>21%</b>Администратор</li>
-                <li><b>10%</b>Инженер</li>
-                <li><b>6%</b>Программист</li>
-                <li><b>6%</b>Дизайнер</li>
-                <li><b>18%</b>Другие</li>
-              </ul>
-            </div>
-          </div>
-          <p class="wm-source">Источник: сервис анализа соцсетей PepperPanel</p>
-
-          <!-- Диаграмма: 2019 vs 2020 -->
-          <figure class="wm-chart" data-scroll-reveal>
-            <figcaption class="wm-chart__head">
-              <h3 class="wm-chart__title">Что оплачивают с&nbsp;помощью электронных денег в&nbsp;России</h3>
-              <p class="wm-chart__sub">Прослеживается рост популярности товаров и&nbsp;услуг, которые используются дома. Доля пользователей, которые минимум раз в&nbsp;год платят за&nbsp;них с&nbsp;компьютера или смартфона.</p>
-              <ul class="wm-chart__legend" aria-hidden="true">
-                <li><i class="is-2019"></i>2019</li>
-                <li><i class="is-2020"></i>2020</li>
-              </ul>
-            </figcaption>
-            <ul class="wm-bars" aria-hidden="true"></ul>
-            <table class="visually-hidden">
-              <caption>Доля пользователей электронных денег, оплачивающих категорию, %</caption>
-              <thead><tr><th>Категория</th><th>2019</th><th>2020</th></tr></thead>
-              <tbody></tbody>
-            </table>
-            <p class="wm-source">Источник: исследования TNS и Mediascope «Электронные платежи в России». Данные собраны из открытых источников и соцсетей и могут отличаться от реальных.</p>
-          </figure>
-        </div>
+    <section class="wm2-art wm2-light" style="--bg:#ffffff" aria-labelledby="market-title">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--label" style="--x:1425;--y:270;--w:600">Анализ рынка</p>
+        <h2 class="wm2-t wm2-t--h" id="market-title" style="--x:1425;--y:329;--w:1225">Согласно исследованиям компании Mediascope 2020&nbsp;года, самые активные пользователи электронных денег в&nbsp;крупных городах России:</h2>
+        <h2 class="wm2-t wm2-t--h" style="--x:374;--y:2451;--w:2052;--ta:center">Прослеживается увеличение популярности товаров и&nbsp;услуг, которые используются дома</h2>
+        <p class="wm2-t wm2-t--body" style="--x:489;--y:2731;--w:1822;--lh:42;--ta:center;--c:#424b58">Процент пользователей, которые минимум раз в&nbsp;год платят за&nbsp;различные товары и&nbsp;услуги с&nbsp;компьютера или смартфона</p>
+        <p class="wm2-t wm2-t--body" style="--x:724;--y:4661;--w:1353;--fs:24;--lh:42;--ta:center;--c:#9c9cbe">* Данные для исследований составлены из&nbsp;открытых источников и&nbsp;соцсетей и&nbsp;могут отличаться от&nbsp;реальных.</p>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/c.jpg" alt="93,7% респондентов хотя бы раз в год оплачивают в интернете товары или услуги; возраст, пол и профессии аудитории; что оплачивают с помощью электронных денег в 2019 и 2020 годах" width="1419" height="2453" loading="lazy">
       </div>
     </section>
 
-    <!-- ========== Интервью ========== -->
-    <section class="wm-section" aria-labelledby="interview-title">
-      <div class="case-container wm-split">
-        <h2 class="case-label case-label--accent" id="interview-title" data-scroll-reveal>Пользовательские интервью</h2>
-        <div>
-          <p class="wm-lead" data-scroll-reveal>На основе опроса знакомых пользователей и&nbsp;отзывов в&nbsp;App Store, Google Play и&nbsp;на&nbsp;независимых сайтах сформирован список проблем, которые можно решить редизайном:</p>
-
-          <div class="wm-interview">
-            <ol class="wm-problems" data-scroll-reveal>
-              <li>Сложности с&nbsp;обращением в&nbsp;техническую поддержку</li>
-              <li>Недостаточный функционал: например, нельзя привязать банковскую карту к&nbsp;кошельку</li>
-              <li>Визуально устаревший интерфейс</li>
-              <li>Сложная запутанная структура и, как следствие, проблемы с&nbsp;доступом к&nbsp;важному функционалу</li>
-              <li>Несоответствие устоявшимся паттернам поведения в&nbsp;популярных банковских сервисах</li>
-            </ol>
-
-            <blockquote class="wm-quote" data-scroll-reveal>
-              <p>На главном экране сделан акцент на&nbsp;пополнении баланса и&nbsp;истории операций. Раздражает принцип «пополни кошелёк, а&nbsp;дальше разбирайся сам».</p>
-              <p>Хотелось бы, чтобы при входе были доступны как пополнение, так и&nbsp;переводы на&nbsp;карты и&nbsp;счета, избранное и&nbsp;платежи.</p>
-              <p>Непонятно, где чат, а&nbsp;где уведомления. А&nbsp;система авторизации вообще боль.</p>
-              <footer><b>Владислав</b>Senior Product Owner</footer>
-            </blockquote>
-          </div>
-
-          <ul class="wm-ratings" data-scroll-reveal>
-            <li><b>3,8</b> из&nbsp;5<span>оценка в&nbsp;Google Play</span></li>
-            <li><b>4,1</b> из&nbsp;5<span>оценка в&nbsp;App Store</span></li>
-          </ul>
-        </div>
+    <!-- ========== Пользовательские интервью ========== -->
+    <section class="wm2-art wm2-light" style="--bg:#f4f9ff" aria-labelledby="interview-title">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--label" style="--x:150;--y:200;--w:700">Пользовательские интервью</p>
+        <h2 class="wm2-t wm2-t--h" id="interview-title" style="--x:150;--y:259;--w:1415">На&nbsp;основе опроса знакомых пользователей приложения и&nbsp;отзывов о&nbsp;приложении в&nbsp;App&nbsp;Store, Google Play и&nbsp;на&nbsp;независимых сайтах с&nbsp;отзывами сформирован список проблем, которые можно решить с&nbsp;помощью редизайна:</h2>
+        <p class="wm2-t wm2-t--item" style="--x:193;--y:745;--w:1402">Сложности с&nbsp;обращением в&nbsp;техническую поддержку</p>
+        <p class="wm2-t wm2-t--item" style="--x:193;--y:869;--w:1402">Недостаточный функционал: например, нет возможности привязать банковскую карту к&nbsp;кошельку</p>
+        <p class="wm2-t wm2-t--item" style="--x:193;--y:1001;--w:1402">Визуально устаревший интерфейс</p>
+        <p class="wm2-t wm2-t--item" style="--x:192;--y:1125;--w:1403">Сложная запутанная структура и, как следствие, проблемы с&nbsp;доступом к&nbsp;важному функционалу</p>
+        <p class="wm2-t wm2-t--item" style="--x:192;--y:1249;--w:1403">Несоответствие устоявшимся паттернам поведения в&nbsp;более популярных банковских сервисах</p>
+        <blockquote class="wm2-t wm2-quote" style="--x:1862;--y:516;--w:850">
+          <p>На&nbsp;главном экране сделан акцент на&nbsp;пополнении баланса и&nbsp;истории операций. Раздражает принцип «пополни кошелёк, а&nbsp;дальше разбирайся сам».</p>
+          <p>Хотелось&nbsp;бы, чтобы при входе были доступны как пополнение, так и&nbsp;переводы на&nbsp;карты и&nbsp;счета, избранное и&nbsp;платежи.</p>
+          <p>Непонятно, где чат, а&nbsp;где уведомления. А&nbsp;система авторизации вообще боль.</p>
+          <p>Было&nbsp;бы прикольно, если&nbsp;бы в&nbsp;платежах была персонализация. Например, в&nbsp;мобильной связи приложение определяло твоего оператора и&nbsp;выводило его первым в&nbsp;списке.</p>
+        </blockquote>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/d.jpg" alt="Рейтинги приложения в Google Play и App Store, отзывы пользователей" width="1419" height="1660" loading="lazy">
       </div>
     </section>
 
     <!-- ========== Персоны (видео) ========== -->
-    <section class="wm-section wm-section--wide" aria-labelledby="personas-title">
-      <div class="case-container">
-        <div class="wm-media-head" data-scroll-reveal>
-          <h2 class="case-label case-label--accent" id="personas-title">Пользовательские персоны</h2>
-          <p class="case-label">Не успели прочесть? Нажмите на паузу :)</p>
-        </div>
-        <div class="wm-video" data-scroll-reveal>
-          <video class="wm-video__el" src="assets/video/webmoney/personas.mp4" poster="assets/img/webmoney/poster-personas.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Три пользовательские персоны WebMoney: цели, мотивация и барьеры"></video>
-          <button class="wm-video__toggle" type="button" aria-label="Пауза" data-video-toggle></button>
-        </div>
+    <section class="wm2-video" aria-label="Пользовательские персоны">
+      <div class="wm-video">
+        <video class="wm-video__el" src="assets/video/webmoney/personas.mp4" poster="assets/img/webmoney/poster-personas.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Три пользовательские персоны WebMoney: цели, мотивация и барьеры"></video>
+        <button class="wm-video__toggle" type="button" aria-label="Пауза" data-video-toggle></button>
       </div>
     </section>
 
     <!-- ========== Проектирование ========== -->
-    <section class="wm-section" aria-labelledby="ux-title">
-      <div class="case-container wm-split">
-        <h2 class="case-label case-label--accent" id="ux-title" data-scroll-reveal>Проектирование</h2>
-        <div>
-          <p class="wm-lead" data-scroll-reveal>Новая упрощённая структура оптимизирует навигацию и&nbsp;приводит функционал к&nbsp;привычному виду электронного кошелька, знакомого большинству пользователей, но&nbsp;учитывает особенности платёжной системы.</p>
-          <ol class="wm-goals">
-            <li data-scroll-reveal>Вынести основной функционал кошелька на&nbsp;главный экран</li>
-            <li data-scroll-reveal>Упростить авторизацию и&nbsp;регистрацию</li>
-            <li data-scroll-reveal>Объединить чаты с&nbsp;пользователями, техподдержку и&nbsp;уведомления об&nbsp;операциях</li>
-            <li data-scroll-reveal>Расширить функционал работы с&nbsp;банковскими картами</li>
-            <li data-scroll-reveal>Автоматизировать конвертацию валюты при переводе</li>
-            <li data-scroll-reveal>Добавить возможность анализировать финансы</li>
-          </ol>
-        </div>
+    <section class="wm2-art" style="--bg:#262b41" aria-labelledby="ux-title">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--label" style="--x:150;--y:2878;--w:700">Проектирование</p>
+        <h2 class="wm2-t wm2-t--h" id="ux-title" style="--x:150;--y:2937;--w:1361">Новая упрощённая структура оптимизирует навигацию и&nbsp;приводит функционал к&nbsp;привычному виду электронного кошелька, знакомого большинству пользователей, но&nbsp;учитывает особенности платёжной системы.</h2>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/f.jpg" alt="Карта приложения, задачи редизайна и вайрфреймы основных экранов" width="1419" height="2900" loading="lazy">
       </div>
     </section>
 
     <!-- ========== Вход ========== -->
-    <section class="wm-section wm-showcase" aria-labelledby="login-title">
-      <div class="case-container wm-showcase__inner">
-        <div class="wm-showcase__text">
-          <p class="case-label case-label--accent" data-scroll-reveal>UI-дизайн · Вход</p>
-          <h2 class="wm-h2" id="login-title" data-scroll-reveal>Начать пользоваться кошельком&nbsp;— легко</h2>
-          <p class="wm-text" data-scroll-reveal>Чтобы войти или зарегистрироваться, достаточно ввести номер телефона и&nbsp;код из&nbsp;SMS.</p>
-          <p class="wm-text" data-scroll-reveal>Простая и&nbsp;интуитивно понятная система безопасности, знакомая любому пользователю: код из&nbsp;SMS и&nbsp;Face&nbsp;ID для следующих входов.</p>
-        </div>
-        <div class="wm-device" data-scroll-reveal>
+    <section class="wm2-art" style="--bg:#13182c" aria-label="Начать пользоваться кошельком — легко">
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/g.jpg" alt="Начать пользоваться кошельком — легко!" width="1419" height="1417" loading="lazy">
+        <div class="wm-device wm2-device" style="--x:1005;--y:781;--w:787">
           <video class="wm-device__screen" src="assets/video/webmoney/login.mp4" poster="assets/img/webmoney/poster-login.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Анимация входа: номер телефона, код из SMS, Face ID"></video>
           <img class="wm-device__frame" src="assets/img/works/webmoney/frame-black.png" alt="" width="528" height="1069">
         </div>
       </div>
     </section>
 
-    <!-- ========== Главный экран ========== -->
-    <section class="wm-section wm-showcase wm-showcase--reverse" aria-labelledby="main-title">
-      <div class="case-container wm-showcase__inner">
-        <div class="wm-showcase__text">
-          <p class="case-label case-label--accent" data-scroll-reveal>UI-дизайн · Главный экран</p>
-          <h2 class="wm-h2" id="main-title" data-scroll-reveal>Быстрый доступ ко&nbsp;всем функциям счёта</h2>
-          <p class="wm-text" data-scroll-reveal>Главный экран позволяет в&nbsp;одно касание проверять баланс кошельков, переводить деньги другим пользователям, оплачивать услуги, переходить к&nbsp;профилю, сообщениям и&nbsp;уведомлениям.</p>
-          <ul class="wm-checks" data-scroll-reveal>
-            <li>Внутри кошелька к&nbsp;быстрым операциям добавлен краткий анализ финансов с&nbsp;выбором периода и&nbsp;история операций</li>
-            <li>К&nbsp;переводам добавлены комментарии — они также отображаются в&nbsp;мессенджере</li>
-            <li>По&nbsp;нажатию на&nbsp;операцию открывается подробный отчёт: квитанция, повтор, сохранение в&nbsp;избранное</li>
-          </ul>
-        </div>
-        <div class="wm-device" data-scroll-reveal>
-          <video class="wm-device__screen" src="assets/video/webmoney/main.mp4" poster="assets/img/webmoney/poster-main.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Анимация: главный экран, кошелёк и отчёт об операции"></video>
+    <section class="wm2-art" style="--bg:#171c32">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--h" style="--x:1740;--y:569;--w:888">Чтобы войти или зарегистрироваться в&nbsp;приложении, достаточно ввести номер телефона и&nbsp;код из&nbsp;SMS</p>
+        <h2 class="wm2-t" style="--x:150;--y:3136;--w:1225;--fs:96;--lh:128">Простая и&nbsp;интуитивно понятная система безопасности, знакомая любому пользователю</h2>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/h.jpg" alt="Вход по номеру телефона и коду из SMS, включение Face ID, экран ввода кода" width="1419" height="2256" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ========== Главный экран и кошелёк ========== -->
+    <section class="wm2-art wm2-light" style="--bg:#f4f3f9">
+      <div class="wm2-art__text">
+        <h2 class="wm2-t" style="--x:149;--y:1019;--w:1437;--fs:96;--lh:120">Главный экран позволяет в&nbsp;одно касание проверять баланс кошельков, переводить деньги другим пользователям, осуществлять платежи, переходить к&nbsp;профилю, сообщениям и&nbsp;уведомлениям.</h2>
+        <h2 class="wm2-t" style="--x:1657;--y:2924;--w:800;--fs:96;--lh:120">Новые функции кошелька</h2>
+        <p class="wm2-t wm2-t--body" style="--x:1657;--y:3194;--w:800;--c:#424b58">Внутри кошелька к&nbsp;ранее имевшимся быстрым операциям добавлен краткий анализ финансов с&nbsp;возможностью выбора периода и&nbsp;история операций с&nbsp;балансом.</p>
+        <p class="wm2-t wm2-t--h" style="--x:1069;--y:5898;--w:746">К&nbsp;переводам добавлены комментарии, которые также отображаются в&nbsp;мессенджере</p>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/i.jpg" alt="Главный экран, экран кошелька, история операций, выбор перевода и отчёт об операции" width="1419" height="3898" loading="lazy">
+      </div>
+    </section>
+
+    <section class="wm2-art wm2-light" style="--bg:#f3f4f9">
+      <div class="wm2-art__text">
+        <h2 class="wm2-t" style="--x:957;--y:314;--w:884;--fs:64;--lh:96;--ta:center">Быстрый доступ ко&nbsp;всем функциям счёта</h2>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/j.jpg" alt="" width="1419" height="1419" loading="lazy">
+        <div class="wm-device wm2-device" style="--x:1005;--y:594;--w:787">
+          <video class="wm-device__screen" src="assets/video/webmoney/main.mp4" poster="assets/img/webmoney/poster-main.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Анимация главного экрана: кошельки, быстрые переводы и избранное"></video>
           <img class="wm-device__frame" src="assets/img/works/webmoney/frame-black.png" alt="" width="528" height="1069">
         </div>
       </div>
     </section>
 
-    <!-- ========== Анализ финансов ========== -->
-    <section class="wm-section" aria-labelledby="finance-title">
-      <div class="case-container">
-        <div class="wm-split">
-          <p class="case-label case-label--accent" data-scroll-reveal>Анализ финансов</p>
-          <div>
-            <h2 class="wm-h2" id="finance-title" data-scroll-reveal>Решена распространённая проблема анализа финансов</h2>
-            <p class="wm-text" data-scroll-reveal>У&nbsp;сервисов-конкурентов графики и&nbsp;диаграммы обычно нельзя прочитать без прокрутки к&nbsp;легенде: чтобы понять, к&nbsp;чему относится значение, приходится листать к&nbsp;нужной категории расходов.</p>
-            <p class="wm-text wm-text--accent" data-scroll-reveal>В&nbsp;новом интерфейсе кошелька категории расходов обозначены на&nbsp;графике и&nbsp;расположены в&nbsp;пределах одного экрана.</p>
-          </div>
-        </div>
-        <div class="wm-screens">
-          <img src="assets/img/webmoney/finance/screen-1.jpg" alt="Расходы по категориям на кольцевой диаграмме" loading="lazy" data-scroll-reveal>
-          <img src="assets/img/webmoney/finance/screen-2.jpg" alt="Список категорий расходов с суммами" loading="lazy" data-scroll-reveal>
-          <img src="assets/img/webmoney/finance/screen-3.jpg" alt="Детализация расходов за период" loading="lazy" data-scroll-reveal>
-        </div>
+    <section class="wm2-art wm2-light" style="--bg:#f4f3f9">
+      <div class="wm2-art__text">
+        <h2 class="wm2-t" style="--x:1638;--y:531;--w:1012;--fs:72;--lh:120">Интерфейс построен по&nbsp;принципам атомарного дизайна</h2>
+        <p class="wm2-t wm2-t--body" style="--x:1638;--y:941;--w:1012;--c:#424b58">Это позволяет быстро создавать новое user-friendly приложение с&nbsp;фокусом на&nbsp;простоте, удобстве и&nbsp;функциональности.</p>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/k.jpg" alt="Компоненты интерфейса и сценарии перевода на кошелёк WebMoney и банковскую карту" width="1419" height="3634" loading="lazy">
       </div>
     </section>
 
-    <!-- ========== Ещё решения ========== -->
-    <section class="wm-section" aria-labelledby="more-title">
-      <div class="case-container wm-split">
-        <h2 class="case-label case-label--accent" id="more-title" data-scroll-reveal>Ещё решения</h2>
-        <ul class="wm-features">
-          <li class="wm-card" data-scroll-reveal>
-            <h3 class="wm-card__title">Платежи</h3>
-            <p>Упорядоченные категории и&nbsp;избранные платежи позволяют быстро найти нужную операцию.</p>
-          </li>
-          <li class="wm-card" data-scroll-reveal>
-            <h3 class="wm-card__title">Сообщения</h3>
-            <p>Чаты и&nbsp;центр уведомлений объединены в&nbsp;один раздел. Уведомления о&nbsp;переводах отображаются в&nbsp;чатах, а&nbsp;комментарии — в&nbsp;виде сообщений.</p>
-          </li>
-          <li class="wm-card" data-scroll-reveal>
-            <h3 class="wm-card__title">Атомарный дизайн</h3>
-            <p>Интерфейс построен по&nbsp;принципам атомарного дизайна: это позволяет быстро развивать продукт с&nbsp;фокусом на&nbsp;простоте, удобстве и&nbsp;функциональности.</p>
-          </li>
-        </ul>
+    <!-- ========== Платежи и анализ финансов ========== -->
+    <section class="wm2-art" style="--bg:#2a2d36">
+      <div class="wm2-art__text">
+        <h2 class="wm2-t" style="--x:150;--y:273;--w:1225;--fs:72;--lh:96">Упорядоченные категории и&nbsp;избранные платежи позволяют быстро найти нужную операцию</h2>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/l.jpg" alt="Экраны платежей: избранное, категории, оплата интернета" width="1419" height="1246" loading="lazy">
       </div>
     </section>
 
-    <!-- ========== Тёмная тема (бесконечная лента) ========== -->
-    <section class="wm-section wm-section--wide" aria-labelledby="dark-title">
-      <div class="case-container wm-media-head" data-scroll-reveal>
-        <h2 class="wm-h2" id="dark-title">Тёмная тема тоже есть</h2>
+    <section class="wm2-art" style="--bg:#0c1729">
+      <div class="wm2-art__text">
+        <h2 class="wm2-t" style="--x:1300;--y:500;--w:1399;--fs:80;--lh:128">Решена распространённая проблема анализа финансов</h2>
+        <p class="wm2-t wm2-t--body" style="--x:1300;--y:782;--w:1275">В&nbsp;большинстве случаев функционал анализа финансов у&nbsp;сервисов-конкурентов позволяет просматривать графики и&nbsp;диаграммы без возможности изучить их&nbsp;легенды. Чтобы понять, к&nbsp;чему относится значение на&nbsp;диаграмме, нужно прокрутить к&nbsp;соответствующей категории расходов.</p>
+        <p class="wm2-t" style="--x:150;--y:3056;--w:1541;--fs:64;--lh:96">В&nbsp;новом интерфейсе кошелька категории расходов обозначены на&nbsp;графике и&nbsp;расположены в&nbsp;пределах одного экрана</p>
       </div>
-      <div class="ribbons wm-dark">
-        <div class="ribbon ribbon--left" style="--start:-0.4">
-          <div class="ribbon__track">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-1.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-2.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-3.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-4.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-5.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-6.jpg" alt="" loading="lazy">
-            <img class="ribbon__shot" src="assets/img/webmoney/dark/screen-7.jpg" alt="" loading="lazy">
-          </div>
-        </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/m.jpg" alt="Экраны анализа расходов: кольцевая диаграмма, список категорий" width="1419" height="2044" loading="lazy">
       </div>
     </section>
 
-    <!-- ========== Финал ========== -->
-    <section class="wm-section wm-outro" aria-labelledby="outro-title">
-      <div class="case-container">
-        <h2 class="wm-outro__title" id="outro-title" data-scroll-reveal>Спасибо за&nbsp;просмотр!</h2>
-        <p class="wm-text" data-scroll-reveal>Концепт редизайна мобильного приложения WebMoney выполнен в&nbsp;учебных целях.</p>
-        <div class="wm-outro__links" data-scroll-reveal>
-          <a class="button" href="sfera.html">Следующий кейс: Платформа Сфера</a>
-          <a class="back-link" href="index.html#works"><img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12"> Все работы</a>
-        </div>
+    <section class="wm2-art wm2-light" style="--bg:#c6d6e3">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--label" style="--x:664;--y:170;--w:1474;--ta:center">Сообщения</p>
+        <h2 class="wm2-t wm2-t--h" style="--x:664;--y:229;--w:1474;--ta:center">Чаты между пользователями и&nbsp;центр уведомлений объединены в&nbsp;один раздел. Теперь уведомления о&nbsp;переводах внутри WebMoney отображаются в&nbsp;чатах, а&nbsp;прикреплённые комментарии показаны в&nbsp;виде сообщений.</h2>
       </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/n.jpg" alt="Экраны сообщений: список чатов и переписка с переводом" width="1419" height="1422" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ========== Тёмная тема ========== -->
+    <section class="wm2-art" style="--bg:#191921">
+      <div class="wm2-art__text">
+        <p class="wm2-t wm2-t--label" style="--x:150;--y:400;--w:600">Тёмная тема</p>
+        <h2 class="wm2-t" style="--x:150;--y:449;--w:700;--fs:96;--lh:128">Тёмная тема тоже есть</h2>
+      </div>
+      <div class="wm2-art__stage">
+        <img class="wm2-art__img" src="assets/img/webmoney/v2/o.jpg" alt="Экраны приложения в тёмной теме" width="1419" height="4415" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ========== Следующий продукт ========== -->
+    <section class="kb-next wm2-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="#">
+        <span class="case-label case-label--accent">Следующий продукт</span>
+        <span class="kb-next__title" id="next-title">Медидея</span>
+        <span class="kb-next__lead">Система управления взаимодействием клиник с&nbsp;пациентами, с&nbsp;их&nbsp;историей болезни, приёмами и&nbsp;назначениями, <br class="kb-br">а&nbsp;также поддержкой различных каналов связи.</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/webmoney/v2/next.jpg" alt="" loading="lazy"></span>
+      </a>
     </section>
   </main>
 
-  <footer class="site-footer" id="contacts">
+    <footer class="site-footer" id="contacts">
     <div class="site-footer__inner">
       <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
         <span>Александр</span>

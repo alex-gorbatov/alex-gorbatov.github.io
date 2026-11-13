@@ -1,0 +1,120 @@
+/* ==========================================================
+   WebMoney — страница по макету «Кейс» (Figma, кадр 2800 px).
+   Каждая секция — картинка макета, поверх которой HTML-текст
+   стоит на тех же координатах. Координаты (--x, --y, --w),
+   кегль (--fs) и интерлиньяж (--lh) заданы в px макета и
+   масштабируются вместе с картинкой через единицу --u.
+   ========================================================== */
+
+.wm2-art {
+  --u: calc(100cqw / 2800);
+  position: relative;
+  container-type: inline-size;
+  background: var(--bg, #161721);
+  overflow: hidden;
+}
+.wm2-art__stage { position: relative; }
+.wm2-art__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wm2-t {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  margin: 0;
+  font-weight: var(--fw, 500);
+  font-size: max(var(--min, 12px), calc(var(--fs) * var(--u)));
+  line-height: calc(var(--lh) / var(--fs));
+  color: var(--c, #fff);
+  text-align: var(--ta, left);
+  z-index: 1;
+}
+.wm2-t--label { --fs: 24; --lh: 32; --c: #0b81e8; --fw: 500; }
+.wm2-t--h { --fs: 48; --lh: 70; }
+.wm2-t--body { --fs: 30; --lh: 48; --fw: 400; }
+.wm2-t p + p { margin-top: calc(var(--lh) / var(--fs) * 1em); }
+
+.wm2-light { --c: #2f303c; }
+.wm2-muted { color: #68627a; }
+
+/* список проблем из интервью: маркеры остаются в картинке */
+.wm2-t--item { --fs: 30; --lh: 42; --c: #424b58; }
+
+/* цитата пользователя */
+.wm2-quote { --fs: 36; --lh: 56; --fw: 500; --c: #2f303c; }
+
+/* роль и результат на первом экране */
+.wm2-role { --fs: 16; --lh: 24; --fw: 500; }
+.wm2-role span { color: #68627a; }
+
+/* кнопка «Назад» поверх первого экрана */
+.wm2-back {
+  position: absolute;
+  left: calc(100 * var(--u));
+  top: calc(120 * var(--u));
+  z-index: 2;
+}
+
+/* заголовок первого экрана нарисован в картинке; для чтения экраном — текст */
+.wm2-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* телефон с видео поверх телефона из макета */
+.wm2-device {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  z-index: 1;
+}
+.wm2-device.wm-device { filter: none; justify-self: auto; }
+
+/* персоны: видео на всю ширину */
+.wm2-video {
+  position: relative;
+  background: #8d8f97;
+}
+.wm2-video .wm-video__el {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2800 / 1575;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* «Следующий продукт» сразу после тёмной темы */
+.wm2-next { padding-top: 60px; }
+
+/* ==========================================================
+   Узкие экраны: текст уходит над картинкой обычным потоком
+   ========================================================== */
+@media (max-width: 760px) {
+  .wm2-art { display: flex; flex-direction: column; }
+  .wm2-art__text {
+    display: grid;
+    gap: 14px;
+    padding: 40px 16px 24px;
+  }
+  .wm2-t {
+    position: static;
+    width: auto;
+    font-size: clamp(14px, calc(var(--fs) * 0.32px), 26px);
+    text-align: left;
+  }
+  .wm2-t--label { font-size: 13px; }
+  .wm2-role { font-size: 14px; }
+  .wm2-quote { font-size: 16px; }
+  .wm2-back { position: static; margin: 0 0 8px; }
+  .wm2 > .wm2-art:first-child .wm2-art__text { padding-top: 110px; }   /* под шапкой сайта */
+  .wm2-device { width: calc(var(--w) * var(--u)); }
+}
