@@ -1,120 +1,856 @@
 /* ==========================================================
-   WebMoney — страница по макету «Кейс» (Figma, кадр 2800 px).
-   Каждая секция — картинка макета, поверх которой HTML-текст
-   стоит на тех же координатах. Координаты (--x, --y, --w),
-   кегль (--fs) и интерлиньяж (--lh) заданы в px макета и
-   масштабируются вместе с картинкой через единицу --u.
+   WebMoney — страница кейса по макету «Кейс» (Figma, кадр 2800 px).
+   Тексты — HTML, графика — отдельные картинки, фоны — CSS.
+   Размеры макета переведены в единицу --u (1 px макета при
+   ширине окна 2800 px), чтобы пропорции сохранялись на любом
+   десктопе; у шрифтов есть нижняя граница в px.
    ========================================================== */
 
-.wm2-art {
-  --u: calc(100cqw / 2800);
-  position: relative;
-  container-type: inline-size;
-  background: var(--bg, #161721);
-  overflow: hidden;
+.wmp {
+  --u: calc(100vw / 2800);
+  --px: max(16px, calc(150 * var(--u)));
+  --wm-blue: #0b81e8;
+  --wm-ink: #2f303c;
+  --wm-ink-2: #424b58;
+  --wm-mute: #9c9cbe;
+  color: #fff;
+  font-weight: 500;
 }
-.wm2-art__stage { position: relative; }
-.wm2-art__img {
-  display: block;
-  width: 100%;
-  height: auto;
+.wmp section { position: relative; padding-inline: var(--px); }
+.wmp img { display: block; max-width: 100%; height: auto; }
+/* сброс с нулевой специфичностью, чтобы отступы секций его перекрывали */
+:where(.wmp) :where(h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote) { margin: 0; }
+:where(.wmp) :where(ul, ol) { padding: 0; list-style: none; }
+
+.wmp-light { color: var(--wm-ink); }
+
+/* ---------- Типографика ---------- */
+.wmp-label {
+  font-size: max(12px, calc(24 * var(--u)));
+  line-height: 1.34;
+  color: var(--wm-blue);
+  margin-bottom: max(10px, calc(27 * var(--u))) !important;
+}
+.wmp-h   { font-weight: 500; font-size: max(18px, calc(48 * var(--u))); line-height: 1.46; }
+.wmp-m   { font-weight: 500; font-size: max(20px, calc(64 * var(--u))); line-height: 1.5; }
+.wmp-l   { font-weight: 500; font-size: max(22px, calc(72 * var(--u))); line-height: 1.5; }
+.wmp-xl  { font-weight: 500; font-size: max(24px, calc(96 * var(--u))); line-height: 1.3; }
+.wmp-body {
+  font-weight: 400;
+  font-size: max(14px, calc(30 * var(--u)));
+  line-height: 1.6;
+  opacity: .8;
+}
+.wmp-light .wmp-body { color: var(--wm-ink-2); opacity: 1; }
+.wmp-source {
+  font-weight: 400;
+  font-size: max(12px, calc(26 * var(--u)));
+  line-height: 1.6;
+  color: var(--wm-mute);
 }
 
-.wm2-t {
+/* ---------- Экран приложения с подписью ---------- */
+.wmp-shot img { width: 100%; }
+.wmp-shot figcaption {
+  margin-top: max(8px, calc(24 * var(--u)));
+  text-align: center;
+  font-weight: 400;
+  font-size: max(12px, calc(28 * var(--u)));
+  color: var(--wm-mute);
+}
+.wmp-row {
+  display: grid;
+  gap: calc(60 * var(--u));
+  align-items: start;
+}
+.wmp-row--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.wmp-row--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.wmp-row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* ==========================================================
+   Первый экран
+   ========================================================== */
+.wmp-hero {
+  padding-top: calc(var(--header-h) + 30px);
+  background: #272d3b url("../assets/img/webmoney/page/hero-bg.jpg") center top / cover no-repeat;
+  overflow: hidden;
+}
+.wmp section.wmp-hero { padding-inline: 0; }
+.wmp-hero__back { margin-left: var(--gutter); }
+.wmp-hero__meta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-top: calc(60 * var(--u));
+  padding-inline: var(--gutter);
+  font-weight: 400;
+  font-size: max(11px, calc(18 * var(--u)));
+  color: rgba(255, 255, 255, .7);
+}
+.wmp-tags {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: max(6px, calc(20 * var(--u)));
+}
+.wmp-tags li {
+  padding: .5em 1.5em;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 99px;
+  white-space: nowrap;
+}
+.wmp-hero__year { justify-self: end; color: #68627a; }
+.wmp-hero__title {
+  margin-top: calc(22 * var(--u)) !important;
+  padding-inline: 16px;
+  text-align: center;
+  font-weight: 500;
+  font-size: max(30px, calc(150 * var(--u)));
+  line-height: 1;
+  letter-spacing: -.01em;
+  position: relative;
+  z-index: 0;              /* нижняя строка уходит под телефоны */
+}
+.wmp-hero__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .1em;
+  color: #4f6fe8;
+  white-space: nowrap;
+}
+.wmp-hero__brand img { width: .68em; height: .68em; }
+
+/* сцена с телефонами: 2800 × 3026 px макета (от верха телефонов до низа секции) */
+.wmp-hero__stage {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 2800 / 3026;
+  margin-top: calc(-71 * var(--u));
+}
+.wmp-hero__ring {
+  position: absolute;
+  left: 20.5%;
+  top: 13.1%;
+  width: 59%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .03);
+}
+.wmp-hero__phones {
+  position: absolute;
+  z-index: 1;              /* телефоны поверх карточки истории операций */
+  left: 25.71%;
+  top: 0;
+  width: 48.57%;
+}
+.wmp img.wmp-hero__float { position: absolute; max-width: none; }
+.wmp-hero__float--cards    { left: 72.4%; top: 33.9%; width: 24.9%; }
+.wmp-hero__float--balance  { left: 0;     top: 74.7%; width: 21.68%; }
+.wmp-hero__float--expenses { left: 75.36%; top: 77.86%; width: 21.96%; }
+.wmp-hero__role {
+  position: absolute;
+  left: 72.5%;
+  top: 7.9%;
+  width: 24%;
+  font-size: max(12px, calc(16 * var(--u)));
+  line-height: 1.5;
+  z-index: 2;
+}
+.wmp-hero__role dt { color: #68627a; }
+.wmp-hero__role dd + dt { margin-top: 1.1em; }
+
+/* стекло: полупрозрачная заливка и размытие того, что под ним */
+.wmp-glass,
+.wmp-glass-btn,
+.wmp-hero__down {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  z-index: 1;
+}
+.wmp-glass,
+.wmp-glass-btn {
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .08);
+  -webkit-backdrop-filter: blur(max(10px, calc(40 * var(--u))));
+  backdrop-filter: blur(max(10px, calc(40 * var(--u))));
+}
+.wmp-glass {
+  width: calc(var(--w) * var(--u));
+  border-radius: calc(40 * var(--u));
+  font-weight: 400;
+  font-size: calc(22 * var(--u));
+  line-height: 1.35;
+  color: #fff;
+  box-shadow: 0 calc(30 * var(--u)) calc(60 * var(--u)) rgba(10, 14, 30, .25);
+}
+.wmp-glass__sub,
+.wmp-glass__time,
+.wmp-glass__day { color: rgba(255, 255, 255, .45); }
+.wmp-glass__name,
+.wmp-glass__amt { font-weight: 500; font-size: calc(26 * var(--u)); }
+.wmp-glass__time { font-size: calc(19 * var(--u)); }
+.wmp img.wmp-glass__icon,
+.wmp-glass li > img,
+.wmp-glass__icon img { width: 100%; border-radius: 30%; }
+
+.wmp-glass--history { z-index: 0; }
+.wmp-glass--support { z-index: 2; }
+.wmp-glass--history { padding: calc(44 * var(--u)) calc(41 * var(--u)) calc(30 * var(--u)) calc(43 * var(--u)); }
+.wmp-glass--history ul { display: grid; gap: calc(29 * var(--u)); margin: calc(30 * var(--u)) 0 calc(56 * var(--u)) !important; }
+.wmp-glass--history li {
+  display: grid;
+  grid-template-columns: calc(85 * var(--u)) 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: calc(29 * var(--u));
+  align-items: center;
+}
+.wmp-glass--history li > img { grid-row: 1 / 3; }
+.wmp-glass--history li > :not(img) { align-self: end; }
+.wmp-glass--history .wmp-glass__sub,
+.wmp-glass--history .wmp-glass__time { align-self: start; }
+.wmp-glass--history .wmp-glass__amt { grid-column: 3; grid-row: 1; text-align: right; }
+.wmp-glass--history .wmp-glass__time { grid-column: 3; grid-row: 2; text-align: right; }
+.wmp-glass--history li:not(:has(.wmp-glass__time)) .wmp-glass__amt { grid-row: 1 / 3; align-self: center; }
+
+.wmp-glass--support {
+  display: grid;
+  grid-template-columns: calc(80 * var(--u)) minmax(0, 1fr) auto;
+  column-gap: calc(24 * var(--u));
+  align-items: center;
+  padding: calc(34 * var(--u)) calc(34 * var(--u));
+  border-radius: calc(35 * var(--u));
+}
+.wmp-glass__icon { position: relative; grid-row: 1 / 3; }
+.wmp-glass__icon::after {                  /* «в сети» */
+  content: "";
+  position: absolute;
+  right: calc(-5 * var(--u));
+  bottom: calc(-5 * var(--u));
+  width: calc(11 * var(--u));
+  height: calc(11 * var(--u));
+  border: calc(5 * var(--u)) solid #3b4153;
+  border-radius: 50%;
+  background: #6fcf97;
+}
+.wmp-glass--support .wmp-glass__name { align-self: end; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: calc(23 * var(--u)); }
+.wmp-glass--support .wmp-glass__sub {
+  align-self: start;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: calc(19 * var(--u));
+}
+.wmp-glass--support .wmp-glass__time { grid-column: 3; grid-row: 1; align-self: end; text-align: right; }
+.wmp-glass__badge {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+  min-width: calc(35 * var(--u));
+  padding: 0 calc(10 * var(--u));
+  border-radius: 99px;
+  background: #0b81e8;
+  font-size: calc(18 * var(--u));
+  line-height: calc(28 * var(--u));
+  text-align: center;
+}
+
+.wmp-glass-btn {
+  display: grid;
+  place-items: center;
+  width: calc(160 * var(--u));
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.wmp-glass-btn img { width: 25%; }
+.wmp-hero__down {
+  display: grid;
+  place-items: center;
+  width: calc(150 * var(--u));
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 50%;
+}
+.wmp-hero__down img { width: 8%; }
+
+/* ==========================================================
+   Идея и план работ
+   ========================================================== */
+.wmp-idea {
+  background: #282d3c;
+  padding-block: calc(70 * var(--u)) calc(200 * var(--u));
+}
+.wmp-idea__lead { max-width: calc(1458 * var(--u) + 60px); }
+.wmp-gantt-wrap { margin-top: max(28px, calc(80 * var(--u))); }
+.wmp-gantt {
+  --col: calc(100% / 12);
+  position: relative;
+  font-weight: 400;
+  font-size: max(11px, calc(26 * var(--u)));
+}
+.wmp-gantt__bars {
+  position: relative;
+  display: grid;
+  gap: max(6px, calc(20 * var(--u)));
+  padding-block: max(10px, calc(20 * var(--u))) max(14px, calc(40 * var(--u))) !important;
+  border: 1px dashed rgba(255, 255, 255, .14);
+  /* пунктирная сетка: 12 колонок */
+  background:
+    repeating-linear-gradient(to right, rgba(255, 255, 255, .09) 0 1px, transparent 1px var(--col)) 0 0 / 100% 100%;
+}
+.wmp-gantt__bars li {
+  margin-left: calc(var(--s) * var(--col));
+  width: calc(var(--w) * var(--col) - 2%);
+  min-height: max(34px, calc(100 * var(--u)));
+  display: flex;
+  align-items: center;
+  padding: .3em 1.4em;
+  border-radius: max(10px, calc(30 * var(--u)));
+  line-height: 1.25;
+}
+.wmp-gantt__bars .is-research { background: #181a1d; }
+.wmp-gantt__bars .is-ux { background: #597ce1; }
+.wmp-gantt__bars .is-ui { background: #a48bf2; }
+.wmp-gantt__phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: max(8px, calc(20 * var(--u))) !important;
+  color: #68627a;
+}
+.wmp-gantt__icon { position: absolute; width: 8%; z-index: 1; opacity: .9; }
+.wmp-gantt__icon--a { right: 4.4%; top: 8%; }
+.wmp-gantt__icon--b { left: 4.3%; bottom: 13%; }
+
+/* ==========================================================
+   Анализ рынка
+   ========================================================== */
+.wmp-market {
+  background: #fff;
+  padding-block: calc(270 * var(--u)) calc(180 * var(--u));
+  overflow: hidden;
+}
+/* две большие окружности на фоне */
+.wmp-market::before,
+.wmp-market::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #eeeef6;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.wmp-market::before { left: -21%; top: calc(220 * var(--u)); width: 60%; aspect-ratio: 1; }
+.wmp-market::after { left: -24%; top: calc(1330 * var(--u)); width: 48%; aspect-ratio: 1; }
+
+.wmp-market__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 41fr 49fr;
+  column-gap: calc(250 * var(--u));
+  align-items: start;
+}
+.wmp-market__photos { margin: calc(170 * var(--u)) 0 0 calc(-50 * var(--u)); width: 100%; }
+.wmp-market__body > .wmp-h + .wmp-stats { margin-top: max(18px, calc(134 * var(--u))); }
+.wmp-market__body > .wmp-source + .wmp-h { margin-top: max(24px, calc(82 * var(--u))); }
+
+.wmp-stat {
+  font-weight: 400;
+  font-size: max(13px, calc(30 * var(--u)));
+  line-height: 1.4;
+  color: var(--wm-ink);
+}
+.wmp-stat b {
+  display: block;
+  font-weight: 400;
+  font-size: max(30px, calc(72 * var(--u)));
+  line-height: 1.18;
+  color: #597ce1;
+}
+.wmp-stat small { font-size: .5em; margin-left: .1em; }
+.wmp-stat--xl { max-width: calc(472 * var(--u) + 60px); margin-top: calc(89 * var(--u)) !important; }
+.wmp-stat--xl b { font-size: max(48px, calc(160 * var(--u))); margin-bottom: .1em; }
+.wmp-stats { display: flex; gap: max(32px, calc(240 * var(--u))); }
+.wmp-stats + .wmp-source { margin-top: max(10px, calc(36 * var(--u))); }
+
+.wmp-pill {
+  display: inline-block;
+  padding: 0 .5em;
+  border-radius: 99px;
+  background: #021639;
+  color: #fff;
+  white-space: nowrap;
+}
+.wmp-audience {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(84 * var(--u));
+  margin-top: max(20px, calc(146 * var(--u)));
+}
+.wmp-audience__gender { width: 37.8%; flex: none; }
+.wmp-ages {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4%;
+  align-items: end;
+  font-weight: 400;
+  font-size: max(10px, calc(18 * var(--u)));
+  text-align: center;
+  color: var(--wm-ink-2);
+}
+.wmp-ages li { display: grid; gap: .5em; white-space: nowrap; }
+.wmp-ages b {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: max(calc(var(--h) * .28px), calc(var(--h) * var(--u)));
+  padding-bottom: .5em;
+  border-radius: max(6px, calc(20 * var(--u)));
+  background: #597ce1;
+  font-weight: 400;
+  color: #fff;
+}
+.wmp-ages li:nth-child(1) b,
+.wmp-ages li:nth-child(5) b { background: #abbdef; }
+
+.wmp-sub {
+  margin-top: max(20px, calc(62 * var(--u))) !important;
+  font-weight: 400;
+  font-size: max(15px, calc(30 * var(--u)));
+  line-height: 1.4;
+}
+.wmp-jobs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: calc(5 * var(--u));
+  margin-top: max(10px, calc(20 * var(--u))) !important;
+  font-weight: 400;
+  font-size: max(9px, calc(18 * var(--u)));
+  text-align: center;
+  color: var(--wm-ink);
+}
+.wmp-jobs li {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8f8fb;
+}
+.wmp-jobs b { font-weight: 400; font-size: 2.4em; line-height: 1.1; }
+.wmp-jobs small { font-size: .5em; }
+.wmp-jobs + .wmp-source { margin-top: max(10px, calc(50 * var(--u))); }
+
+.wmp-radar {
+  position: relative;
+  z-index: 1;
+  margin-top: max(48px, calc(262 * var(--u)));
+  padding: calc(150 * var(--u)) calc(200 * var(--u)) calc(100 * var(--u));
+  border-radius: max(24px, calc(100 * var(--u)));
+  background: #f8f8fb;
+  text-align: center;
+}
+.wmp-legend {
+  display: flex;
+  justify-content: center;
+  gap: max(24px, calc(94 * var(--u)));
+  margin-top: max(16px, calc(100 * var(--u))) !important;
+  font-weight: 400;
+  font-size: max(13px, calc(30 * var(--u)));
+}
+.wmp-legend li { display: flex; align-items: center; gap: .7em; }
+.wmp-legend li::before {
+  content: "";
+  width: 2.3em;
+  height: 1.65em;
+  border-radius: 99px;
+  background: #fbd9a5;
+}
+.wmp-legend .is-2020::before { background: #5271e0; }
+.wmp-radar__lead {
+  margin-top: max(16px, calc(58 * var(--u))) !important;
+  padding-bottom: max(14px, calc(30 * var(--u)));
+  border-bottom: 1px solid #e9e9f1;
+  font-weight: 400;
+  font-size: max(13px, calc(30 * var(--u)));
+  line-height: 1.4;
+  color: var(--wm-ink-2);
+}
+.wmp-radar__chart { width: 85.2%; margin: max(20px, calc(70 * var(--u))) auto 0; }
+.wmp-radar__caption {
+  margin-top: max(16px, calc(96 * var(--u))) !important;
+  padding-bottom: max(14px, calc(100 * var(--u)));
+  border-bottom: 1px solid #e9e9f1;
+  font-weight: 400;
+  font-size: max(13px, calc(30 * var(--u)));
+}
+.wmp-radar__source { margin-top: max(12px, calc(50 * var(--u))) !important; }
+.wmp-footnote {
+  position: relative;
+  z-index: 1;
+  max-width: calc(1353 * var(--u) + 40px);
+  margin: max(16px, calc(20 * var(--u))) auto 0 !important;
+  text-align: center;
+  font-weight: 400;
+  font-size: max(11px, calc(24 * var(--u)));
+  line-height: 1.75;
+  color: var(--wm-mute);
+}
+
+/* ==========================================================
+   Пользовательские интервью
+   ========================================================== */
+.wmp-interview {
+  padding-top: calc(200 * var(--u));
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff calc(1753 * var(--u))),
+    linear-gradient(100deg, #f4f9ff, #f7effe);
+}
+.wmp-interview__grid {
+  display: grid;
+  grid-template-columns: 1415fr 850fr;
+  column-gap: calc(297 * var(--u));
+  align-items: start;
+}
+.wmp-problems {
+  display: grid;
+  gap: max(12px, calc(40 * var(--u)));
+  margin-top: max(24px, calc(206 * var(--u))) !important;
+  font-size: max(14px, calc(30 * var(--u)));
+  line-height: 1.4;
+  color: var(--wm-ink-2);
+}
+.wmp-problems li { position: relative; padding-left: 1.45em; }
+.wmp-problems li::before {
+  content: "";
+  position: absolute;
+  left: .1em;
+  top: .5em;
+  width: .4em;
+  height: .4em;
+  border-radius: 50%;
+  background: var(--wm-blue);
+}
+.wmp-problems li:nth-child(even)::before { border-radius: 0; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.wmp-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(8px, calc(20 * var(--u)));
+  margin-top: max(24px, calc(95 * var(--u)));
+}
+.wmp-badges img { height: max(40px, calc(128 * var(--u))); width: auto; }
+
+.wmp-quote { padding-top: calc(45 * var(--u)); }
+.wmp-quote__avatar { width: max(72px, calc(200 * var(--u))); margin-left: calc(-62 * var(--u)); }
+.wmp-quote blockquote {
+  position: relative;
+  margin-top: max(16px, calc(71 * var(--u)));
+  font-size: max(15px, calc(36 * var(--u)));
+  line-height: 1.56;
+}
+.wmp-quote blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -.75em;
+  top: -.12em;
+  font-size: 2.6em;
+  line-height: 1;
+  color: var(--wm-blue);
+}
+.wmp-quote blockquote p + p { margin-top: 1.56em; }
+.wmp-quote figcaption {
+  margin-top: max(14px, calc(30 * var(--u)));
+  font-weight: 400;
+  font-size: max(11px, calc(18 * var(--u)));
+  color: var(--wm-mute);
+}
+.wmp-quote figcaption b {
+  display: block;
+  font-weight: 500;
+  font-size: max(14px, calc(30 * var(--u)));
+  color: var(--wm-blue);
+}
+.wmp img.wmp-interview__reviews {
+  width: 100vw;
+  max-width: none;
+  margin: max(40px, calc(197 * var(--u))) calc(-1 * var(--px)) 0;
+}
+
+/* ==========================================================
+   Персоны: видео на всю ширину
+   ========================================================== */
+.wmp section.wmp-video { padding-inline: 0; background: #8d8f97; }
+.wmp-video .wm-video { border-radius: 0; aspect-ratio: 2800 / 1575; }
+.wmp-video .wm-video__el { display: block; }
+
+/* ==========================================================
+   Проектирование
+   ========================================================== */
+.wmp-ux {
+  background: #272b41;
+  padding-block: calc(202 * var(--u)) calc(232 * var(--u));
+  overflow: hidden;
+}
+.wmp img.wmp-ux__map { width: calc(2650 * var(--u)); max-width: none; }
+.wmp-ux__grid {
+  display: grid;
+  grid-template-columns: 1361fr 800fr;
+  column-gap: calc(322 * var(--u));
+  align-items: end;
+  margin-top: calc(-356 * var(--u));
+  padding-right: calc(17 * var(--u));
+}
+.wmp-goals {
+  counter-reset: goal;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: max(8px, calc(20 * var(--u)));
+  margin-top: max(24px, calc(236 * var(--u))) !important;
+  width: 90%;
+  font-weight: 400;
+  font-size: max(12px, calc(24 * var(--u)));
+  line-height: 1.34;
+}
+.wmp-goals li {
+  counter-increment: goal;
+  padding: max(12px, calc(35 * var(--u))) max(12px, calc(50 * var(--u))) max(14px, calc(40 * var(--u)));
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: max(12px, calc(40 * var(--u)));
+  background: rgba(255, 255, 255, .1);
+}
+.wmp-goals li::before {
+  content: "0" counter(goal) ".";
+  display: block;
+  margin-bottom: 1.2em;
+  font-size: .75em;
+  color: rgba(255, 255, 255, .4);
+}
+.wmp img.wmp-ux__wires {
+  width: 100vw;
+  max-width: none;
+  margin: calc(400 * var(--u)) calc(-1 * var(--px)) 0;
+}
+
+/* ==========================================================
+   Телефон с видео в кругах
+   ========================================================== */
+.wmp-start,
+.wmp-quick {
+  padding-block: calc(280 * var(--u)) calc(300 * var(--u));
+  text-align: center;
+  overflow: hidden;
+}
+.wmp-start { background: #151a2e; }
+.wmp-quick { background: #f3f3fa; }
+.wmp-start .wmp-h { max-width: 14em; margin-inline: auto; font-size: max(22px, calc(64 * var(--u))); }
+.wmp-quick .wmp-m { max-width: 14em; margin-inline: auto; }
+.wmp-rings {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: calc(180 * var(--u));
+}
+.wmp-rings::before,
+.wmp-rings::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max(300px, calc(1300 * var(--u)));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .035);
+  transform: translate(-50%, -50%);
+}
+.wmp-rings::after { width: max(420px, calc(1900 * var(--u))); }
+.wmp-rings--light::before,
+.wmp-rings--light::after { background: rgba(120, 130, 190, .06); }
+.wmp-rings .wm-device {
+  z-index: 1;
+  width: max(220px, calc(790 * var(--u)));
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, .35));
+}
+.wmp-rings--light .wm-device { filter: drop-shadow(0 40px 80px rgba(60, 70, 120, .25)); }
+
+/* ==========================================================
+   Секции со связями экранов: элементы стоят по координатам макета
+   (--x, --y от верха секции, --w в px макета), стрелки — картинки
+   ========================================================== */
+.wmp section.wmp-sec-abs { padding: 0; overflow: hidden; }
+.wmp-abs { position: relative; height: calc(var(--h) * var(--u)); }
+.wmp-abs > * {
   position: absolute;
   left: calc(var(--x) * var(--u));
   top: calc(var(--y) * var(--u));
   width: calc(var(--w) * var(--u));
-  margin: 0;
-  font-weight: var(--fw, 500);
-  font-size: max(var(--min, 12px), calc(var(--fs) * var(--u)));
-  line-height: calc(var(--lh) / var(--fs));
-  color: var(--c, #fff);
-  text-align: var(--ta, left);
-  z-index: 1;
+  max-width: none;
 }
-.wm2-t--label { --fs: 24; --lh: 32; --c: #0b81e8; --fw: 500; }
-.wm2-t--h { --fs: 48; --lh: 70; }
-.wm2-t--body { --fs: 30; --lh: 48; --fw: 400; }
-.wm2-t p + p { margin-top: calc(var(--lh) / var(--fs) * 1em); }
-
-.wm2-light { --c: #2f303c; }
-.wm2-muted { color: #68627a; }
-
-/* список проблем из интервью: маркеры остаются в картинке */
-.wm2-t--item { --fs: 30; --lh: 42; --c: #424b58; }
-
-/* цитата пользователя */
-.wm2-quote { --fs: 36; --lh: 56; --fw: 500; --c: #2f303c; }
-
-/* роль и результат на первом экране */
-.wm2-role { --fs: 16; --lh: 24; --fw: 500; }
-.wm2-role span { color: #68627a; }
-
-/* кнопка «Назад» поверх первого экрана */
-.wm2-back {
-  position: absolute;
-  left: calc(100 * var(--u));
-  top: calc(120 * var(--u));
-  z-index: 2;
-}
-
-/* заголовок первого экрана нарисован в картинке; для чтения экраном — текст */
-.wm2-sr {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+.wmp-abs > .wmp-shot { z-index: 1; }
+.wmp-abs > .wmp-shot figcaption { margin-top: calc(30 * var(--u)); }
+.wmp-arrow { z-index: 2; pointer-events: none; }
+.wmp-ring { aspect-ratio: 1; border-radius: 50%; background: rgba(255, 255, 255, .05); }
+.wmp-ring--line { background: none; border: 1px solid #e3e3ef; }
+.wmp-vlabel {
+  height: calc(var(--h) * var(--u));
+  writing-mode: vertical-rl;
+  font-weight: 400;
+  font-size: max(11px, calc(28 * var(--u)));
+  line-height: calc(42 * var(--u));
+  color: var(--wm-mute);
   white-space: nowrap;
 }
 
-/* телефон с видео поверх телефона из макета */
-.wm2-device {
-  position: absolute;
-  left: calc(var(--x) * var(--u));
-  top: calc(var(--y) * var(--u));
-  width: calc(var(--w) * var(--u));
-  z-index: 1;
-}
-.wm2-device.wm-device { filter: none; justify-self: auto; }
+/* вход */
+.wmp-login { background: linear-gradient(to bottom, #171c32 0, #171e37 5%, #184a8d 52%, #2a6fc3 100%); }
+.wmp-login .wmp-xl { z-index: 2; }
 
-/* персоны: видео на всю ширину */
-.wm2-video {
-  position: relative;
-  background: #8d8f97;
-}
-.wm2-video .wm-video__el {
-  display: block;
-  width: 100%;
-  aspect-ratio: 2800 / 1575;
-  object-fit: cover;
-  border-radius: 0;
-}
+/* главный экран */
+.wmp-main { background: #f3f3f9; }
+.wmp-main__lead { line-height: 1.25; }
 
-/* «Следующий продукт» сразу после тёмной темы */
-.wm2-next { padding-top: 60px; }
+/* атомарный дизайн */
+.wmp-atomic { background: #f3f3f9; }
+.wmp-atomic .wmp-l { line-height: 1.67; }
+.wmp-atomic .wmp-body { opacity: 1; }
+
+/* платежи */
+.wmp-pay { background: #2a2d36 url("../assets/img/webmoney/page/pay-bg.jpg") center / cover no-repeat; }
+.wmp-pay .wmp-l { line-height: 1.34; text-shadow: 0 2px 30px rgba(0, 0, 0, .25); }
+
+/* сообщения */
+.wmp-msg { background: #c6d6e3 url("../assets/img/webmoney/page/msg-bg.jpg") center / cover no-repeat; }
+.wmp-msg .is-text { text-align: center; }
 
 /* ==========================================================
-   Узкие экраны: текст уходит над картинкой обычным потоком
+   Анализ финансов
+   ========================================================== */
+.wmp-fin {
+  padding-block: calc(500 * var(--u)) calc(430 * var(--u));
+  background: linear-gradient(to bottom, #0c0f18 0, #0c1728 8%, #1d5aa4 78%, #2b72c4 100%);
+}
+.wmp-fin__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: calc(90 * var(--u));
+  padding-inline: calc(20 * var(--u));
+}
+.wmp-fin__s1 { grid-column: 1; grid-row: 1 / 3; }
+.wmp-fin__head { grid-column: 2 / 4; grid-row: 1; padding: 0 0 calc(220 * var(--u)) calc(260 * var(--u)); margin-right: calc(-20 * var(--u)); }
+.wmp-fin__head .wmp-l { line-height: 1.6; font-size: max(22px, calc(80 * var(--u))); }
+.wmp-fin__head .wmp-body { margin-top: max(10px, calc(26 * var(--u))); }
+.wmp-fin__s2 { grid-column: 2; grid-row: 2 / 4; }
+.wmp-fin__s3 { grid-column: 3; grid-row: 2 / 5; margin-top: calc(694 * var(--u)); }
+.wmp-fin__note { grid-column: 1 / 3; grid-row: 4; margin: calc(216 * var(--u)) 0 0 calc(-20 * var(--u)) !important; }
+
+/* ==========================================================
+   Тёмная тема: четыре колонки экранов со сдвигом
+   ========================================================== */
+.wmp-dark { background: #191a21; padding-block: calc(400 * var(--u)) calc(300 * var(--u)); }
+.wmp-dark__head { position: absolute; left: var(--px); top: calc(400 * var(--u)); width: calc(700 * var(--u)); z-index: 1; }
+.wmp-dark__cols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: calc(90 * var(--u));
+  padding-inline: calc(20 * var(--u)) calc(22 * var(--u));
+  align-items: start;
+}
+.wmp-dark__col { display: grid; gap: calc(50 * var(--u)); }
+.wmp-dark__col img { width: 100%; }
+.wmp-dark__col:nth-child(1) { margin-top: calc(609 * var(--u)); }
+.wmp-dark__col:nth-child(2) { margin-top: calc(410 * var(--u)); }
+.wmp-dark__col:nth-child(3) { margin-top: calc(210 * var(--u)); }
+
+.wmp-next { padding-top: 60px; }
+
+/* ==========================================================
+   Планшет и телефон: одна колонка
    ========================================================== */
 @media (max-width: 760px) {
-  .wm2-art { display: flex; flex-direction: column; }
-  .wm2-art__text {
+  .wmp section { padding-block: 56px; }
+  .wmp section.wmp-video { padding-block: 0; }
+
+  /* ограничения ширины текста из макета на узком экране не нужны */
+  .wmp-idea__lead,
+  .wmp-stat--xl,
+  .wmp-footnote,
+  .wmp-start .wmp-h,
+  .wmp-quick .wmp-m { max-width: none; }
+
+  /* первый экран */
+  .wmp section.wmp-hero { padding-top: calc(var(--header-h) + 16px); padding-bottom: 0; }
+  .wmp-hero__meta { grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
+  .wmp-tags { grid-column: 1; justify-content: flex-start; }
+  .wmp-hero__year { justify-self: start; }
+  .wmp-hero__title { margin-top: 20px !important; text-align: left; padding-inline: var(--gutter); }
+  .wmp-hero__brand { justify-content: flex-start; }
+  .wmp-hero__stage { aspect-ratio: auto; margin-top: 24px; padding: 0 var(--gutter); }
+  .wmp-hero__role { position: static; width: auto; font-size: 14px; }
+  .wmp-hero__phones { position: relative; left: auto; width: 86%; margin: 28px auto -18%; }
+  .wmp-hero__ring { top: 30%; left: 5%; width: 90%; }
+  .wmp-hero__float { display: none !important; }
+
+  /* план работ прокручивается по горизонтали */
+  .wmp-gantt-wrap { overflow-x: auto; margin-inline: calc(-1 * var(--px)); padding-inline: var(--px); }
+  .wmp-gantt { min-width: 720px; }
+
+  .wmp-market__grid,
+  .wmp-interview__grid,
+  .wmp-ux__grid { grid-template-columns: 1fr; row-gap: 32px; }
+
+  .wmp-market::before, .wmp-market::after { display: none; }
+  .wmp-stat--xl { margin-top: 0 !important; }
+  .wmp-market__photos { margin: 24px 0 0; }
+  .wmp-audience { flex-direction: column; align-items: stretch; gap: 24px; }
+  .wmp-audience__gender { width: 70%; }
+  .wmp-jobs { grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 11px; }
+  .wmp-radar { padding: 28px 16px; margin-inline: calc(-1 * var(--px) + 8px); }
+  .wmp-radar__chart { width: 100%; }
+
+  .wmp section.wmp-interview { padding-bottom: 0; }
+  .wmp-quote { padding-left: 24px; }
+  .wmp-quote__avatar { margin-left: -24px; }
+  .wmp img.wmp-interview__reviews { width: 190vw; margin-top: 40px; }
+
+  .wmp-ux__grid { margin-top: 32px; padding-right: 0; }
+  .wmp-goals { grid-template-columns: 1fr 1fr; width: 100%; }
+  .wmp-ux__phone { width: 62%; margin-inline: auto !important; }
+  .wmp img.wmp-ux__wires { width: 220vw; margin-top: 40px; }
+
+  .wmp-rings { margin-top: 40px; }
+
+  .wmp-row--4, .wmp-row--3 { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .wmp-row > * { margin-top: 0 !important; }
+
+  /* секции со стрелками: обычный поток в две колонки, стрелки и декор скрыты */
+  .wmp section.wmp-sec-abs { padding: 56px var(--px); }
+  .wmp-abs {
+    height: auto;
     display: grid;
-    gap: 14px;
-    padding: 40px 16px 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    align-items: start;
   }
-  .wm2-t {
-    position: static;
-    width: auto;
-    font-size: clamp(14px, calc(var(--fs) * 0.32px), 26px);
-    text-align: left;
-  }
-  .wm2-t--label { font-size: 13px; }
-  .wm2-role { font-size: 14px; }
-  .wm2-quote { font-size: 16px; }
-  .wm2-back { position: static; margin: 0 0 8px; }
-  .wm2 > .wm2-art:first-child .wm2-art__text { padding-top: 110px; }   /* под шапкой сайта */
-  .wm2-device { width: calc(var(--w) * var(--u)); }
+  .wmp-abs > * { position: relative; left: auto; top: auto; width: auto; }
+  .wmp-abs > .is-text,
+  .wmp-abs > .is-full { grid-column: 1 / -1; }
+  .wmp-abs > .is-deco { display: none; }
+  .wmp-abs > .wmp-shot figcaption { margin-top: 8px; }
+  .wmp-abs > .wmp-main__home { width: 72%; justify-self: center; }
+  .wmp img.wmp-login__photo { width: 80%; margin-left: calc(-1 * var(--px)); }
+  .wmp img.wmp-login__hand { width: calc(100% + 2 * var(--px)); margin: 0 calc(-1 * var(--px)) -56px; }
+  .wmp-main__lead { line-height: 1.3; }
+
+  .wmp-fin__grid { grid-template-columns: 1fr 1fr; gap: 16px; padding-inline: 0; }
+  .wmp-fin__grid > * { grid-column: auto; grid-row: auto; margin: 0 !important; }
+  .wmp-fin__head { grid-column: 1 / -1; padding: 0 0 8px; order: -1; }
+  .wmp-fin__note { grid-column: 1 / -1; align-self: center; }
+  .wmp-fin__s3 { grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center; }
+
+
+  .wmp-dark__head { position: static; width: auto; margin-bottom: 28px; }
+  .wmp-dark__cols { grid-template-columns: 1fr 1fr; gap: 12px; padding-inline: 0; }
+  .wmp-dark__col { display: contents; }
 }

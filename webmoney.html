@@ -44,70 +44,167 @@
     </nav>
   </header>
 
-  <main class="wm2">
+  <main class="wmp">
     <!-- ========== Первый экран ========== -->
-    <section class="wm2-art" style="--bg:#272d3b" aria-labelledby="case-title">
-      <div class="wm2-art__text">
-        <a class="back-link wm2-back" href="index.html#works">
-          <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
-          Назад
-        </a>
-        <h1 class="wm2-sr" id="case-title">Новое мобильное приложение WebMoney App</h1>
-        <p class="wm2-t wm2-role" style="--x:2030;--y:770;--w:760"><span>Роль:</span><br>Дизайнер&nbsp;— исследование, проектирование, UI, UX, анимации<br><span>Результат:</span><br>Обновлённый визуал, упрощённая структура и&nbsp;новые функции</p>
+    <section class="wmp-hero" aria-labelledby="case-title">
+      <a class="back-link wmp-hero__back" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+      <div class="wmp-hero__meta" data-reveal>
+        <ul class="wmp-tags" aria-label="Виды работ">
+          <li>Research</li><li>Wireframe</li><li>UI/UX Design</li><li>Mobile Design</li><li>UI Animations</li>
+        </ul>
+        <span class="wmp-hero__year">2021</span>
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/a.jpg?v=2" alt="Новое мобильное приложение WebMoney App: экраны кошелька, расходов и истории операций" width="1419" height="1803">
+      <h1 class="wmp-hero__title" id="case-title" data-reveal>Новое мобильное приложение <span class="wmp-hero__brand"><img src="assets/img/webmoney/page/logo.webp" alt="" width="102" height="102">WebMoney App</span></h1>
+
+      <div class="wmp-hero__stage">
+        <span class="wmp-hero__ring" aria-hidden="true"></span>
+        <dl class="wmp-hero__role" data-reveal>
+          <dt>Роль:</dt><dd>Дизайнер&nbsp;— исследование, проектирование, UI, UX, анимации</dd>
+          <dt>Результат:</dt><dd>Обновлённый визуал, упрощённая структура и&nbsp;новые функции</dd>
+        </dl>
+        <img class="wmp-hero__phones" src="assets/img/webmoney/page/hero-phones.webp" alt="Экраны нового приложения WebMoney на двух iPhone: анализ расходов и кошелёк" width="1360" height="2626" data-reveal>
+        <div class="wmp-glass wmp-glass--history wmp-hero__float" style="--x:356;--y:1265;--w:665" aria-hidden="true">
+          <p class="wmp-glass__day">Сегодня, 2&nbsp;мая</p>
+          <ul>
+            <li><img src="assets/img/webmoney/page/ic-yandex.webp" alt="" width="85" height="85"><span class="wmp-glass__name">Яндекс Go</span><span class="wmp-glass__sub">Транспорт</span><span class="wmp-glass__amt">−623&nbsp;₽</span><span class="wmp-glass__time">12:10</span></li>
+            <li><img src="assets/img/webmoney/page/ic-domru.webp" alt="" width="85" height="85"><span class="wmp-glass__name">Дом.ru</span><span class="wmp-glass__sub">Оплата услуг</span><span class="wmp-glass__amt">−610&nbsp;₽</span></li>
+          </ul>
+          <p class="wmp-glass__day">Вчера, 1&nbsp;мая</p>
+          <ul>
+            <li><img src="assets/img/webmoney/page/ic-wm.webp" alt="" width="85" height="85"><span class="wmp-glass__name">WebMoney</span><span class="wmp-glass__sub">Исходящий перевод</span><span class="wmp-glass__amt">−10&nbsp;000&nbsp;₽</span><span class="wmp-glass__time">22:56</span></li>
+            <li><img src="assets/img/webmoney/page/ic-ui8.webp" alt="" width="85" height="85"><span class="wmp-glass__name">UI8</span><span class="wmp-glass__sub">Входящий перевод</span><span class="wmp-glass__amt">+42&nbsp;481.51&nbsp;₽</span><span class="wmp-glass__time">11:58</span></li>
+          </ul>
+        </div>
+        <img class="wmp-hero__float wmp-hero__float--cards" src="assets/img/webmoney/page/hero-cards.webp" alt="" width="697" height="402" loading="lazy" aria-hidden="true">
+        <div class="wmp-glass wmp-glass--support wmp-hero__float" style="--x:1923;--y:1792;--w:536" aria-hidden="true">
+          <span class="wmp-glass__icon"><img src="assets/img/webmoney/page/ic-support.webp" alt="" width="80" height="80"></span>
+          <span class="wmp-glass__name">Поддержка WebMoney</span>
+          <span class="wmp-glass__sub">Спасибо за&nbsp;обращение в&nbsp;службу поддержки</span>
+          <span class="wmp-glass__time">23:58</span>
+          <span class="wmp-glass__badge">2</span>
+        </div>
+        <span class="wmp-glass-btn wmp-hero__float" style="--x:-34;--y:993" aria-hidden="true"><img src="assets/img/webmoney/page/ic-finger.png" alt="" width="40" height="40"></span>
+        <span class="wmp-glass-btn wmp-hero__float" style="--x:1092;--y:2552" aria-hidden="true"><img src="assets/img/webmoney/page/ic-qr.png" alt="" width="40" height="40"></span>
+        <span class="wmp-hero__down wmp-hero__float" style="--x:1850;--y:219" aria-hidden="true"><img src="assets/img/webmoney/page/ic-down.png" alt="" width="13" height="17"></span>
+        <img class="wmp-hero__float wmp-hero__float--balance" src="assets/img/webmoney/page/hero-balance.webp" alt="" width="607" height="311" loading="lazy" aria-hidden="true">
+        <img class="wmp-hero__float wmp-hero__float--expenses" src="assets/img/webmoney/page/hero-expenses.webp" alt="" width="615" height="630" loading="lazy" aria-hidden="true">
       </div>
     </section>
 
-    <!-- ========== Идея и процесс ========== -->
-    <section class="wm2-art" style="--bg:#272d3b">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--h" style="--x:150;--y:70;--w:1458">Идея пришла при использовании приложения: устаревший визуал и&nbsp;запутанная структура текущего дизайна натолкнули на&nbsp;мысль о&nbsp;необходимости редизайна, и&nbsp;понеслась...</p>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/b.jpg" alt="План работ: анализ рынка, интервью и персоны, конкурентный анализ, user flow, структура, прототипирование, дизайн, дизайн-система, презентация" width="1419" height="892" loading="lazy">
+    <!-- ========== Идея и план работ ========== -->
+    <section class="wmp-idea" aria-label="Идея и план работ">
+      <p class="wmp-h wmp-idea__lead" data-scroll-reveal>Идея пришла при использовании приложения: устаревший визуал и&nbsp;запутанная структура текущего дизайна натолкнули на&nbsp;мысль о&nbsp;необходимости редизайна, и&nbsp;понеслась...</p>
+
+      <div class="wmp-gantt-wrap" data-scroll-reveal>
+        <div class="wmp-gantt">
+          <img class="wmp-gantt__icon wmp-gantt__icon--a" src="assets/img/webmoney/page/idea-icon2.webp" alt="" width="200" height="200" loading="lazy" aria-hidden="true">
+          <img class="wmp-gantt__icon wmp-gantt__icon--b" src="assets/img/webmoney/page/idea-icon1.webp" alt="" width="200" height="200" loading="lazy" aria-hidden="true">
+          <ol class="wmp-gantt__bars">
+            <li class="is-research" style="--s:0;--w:2">Анализ рынка</li>
+            <li class="is-research" style="--s:0;--w:4">Пользовательские интервью + Создание персон + CJM</li>
+            <li class="is-research" style="--s:2;--w:3">Конкурентный анализ</li>
+            <li class="is-ux" style="--s:4;--w:2">User Flow</li>
+            <li class="is-ux" style="--s:4;--w:4">Разработка структуры</li>
+            <li class="is-ux" style="--s:6;--w:2">Прототипирование</li>
+            <li class="is-ui" style="--s:8;--w:3">Дизайн</li>
+            <li class="is-ui" style="--s:9;--w:2">Создание дизайн-системы</li>
+            <li class="is-ui" style="--s:10.4;--w:1.6">Презентация</li>
+          </ol>
+          <ul class="wmp-gantt__phases" aria-hidden="true">
+            <li>Исследование</li><li>Проектирование</li><li>Дизайн</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- ========== Анализ рынка ========== -->
-    <section class="wm2-art wm2-light" style="--bg:#ffffff" aria-labelledby="market-title">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--label" style="--x:1425;--y:270;--w:600">Анализ рынка</p>
-        <h2 class="wm2-t wm2-t--h" id="market-title" style="--x:1425;--y:329;--w:1225">Согласно исследованиям компании Mediascope 2020&nbsp;года, самые активные пользователи электронных денег в&nbsp;крупных городах России:</h2>
-        <h2 class="wm2-t wm2-t--h" style="--x:374;--y:2451;--w:2052;--ta:center">Прослеживается увеличение популярности товаров и&nbsp;услуг, которые используются дома</h2>
-        <p class="wm2-t wm2-t--body" style="--x:489;--y:2731;--w:1822;--lh:42;--ta:center;--c:#424b58">Процент пользователей, которые минимум раз в&nbsp;год платят за&nbsp;различные товары и&nbsp;услуги с&nbsp;компьютера или смартфона</p>
-        <p class="wm2-t wm2-t--body" style="--x:724;--y:4661;--w:1353;--fs:24;--lh:42;--ta:center;--c:#9c9cbe">* Данные для исследований составлены из&nbsp;открытых источников и&nbsp;соцсетей и&nbsp;могут отличаться от&nbsp;реальных.</p>
+    <section class="wmp-market wmp-light" aria-labelledby="market-title">
+      <div class="wmp-market__grid">
+        <div class="wmp-market__side">
+          <p class="wmp-stat wmp-stat--xl" data-scroll-reveal><b>93,7<small>%</small></b> респондентов хотя&nbsp;бы раз в&nbsp;год оплачивают в&nbsp;интернете товары или услуги</p>
+          <img class="wmp-market__photos" src="assets/img/webmoney/page/market-photos.webp" alt="Пользователи электронных денег: люди со смартфонами и банковскими картами" width="1076" height="1084" loading="lazy" data-scroll-reveal>
+        </div>
+        <div class="wmp-market__body">
+          <p class="wmp-label" data-scroll-reveal>Анализ рынка</p>
+          <h2 class="wmp-h" id="market-title" data-scroll-reveal>Согласно исследованиям компании Mediascope 2020&nbsp;года, самые активные пользователи электронных денег в&nbsp;крупных городах России:</h2>
+          <div class="wmp-stats" data-scroll-reveal>
+            <p class="wmp-stat"><b>81,7<small>%</small></b> люди 25–34&nbsp;лет</p>
+            <p class="wmp-stat"><b>82,2<small>%</small></b> люди 35–44&nbsp;лет</p>
+          </div>
+          <p class="wmp-source">Источник: mediascope.net/news/1061511/</p>
+
+          <h2 class="wmp-h" data-scroll-reveal>Данные подтверждаются статистикой <span class="wmp-pill">733&nbsp;тыс.</span> аудитории социальных сетей WebMoney и&nbsp;сервисов-конкурентов:</h2>
+          <div class="wmp-audience" data-scroll-reveal>
+            <img class="wmp-audience__gender" src="assets/img/webmoney/page/market-gender.webp" alt="Пол аудитории: 79% мужчин и 21% женщин" width="463" height="296" loading="lazy">
+            <ul class="wmp-ages" aria-label="Возраст аудитории">
+              <li style="--h:100"><b>7%</b><span>до 18&nbsp;лет</span></li>
+              <li style="--h:180"><b>20%</b><span>18–25&nbsp;лет</span></li>
+              <li style="--h:230"><b>29%</b><span>25–35&nbsp;лет</span></li>
+              <li style="--h:252"><b>33%</b><span>35–45&nbsp;лет</span></li>
+              <li style="--h:126"><b>11%</b><span>от 45&nbsp;лет</span></li>
+            </ul>
+          </div>
+          <h3 class="wmp-sub" data-scroll-reveal>Профессии пользователей:</h3>
+          <ul class="wmp-jobs" data-scroll-reveal>
+            <li><b>39<small>%</small></b>Руководитель</li>
+            <li><b>21<small>%</small></b>Администратор</li>
+            <li><b>10<small>%</small></b>Инженер</li>
+            <li><b>6<small>%</small></b>Программист</li>
+            <li><b>6<small>%</small></b>Дизайнер</li>
+            <li><b>18<small>%</small></b>Другие</li>
+          </ul>
+          <p class="wmp-source">Источник: сервис анализа соцсетей PepperPanel</p>
+        </div>
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/c.jpg" alt="93,7% респондентов хотя бы раз в год оплачивают в интернете товары или услуги; возраст, пол и профессии аудитории; что оплачивают с помощью электронных денег в 2019 и 2020 годах" width="1419" height="2453" loading="lazy">
+
+      <div class="wmp-radar" data-scroll-reveal>
+        <h2 class="wmp-h">Прослеживается увеличение популярности товаров и&nbsp;услуг, которые используются дома</h2>
+        <ul class="wmp-legend" aria-hidden="true"><li class="is-2019">2019</li><li class="is-2020">2020</li></ul>
+        <p class="wmp-radar__lead">Процент пользователей, которые минимум раз в&nbsp;год платят за&nbsp;различные товары и&nbsp;услуги с&nbsp;компьютера или смартфона</p>
+        <img class="wmp-radar__chart" src="assets/img/webmoney/page/market-radar.webp" alt="Лепестковая диаграмма: что оплачивают электронными деньгами в 2019 и 2020 годах. Мобильная связь — 85,8% и 81,6%, интернет-магазины — 81% и 81%, интернет-провайдеры — 67% и 67%, денежные переводы — 55% и 58,5%, коммунальные услуги — 74% и 72,3%, билеты на мероприятия — 54,4% и 44%, билеты на транспорт — 59,9% и 50,4%, бронирование отелей — 32,4% и 23,6%, штрафы и налоги — 52,5% и 51,7%, онлайн-игры — 25,3% и 29,4%, такси и каршеринг — 50,8% и 55,2%, погашение кредитов — 41,7% и 43,1%, доставка продуктов — 51,5% и 61,1%" width="1788" height="1385" loading="lazy">
+        <p class="wmp-radar__caption">Что оплачивают с&nbsp;помощью электронных денег в&nbsp;России</p>
+        <p class="wmp-source wmp-radar__source">Источник: исследования TNS и&nbsp;Mediascope. Электронные платежи в&nbsp;России.</p>
       </div>
+      <p class="wmp-footnote">* Данные для исследований составлены из&nbsp;открытых источников и&nbsp;соцсетей и&nbsp;могут отличаться от&nbsp;реальных.</p>
     </section>
 
     <!-- ========== Пользовательские интервью ========== -->
-    <section class="wm2-art wm2-light" style="--bg:#f4f9ff" aria-labelledby="interview-title">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--label" style="--x:150;--y:200;--w:700">Пользовательские интервью</p>
-        <h2 class="wm2-t wm2-t--h" id="interview-title" style="--x:150;--y:259;--w:1415">На&nbsp;основе опроса знакомых пользователей приложения и&nbsp;отзывов о&nbsp;приложении в&nbsp;App&nbsp;Store, Google Play и&nbsp;на&nbsp;независимых сайтах с&nbsp;отзывами сформирован список проблем, которые можно решить с&nbsp;помощью редизайна:</h2>
-        <p class="wm2-t wm2-t--item" style="--x:193;--y:745;--w:1402">Сложности с&nbsp;обращением в&nbsp;техническую поддержку</p>
-        <p class="wm2-t wm2-t--item" style="--x:193;--y:869;--w:1402">Недостаточный функционал: например, нет возможности привязать банковскую карту к&nbsp;кошельку</p>
-        <p class="wm2-t wm2-t--item" style="--x:193;--y:1001;--w:1402">Визуально устаревший интерфейс</p>
-        <p class="wm2-t wm2-t--item" style="--x:192;--y:1125;--w:1403">Сложная запутанная структура и, как следствие, проблемы с&nbsp;доступом к&nbsp;важному функционалу</p>
-        <p class="wm2-t wm2-t--item" style="--x:192;--y:1249;--w:1403">Несоответствие устоявшимся паттернам поведения в&nbsp;более популярных банковских сервисах</p>
-        <blockquote class="wm2-t wm2-quote" style="--x:1862;--y:516;--w:850">
-          <p>На&nbsp;главном экране сделан акцент на&nbsp;пополнении баланса и&nbsp;истории операций. Раздражает принцип «пополни кошелёк, а&nbsp;дальше разбирайся сам».</p>
-          <p>Хотелось&nbsp;бы, чтобы при входе были доступны как пополнение, так и&nbsp;переводы на&nbsp;карты и&nbsp;счета, избранное и&nbsp;платежи.</p>
-          <p>Непонятно, где чат, а&nbsp;где уведомления. А&nbsp;система авторизации вообще боль.</p>
-          <p>Было&nbsp;бы прикольно, если&nbsp;бы в&nbsp;платежах была персонализация. Например, в&nbsp;мобильной связи приложение определяло твоего оператора и&nbsp;выводило его первым в&nbsp;списке.</p>
-        </blockquote>
+    <section class="wmp-interview wmp-light" aria-labelledby="interview-title">
+      <div class="wmp-interview__grid">
+        <div>
+          <p class="wmp-label" data-scroll-reveal>Пользовательские интервью</p>
+          <h2 class="wmp-h" id="interview-title" data-scroll-reveal>На&nbsp;основе опроса знакомых пользователей приложения и&nbsp;отзывов о&nbsp;приложении в&nbsp;App&nbsp;Store, Google Play и&nbsp;на&nbsp;независимых сайтах с&nbsp;отзывами сформирован список проблем, которые можно решить с&nbsp;помощью редизайна:</h2>
+          <ul class="wmp-problems" data-scroll-reveal>
+            <li>Сложности с&nbsp;обращением в&nbsp;техническую поддержку</li>
+            <li>Недостаточный функционал: например, нет возможности привязать банковскую карту к&nbsp;кошельку</li>
+            <li>Визуально устаревший интерфейс</li>
+            <li>Сложная запутанная структура и, как следствие, проблемы с&nbsp;доступом к&nbsp;важному функционалу</li>
+            <li>Несоответствие устоявшимся паттернам поведения в&nbsp;более популярных банковских сервисах</li>
+          </ul>
+          <div class="wmp-badges" data-scroll-reveal>
+            <img src="assets/img/webmoney/page/badge-gp.webp" alt="Google Play: оценка 3,8 из 5" width="482" height="128" loading="lazy">
+            <img src="assets/img/webmoney/page/badge-as.webp" alt="App Store: оценка 4,1 из 5" width="454" height="128" loading="lazy">
+          </div>
+        </div>
+        <figure class="wmp-quote" data-scroll-reveal>
+          <img class="wmp-quote__avatar" src="assets/img/webmoney/page/avatar.webp" alt="" width="220" height="220" loading="lazy">
+          <blockquote>
+            <p>На&nbsp;главном экране сделан акцент на&nbsp;пополнении баланса и&nbsp;истории операций. Раздражает принцип «пополни кошелёк, а&nbsp;дальше разбирайся сам».</p>
+            <p>Хотелось&nbsp;бы, чтобы при входе были доступны как пополнение, так и&nbsp;переводы на&nbsp;карты и&nbsp;счета, избранное и&nbsp;платежи.</p>
+            <p>Непонятно, где чат, а&nbsp;где уведомления. А&nbsp;система авторизации вообще боль.</p>
+            <p>Было&nbsp;бы прикольно, если&nbsp;бы в&nbsp;платежах была персонализация. Например, в&nbsp;мобильной связи приложение определяло твоего оператора и&nbsp;выводило его первым в&nbsp;списке.</p>
+          </blockquote>
+          <figcaption><b>Владислав</b>Senior Product Owner</figcaption>
+        </figure>
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/d.jpg" alt="Рейтинги приложения в Google Play и App Store, отзывы пользователей" width="1419" height="1660" loading="lazy">
-      </div>
+      <img class="wmp-interview__reviews" src="assets/img/webmoney/page/reviews.jpg" alt="Отзывы пользователей о приложении WebMoney в магазинах приложений: жалобы на запутанную структуру, поддержку и комиссии" width="2800" height="1523" loading="lazy" data-scroll-reveal>
     </section>
 
     <!-- ========== Персоны (видео) ========== -->
-    <section class="wm2-video" aria-label="Пользовательские персоны">
+    <section class="wmp-video" aria-label="Пользовательские персоны">
       <div class="wm-video">
         <video class="wm-video__el" src="assets/video/webmoney/personas.mp4" poster="assets/img/webmoney/poster-personas.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Три пользовательские персоны WebMoney: цели, мотивация и барьеры"></video>
         <button class="wm-video__toggle" type="button" aria-label="Пауза" data-video-toggle></button>
@@ -115,123 +212,174 @@
     </section>
 
     <!-- ========== Проектирование ========== -->
-    <section class="wm2-art" style="--bg:#262b41" aria-labelledby="ux-title">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--label" style="--x:150;--y:2878;--w:700">Проектирование</p>
-        <h2 class="wm2-t wm2-t--h" id="ux-title" style="--x:150;--y:2937;--w:1361">Новая упрощённая структура оптимизирует навигацию и&nbsp;приводит функционал к&nbsp;привычному виду электронного кошелька, знакомого большинству пользователей, но&nbsp;учитывает особенности платёжной системы.</h2>
+    <section class="wmp-ux" aria-labelledby="ux-title">
+      <img class="wmp-ux__map" src="assets/img/webmoney/page/sitemap.webp" alt="Карта приложения: обзор, платежи и переводы, анализ финансов, мессенджер и настройки с вложенными экранами" width="2650" height="2452" loading="lazy" data-scroll-reveal>
+      <div class="wmp-ux__grid">
+        <div>
+          <p class="wmp-label" data-scroll-reveal>Проектирование</p>
+          <h2 class="wmp-h" id="ux-title" data-scroll-reveal>Новая упрощённая структура оптимизирует навигацию и&nbsp;приводит функционал к&nbsp;привычному виду электронного кошелька, знакомого большинству пользователей, но&nbsp;учитывает особенности платёжной системы.</h2>
+          <ol class="wmp-goals" data-scroll-reveal>
+            <li>Вынести основной функционал кошелька на&nbsp;главный экран</li>
+            <li>Упростить авторизацию и&nbsp;регистрацию</li>
+            <li>Объединить чаты с&nbsp;пользователями, техподдержку и&nbsp;уведомления об&nbsp;операциях</li>
+            <li>Расширить функционал работы с&nbsp;банковскими картами</li>
+            <li>Автоматизировать конвертацию валюты при переводе</li>
+            <li>Добавить возможность анализировать финансы</li>
+          </ol>
+        </div>
+        <figure class="wmp-shot wmp-ux__phone" data-scroll-reveal><img src="assets/img/webmoney/page/wire-main.webp" alt="Вайрфрейм главного экрана: приветствие, кошельки, быстрые переводы и избранное" width="800" height="1685" loading="lazy"></figure>
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/f.jpg" alt="Карта приложения, задачи редизайна и вайрфреймы основных экранов" width="1419" height="2900" loading="lazy">
-      </div>
+      <img class="wmp-ux__wires" src="assets/img/webmoney/page/wire-row.webp" alt="Вайрфреймы экранов: кошелёк, анализ расходов, платежи и переводы, сообщения, перевод на кошелёк" width="2800" height="1106" loading="lazy" data-scroll-reveal>
     </section>
 
     <!-- ========== Вход ========== -->
-    <section class="wm2-art" style="--bg:#13182c" aria-label="Начать пользоваться кошельком — легко">
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/g.jpg" alt="Начать пользоваться кошельком — легко!" width="1419" height="1417" loading="lazy">
-        <div class="wm-device wm2-device" style="--x:1005;--y:781;--w:787">
+    <section class="wmp-start" aria-labelledby="start-title">
+      <p class="wmp-label">UI Design</p>
+      <h2 class="wmp-h" id="start-title" data-scroll-reveal>Начать пользоваться кошельком&nbsp;— легко!</h2>
+      <div class="wmp-rings">
+        <div class="wm-device">
           <video class="wm-device__screen" src="assets/video/webmoney/login.mp4" poster="assets/img/webmoney/poster-login.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Анимация входа: номер телефона, код из SMS, Face ID"></video>
           <img class="wm-device__frame" src="assets/img/works/webmoney/frame-black.png" alt="" width="528" height="1069">
         </div>
       </div>
     </section>
 
-    <section class="wm2-art" style="--bg:#171c32">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--h" style="--x:1740;--y:569;--w:888">Чтобы войти или зарегистрироваться в&nbsp;приложении, достаточно ввести номер телефона и&nbsp;код из&nbsp;SMS</p>
-        <h2 class="wm2-t" style="--x:150;--y:3136;--w:1225;--fs:96;--lh:128">Простая и&nbsp;интуитивно понятная система безопасности, знакомая любому пользователю</h2>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/h.jpg" alt="Вход по номеру телефона и коду из SMS, включение Face ID, экран ввода кода" width="1419" height="2256" loading="lazy">
+    <section class="wmp-login wmp-sec-abs" aria-label="Вход и регистрация">
+      <div class="wmp-abs" style="--h:4453">
+        <img class="wmp-login__photo is-full" src="assets/img/webmoney/page/login-photo.webp" alt="" width="1375" height="1482" loading="lazy" style="--x:0;--y:72;--w:1375" aria-hidden="true">
+        <p class="wmp-h is-text" style="--x:1740;--y:569;--w:888" data-scroll-reveal>Чтобы войти или зарегистрироваться в&nbsp;приложении, достаточно ввести номер телефона и&nbsp;код из&nbsp;SMS</p>
+        <figure class="wmp-shot " style="--x:115;--y:1038;--w:530" data-scroll-reveal><img src="assets/img/webmoney/page/login-1.webp" alt="Приветственный экран: «Рады видеть вас в новом WebMoney», кнопки «Войти» и «Зарегистрироваться»" width="530" height="1113" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:795;--y:1028;--w:530" data-scroll-reveal><img src="assets/img/webmoney/page/login-2.webp" alt="Экран «Добро пожаловать»: ввод номера телефона" width="530" height="1113" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1475;--y:1028;--w:530" data-scroll-reveal><img src="assets/img/webmoney/page/login-3.webp" alt="Ввод кода из SMS" width="530" height="1113" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:2155;--y:1028;--w:530" data-scroll-reveal><img src="assets/img/webmoney/page/login-4.webp" alt="Предложение включить Face ID" width="530" height="1113" loading="lazy"></figure>
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-login-1.webp" alt="" width="126" height="366" loading="lazy" style="--x:657;--y:1577;--w:126" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-login-2.webp" alt="" width="126" height="231" loading="lazy" style="--x:1337;--y:1486;--w:126" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-login-3.webp" alt="" width="126" height="227" loading="lazy" style="--x:2017;--y:1682;--w:126" aria-hidden="true">
+        <span class="wmp-ring is-deco" style="--x:1216;--y:2476;--w:1650" aria-hidden="true"></span>
+        <span class="wmp-ring is-deco" style="--x:1357;--y:2617;--w:1368" aria-hidden="true"></span>
+        <span class="wmp-ring is-deco" style="--x:1504;--y:2764;--w:1074" aria-hidden="true"></span>
+        <h2 class="wmp-xl is-text" style="--x:150;--y:3136;--w:1225" data-scroll-reveal>Простая и&nbsp;интуитивно понятная система безопасности, знакомая любому пользователю</h2>
+        <img class="wmp-login__hand is-full" src="assets/img/webmoney/page/login-hand.webp" alt="Телефон в руке: экран ввода кода доступа «С возвращением, Любовь!»" width="2542" height="2170" loading="lazy" style="--x:258;--y:2283;--w:2542">
       </div>
     </section>
 
     <!-- ========== Главный экран и кошелёк ========== -->
-    <section class="wm2-art wm2-light" style="--bg:#f4f3f9">
-      <div class="wm2-art__text">
-        <h2 class="wm2-t" style="--x:149;--y:1019;--w:1437;--fs:96;--lh:120">Главный экран позволяет в&nbsp;одно касание проверять баланс кошельков, переводить деньги другим пользователям, осуществлять платежи, переходить к&nbsp;профилю, сообщениям и&nbsp;уведомлениям.</h2>
-        <h2 class="wm2-t" style="--x:1657;--y:2924;--w:800;--fs:96;--lh:120">Новые функции кошелька</h2>
-        <p class="wm2-t wm2-t--body" style="--x:1657;--y:3194;--w:800;--c:#424b58">Внутри кошелька к&nbsp;ранее имевшимся быстрым операциям добавлен краткий анализ финансов с&nbsp;возможностью выбора периода и&nbsp;история операций с&nbsp;балансом.</p>
-        <p class="wm2-t wm2-t--h" style="--x:1069;--y:5898;--w:746">К&nbsp;переводам добавлены комментарии, которые также отображаются в&nbsp;мессенджере</p>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/i.jpg" alt="Главный экран, экран кошелька, история операций, выбор перевода и отчёт об операции" width="1419" height="3898" loading="lazy">
+    <section class="wmp-main wmp-light wmp-sec-abs" aria-label="Главный экран и кошелёк">
+      <div class="wmp-abs" style="--h:7690">
+        <h2 class="wmp-xl wmp-main__lead is-text" style="--x:150;--y:1019;--w:1437" data-scroll-reveal>Главный экран позволяет в&nbsp;одно касание проверять баланс кошельков, переводить деньги другим пользователям, осуществлять платежи, переходить к&nbsp;профилю, сообщениям и&nbsp;уведомлениям.</h2>
+        <figure class="wmp-shot is-full wmp-main__home" style="--x:1765;--y:350;--w:1035" data-scroll-reveal><img src="assets/img/webmoney/page/main-home.webp" alt="Главный экран: приветствие, карточки кошельков, быстрые переводы контактам, избранное и список платежей" width="1035" height="2141" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:362;--y:2904;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/main-wallet.webp" alt="Экран кошелька: баланс, кнопки «Пополнить», «Перевести», «Оплатить» и график расходов" width="800" height="1686" loading="lazy"><figcaption>Экран кошелька</figcaption></figure>
+        <h2 class="wmp-xl is-text" style="--x:1658;--y:2924;--w:800" data-scroll-reveal>Новые функции кошелька</h2>
+        <p class="wmp-body is-text" style="--x:1658;--y:3194;--w:800" data-scroll-reveal>Внутри кошелька к&nbsp;ранее имевшимся быстрым операциям добавлен краткий анализ финансов с&nbsp;возможностью выбора периода и&nbsp;история операций с&nbsp;балансом.</p>
+        <figure class="wmp-shot " style="--x:1638;--y:3696;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/main-history.webp" alt="История операций: расходы и зачисления по дням" width="800" height="1686" loading="lazy"><figcaption>История операций</figcaption></figure>
+        <figure class="wmp-shot " style="--x:150;--y:5008;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/main-choose.webp" alt="Выбор способа перевода: на кошелёк WebMoney, на банковскую карту, на другой кошелёк" width="800" height="1686" loading="lazy"><figcaption>Выбор перевода</figcaption></figure>
+        <p class="wmp-h is-text" style="--x:1070;--y:5898;--w:746" data-scroll-reveal>К&nbsp;переводам добавлены комментарии, которые также отображаются в&nbsp;мессенджере</p>
+        <figure class="wmp-shot " style="--x:1329;--y:6477;--w:671" data-scroll-reveal><img src="assets/img/webmoney/page/main-receipt.webp" alt="Отчёт о покупке в Metro Cash &amp; Carry с картой и кнопкой «Получить квитанцию»" width="671" height="1193" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1850;--y:5738;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/main-report.webp" alt="Отчёт о переводе на карту Mastercard: сумма, комментарий «Возвращаю долг», статус и реквизиты" width="800" height="1686" loading="lazy"><figcaption>Отчёт об операции</figcaption></figure>
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-main-1.webp" alt="" width="1080" height="1997" loading="lazy" style="--x:756;--y:877;--w:1080" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-main-2.webp" alt="" width="376" height="425" loading="lazy" style="--x:1212;--y:4232;--w:376" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-main-3.webp" alt="" width="385" height="1542" loading="lazy" style="--x:171;--y:3436;--w:385" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-main-4.webp" alt="" width="381" height="995" loading="lazy" style="--x:2244;--y:4713;--w:381" aria-hidden="true">
+        <span class="wmp-vlabel is-deco" style="--x:162;--y:3742;--w:42;--h:530" aria-hidden="true">Нажатие на&nbsp;кнопку «Перевести»</span>
+        <span class="wmp-vlabel is-deco" style="--x:1383;--y:4355;--w:42;--h:192" aria-hidden="true">Свайп вверх</span>
+        <span class="wmp-vlabel is-deco" style="--x:2676;--y:4866;--w:42;--h:356" aria-hidden="true">Нажатие на&nbsp;операцию</span>
       </div>
     </section>
 
-    <section class="wm2-art wm2-light" style="--bg:#f3f4f9">
-      <div class="wm2-art__text">
-        <h2 class="wm2-t" style="--x:957;--y:314;--w:884;--fs:64;--lh:96;--ta:center">Быстрый доступ ко&nbsp;всем функциям счёта</h2>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/j.jpg" alt="" width="1419" height="1419" loading="lazy">
-        <div class="wm-device wm2-device" style="--x:1005;--y:594;--w:787">
+    <section class="wmp-quick wmp-light" aria-labelledby="quick-title">
+      <p class="wmp-label">UI Animations</p>
+      <h2 class="wmp-m" id="quick-title" data-scroll-reveal>Быстрый доступ ко&nbsp;всем функциям счёта</h2>
+      <div class="wmp-rings wmp-rings--light">
+        <div class="wm-device">
           <video class="wm-device__screen" src="assets/video/webmoney/main.mp4" poster="assets/img/webmoney/poster-main.jpg" muted loop playsinline preload="none" data-autoplay aria-label="Анимация главного экрана: кошельки, быстрые переводы и избранное"></video>
           <img class="wm-device__frame" src="assets/img/works/webmoney/frame-black.png" alt="" width="528" height="1069">
         </div>
       </div>
     </section>
 
-    <section class="wm2-art wm2-light" style="--bg:#f4f3f9">
-      <div class="wm2-art__text">
-        <h2 class="wm2-t" style="--x:1638;--y:531;--w:1012;--fs:72;--lh:120">Интерфейс построен по&nbsp;принципам атомарного дизайна</h2>
-        <p class="wm2-t wm2-t--body" style="--x:1638;--y:941;--w:1012;--c:#424b58">Это позволяет быстро создавать новое user-friendly приложение с&nbsp;фокусом на&nbsp;простоте, удобстве и&nbsp;функциональности.</p>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/k.jpg" alt="Компоненты интерфейса и сценарии перевода на кошелёк WebMoney и банковскую карту" width="1419" height="3634" loading="lazy">
-      </div>
-    </section>
-
-    <!-- ========== Платежи и анализ финансов ========== -->
-    <section class="wm2-art" style="--bg:#2a2d36">
-      <div class="wm2-art__text">
-        <h2 class="wm2-t" style="--x:150;--y:273;--w:1225;--fs:72;--lh:96">Упорядоченные категории и&nbsp;избранные платежи позволяют быстро найти нужную операцию</h2>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/l.jpg" alt="Экраны платежей: избранное, категории, оплата интернета" width="1419" height="1246" loading="lazy">
-      </div>
-    </section>
-
-    <section class="wm2-art" style="--bg:#0c1729">
-      <div class="wm2-art__text">
-        <h2 class="wm2-t" style="--x:1300;--y:500;--w:1399;--fs:80;--lh:128">Решена распространённая проблема анализа финансов</h2>
-        <p class="wm2-t wm2-t--body" style="--x:1300;--y:782;--w:1275">В&nbsp;большинстве случаев функционал анализа финансов у&nbsp;сервисов-конкурентов позволяет просматривать графики и&nbsp;диаграммы без возможности изучить их&nbsp;легенды. Чтобы понять, к&nbsp;чему относится значение на&nbsp;диаграмме, нужно прокрутить к&nbsp;соответствующей категории расходов.</p>
-        <p class="wm2-t" style="--x:150;--y:3056;--w:1541;--fs:64;--lh:96">В&nbsp;новом интерфейсе кошелька категории расходов обозначены на&nbsp;графике и&nbsp;расположены в&nbsp;пределах одного экрана</p>
-      </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/m.jpg" alt="Экраны анализа расходов: кольцевая диаграмма, список категорий" width="1419" height="2044" loading="lazy">
+    <!-- ========== Атомарный дизайн и переводы ========== -->
+    <section class="wmp-atomic wmp-light wmp-sec-abs" aria-labelledby="atomic-title">
+      <div class="wmp-abs" style="--h:7172">
+        <span class="wmp-ring wmp-ring--line is-deco" style="--x:-318;--y:19;--w:1651" aria-hidden="true"></span>
+        <img class="is-full" src="assets/img/webmoney/page/atomic-parts.webp" alt="Компоненты интерфейса: карточки кошельков и банковских карт, кнопки, строки операций, уведомления" width="1545" height="1286" loading="lazy" style="--x:0;--y:182;--w:1545" data-scroll-reveal>
+        <h2 class="wmp-l is-text" style="--x:1638;--y:531;--w:1012" id="atomic-title" data-scroll-reveal>Интерфейс построен по&nbsp;принципам атомарного дизайна</h2>
+        <p class="wmp-body is-text" style="--x:1638;--y:941;--w:1012" data-scroll-reveal>Это позволяет быстро создавать новое user-friendly приложение с&nbsp;фокусом на&nbsp;простоте, удобстве и&nbsp;функциональности.</p>
+        <figure class="wmp-shot " style="--x:150;--y:4002;--w:650" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-menu.webp" alt="Меню выбора перевода: на кошелёк WebMoney, на банковскую карту, на другой кошелёк" width="650" height="524" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:574;--y:1816;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-1.webp" alt="Перевод на кошелёк WebMoney: номер кошелька и список контактов" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1850;--y:2136;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-2.webp" alt="Перевод на кошелёк WebMoney: сумма, комиссия и сообщение получателю" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:150;--y:5186;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-3.webp" alt="Перевод на банковскую карту: номер карты и привязанные карты" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1000;--y:4856;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-4.webp" alt="Перевод на банковскую карту: сумма и комиссия" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1850;--y:4526;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/transfer-5.webp" alt="Сообщение «Спасибо! Ваш платёж успешно завершён»" width="800" height="1686" loading="lazy"></figure>
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-1.webp" alt="" width="376" height="421" loading="lazy" style="--x:1424;--y:2973;--w:376" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-2.webp" alt="" width="186" height="614" loading="lazy" style="--x:850;--y:3552;--w:186" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-3.webp" alt="" width="40" height="644" loading="lazy" style="--x:2230;--y:3852;--w:40" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-4.webp" alt="" width="487" height="911" loading="lazy" style="--x:544;--y:4245;--w:487" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-5.webp" alt="" width="406" height="187" loading="lazy" style="--x:1000;--y:6572;--w:406" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-tr-6.webp" alt="" width="406" height="187" loading="lazy" style="--x:1850;--y:6242;--w:406" aria-hidden="true">
       </div>
     </section>
 
-    <section class="wm2-art wm2-light" style="--bg:#c6d6e3">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--label" style="--x:664;--y:170;--w:1474;--ta:center">Сообщения</p>
-        <h2 class="wm2-t wm2-t--h" style="--x:664;--y:229;--w:1474;--ta:center">Чаты между пользователями и&nbsp;центр уведомлений объединены в&nbsp;один раздел. Теперь уведомления о&nbsp;переводах внутри WebMoney отображаются в&nbsp;чатах, а&nbsp;прикреплённые комментарии показаны в&nbsp;виде сообщений.</h2>
+    <!-- ========== Платежи ========== -->
+    <section class="wmp-pay wmp-sec-abs" aria-labelledby="pay-title">
+      <div class="wmp-abs" style="--h:2458">
+        <h2 class="wmp-l is-text" style="--x:150;--y:273;--w:1225" id="pay-title" data-scroll-reveal>Упорядоченные категории и&nbsp;избранные платежи позволяют быстро найти нужную операцию</h2>
+        <figure class="wmp-shot " style="--x:150;--y:980;--w:540" data-scroll-reveal><img src="assets/img/webmoney/page/pay-1.webp" alt="Платежи и переводы: избранные платежи и категории" width="540" height="1128" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:803;--y:680;--w:540" data-scroll-reveal><img src="assets/img/webmoney/page/pay-2.webp" alt="Категория «Связь, интернет и ТВ»: виды услуг" width="540" height="1128" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1456;--y:380;--w:540" data-scroll-reveal><img src="assets/img/webmoney/page/pay-3.webp" alt="Список провайдеров: Билайн, Дом.ru, МТС, Мегафон, Ростелеком" width="540" height="1128" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:2109;--y:980;--w:540" data-scroll-reveal><img src="assets/img/webmoney/page/pay-4.webp" alt="Платёж Дом.ru: номер лицевого счёта и сумма" width="540" height="1128" loading="lazy"></figure>
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-pay-1.webp" alt="" width="103" height="763" loading="lazy" style="--x:695;--y:974;--w:103" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-pay-2.webp" alt="" width="103" height="437" loading="lazy" style="--x:1348;--y:651;--w:103" aria-hidden="true">
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-pay-3.webp" alt="" width="384" height="184" loading="lazy" style="--x:2001;--y:781;--w:384" aria-hidden="true">
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/n.jpg" alt="Экраны сообщений: список чатов и переписка с переводом" width="1419" height="1422" loading="lazy">
+    </section>
+
+    <!-- ========== Анализ финансов ========== -->
+    <section class="wmp-fin" aria-labelledby="fin-title">
+      <div class="wmp-fin__grid">
+        <figure class="wmp-shot wmp-fin__s1" data-scroll-reveal><img src="assets/img/webmoney/page/fin-1.webp" alt="Анализ расходов: кольцевая диаграмма с подписанными категориями" width="800" height="1686" loading="lazy"></figure>
+        <div class="wmp-fin__head">
+          <h2 class="wmp-l" id="fin-title" data-scroll-reveal>Решена распространённая проблема анализа финансов</h2>
+          <p class="wmp-body" data-scroll-reveal>В&nbsp;большинстве случаев функционал анализа финансов у&nbsp;сервисов-конкурентов позволяет просматривать графики и&nbsp;диаграммы без возможности изучить их&nbsp;легенды. Чтобы понять, к&nbsp;чему относится значение на&nbsp;диаграмме, нужно прокрутить к&nbsp;соответствующей категории расходов.</p>
+        </div>
+        <figure class="wmp-shot wmp-fin__s2" data-scroll-reveal><img src="assets/img/webmoney/page/fin-2.webp" alt="Анализ расходов: доли категорий в виде полос" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot wmp-fin__s3" data-scroll-reveal><img src="assets/img/webmoney/page/fin-3.webp" alt="Анализ расходов: список категорий с суммами" width="800" height="1686" loading="lazy"></figure>
+        <p class="wmp-m wmp-fin__note" data-scroll-reveal>В&nbsp;новом интерфейсе кошелька категории расходов обозначены на&nbsp;графике и&nbsp;расположены в&nbsp;пределах одного экрана</p>
+      </div>
+    </section>
+
+    <!-- ========== Сообщения ========== -->
+    <section class="wmp-msg wmp-light wmp-sec-abs" aria-labelledby="msg-title">
+      <div class="wmp-abs" style="--h:2805">
+        <p class="wmp-label is-text" style="--x:664;--y:170;--w:1474" data-scroll-reveal>Сообщения</p>
+        <h2 class="wmp-h is-text" style="--x:664;--y:229;--w:1474" id="msg-title" data-scroll-reveal>Чаты между пользователями и&nbsp;центр уведомлений объединены в&nbsp;один раздел. Теперь уведомления о&nbsp;переводах внутри WebMoney отображаются в&nbsp;чатах, а&nbsp;прикреплённые комментарии показаны в&nbsp;виде сообщений.</h2>
+        <figure class="wmp-shot " style="--x:362;--y:609;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/msg-1.webp" alt="Раздел «Сообщения»: поддержка WebMoney и чаты с контактами" width="800" height="1686" loading="lazy"></figure>
+        <figure class="wmp-shot " style="--x:1638;--y:969;--w:800" data-scroll-reveal><img src="assets/img/webmoney/page/msg-2.webp" alt="Чат с контактом: входящий перевод 2000 ₽ с комментарием и голосовые сообщения" width="800" height="1686" loading="lazy"></figure>
+        <img class="wmp-arrow is-deco" src="assets/img/webmoney/page/arr-msg.webp" alt="" width="376" height="217" loading="lazy" style="--x:1212;--y:1113;--w:376" aria-hidden="true">
       </div>
     </section>
 
     <!-- ========== Тёмная тема ========== -->
-    <section class="wm2-art" style="--bg:#191921">
-      <div class="wm2-art__text">
-        <p class="wm2-t wm2-t--label" style="--x:150;--y:400;--w:600">Тёмная тема</p>
-        <h2 class="wm2-t" style="--x:150;--y:449;--w:700;--fs:96;--lh:128">Тёмная тема тоже есть</h2>
+    <section class="wmp-dark" aria-labelledby="dark-title">
+      <div class="wmp-dark__head">
+        <p class="wmp-label" data-scroll-reveal>Тёмная тема</p>
+        <h2 class="wmp-xl" id="dark-title" data-scroll-reveal>Тёмная тема тоже есть</h2>
       </div>
-      <div class="wm2-art__stage">
-        <img class="wm2-art__img" src="assets/img/webmoney/v2/o.jpg" alt="Экраны приложения в тёмной теме" width="1419" height="4415" loading="lazy">
+      <div class="wmp-dark__cols">
+        <div class="wmp-dark__col"><img src="assets/img/webmoney/page/dark-a1.webp" alt="Тёмная тема: ввод номера телефона" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-a2.webp" alt="Тёмная тема: главный экран" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-a3.webp" alt="Тёмная тема: перевод на банковскую карту: выбор карты" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-a4.webp" alt="Тёмная тема: анализ расходов: диаграмма" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-a5.webp" alt="Тёмная тема: сообщения" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-a6.webp" alt="Тёмная тема: платежи и переводы" width="587" height="1225" loading="lazy"></div>
+        <div class="wmp-dark__col"><img src="assets/img/webmoney/page/dark-b1.webp" alt="Тёмная тема: ввод кода из sms" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-b2.webp" alt="Тёмная тема: экран кошелька" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-b3.webp" alt="Тёмная тема: перевод на банковскую карту: сумма" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-b4.webp" alt="Тёмная тема: анализ расходов: категории" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-b5.webp" alt="Тёмная тема: список чатов" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-b6.webp" alt="Тёмная тема: связь, интернет и тв" width="587" height="1225" loading="lazy"></div>
+        <div class="wmp-dark__col"><img src="assets/img/webmoney/page/dark-c1.webp" alt="Тёмная тема: включение face id" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-c2.webp" alt="Тёмная тема: история операций" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-c3.webp" alt="Тёмная тема: перевод на кошелёк: выбор контакта" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-c4.webp" alt="Тёмная тема: список расходов" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-c5.webp" alt="Тёмная тема: выбор способа перевода" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-c6.webp" alt="Тёмная тема: выбор провайдера" width="587" height="1225" loading="lazy"></div>
+        <div class="wmp-dark__col"><img src="assets/img/webmoney/page/dark-d1.webp" alt="Тёмная тема: экран ввода кода доступа" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-d2.webp" alt="Тёмная тема: отчёт о переводе на карту" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-d3.webp" alt="Тёмная тема: перевод на кошелёк: сумма" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-d4.webp" alt="Тёмная тема: платёж успешно завершён" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-d5.webp" alt="Тёмная тема: отчёт об операции с картой" width="587" height="1225" loading="lazy"><img src="assets/img/webmoney/page/dark-d6.webp" alt="Тёмная тема: платёж дом.ru" width="587" height="1225" loading="lazy"></div>
       </div>
     </section>
 
     <!-- ========== Следующий продукт ========== -->
-    <section class="kb-next wm2-next" aria-labelledby="next-title">
-      <a class="kb-next__link" href="#">
+    <section class="kb-next wmp-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="medidea.html">
         <span class="case-label case-label--accent">Следующий продукт</span>
         <span class="kb-next__title" id="next-title">Медидея</span>
         <span class="kb-next__lead">Система управления взаимодействием клиник с&nbsp;пациентами, с&nbsp;их&nbsp;историей болезни, приёмами и&nbsp;назначениями, <br class="kb-br">а&nbsp;также поддержкой различных каналов связи.</span>
         <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
-        <span class="kb-next__preview"><img src="assets/img/webmoney/v2/next.jpg" alt="" loading="lazy"></span>
+        <span class="kb-next__preview"><img src="assets/img/webmoney/v2/next.jpg?v=3" alt="" loading="lazy"></span>
       </a>
     </section>
   </main>
