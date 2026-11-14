@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Скоро здесь будет кейс — Александр Горбатов</title>
+  <meta name="description" content="Описание этого проекта скоро появится. Пока можно посмотреть работы Александра Горбатова на других площадках.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/soon.css">
+</head>
+<body class="soon-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works">Портфолио</a></li>
+        <li><a class="nav__link" href="experience.html">Опыт</a></li>
+        <li><a class="nav__link" href="education.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+
+  <main class="soon">
+    <div class="soon__head">
+      <a class="back-link" href="index.html" data-back>
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+      <h1 class="soon__title">Я&nbsp;ещё не&nbsp;добрался до&nbsp;полноценного описания этого проекта. Он&nbsp;скоро будет, а&nbsp;пока можно посмотреть мои работы на&nbsp;других платформах и&nbsp;связаться со&nbsp;мной</h1>
+    </div>
+
+    <nav class="soon__links" aria-label="Работы и контакты на других площадках">
+      <a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a>
+      <a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a>
+      <a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a>
+      <a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Сетка</a>
+      <a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a>
+      <a href="#">HH.ru</a>
+    </nav>
+
+    <img class="soon__bunny" src="assets/img/soon/bunny.webp" alt="" width="1608" height="1112">
+
+    <footer class="soon__footer">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+      <p>© 2026-2027. Все права защищены.</p>
+    </footer>
+  </main>
+
+  <script>
+    /* «Назад» возвращает туда, откуда пришли, если это страница сайта */
+    document.querySelector('[data-back]').addEventListener('click', (e) => {
+      if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  </script>
+  <script src="js/case.js?v=2" defer></script>
+</body>
+</html>
