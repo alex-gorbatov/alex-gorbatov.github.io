@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Медидея — кейс Александра Горбатова</title>
+  <meta name="description" content="Редизайн медицинской информационной системы для частных клиник: концепция, прототипы с бизнес-логикой, шесть версий сетки расписания, UI-кит.">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="soon.html">Опыт</a></li>
+        <li><a class="nav__link" href="soon.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="md-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="md-title">Медидея</h1>
+        <p class="kb-hero__lead">Редизайн медицинской информационной системы для частных клиник: расписание, карта пациента, работа с&nbsp;ОМС и&nbsp;ДМС, счета, рассылки и&nbsp;аналитика.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны системы Медидея" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/medidea/grid-status.jpg" alt="Расписание на неделю с группировкой по статусу" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/medidea/doctors.jpg" alt="График работы врачей" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/medidea/grid-preview.jpg" alt="Предпросмотр записи в расписании" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задача ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задача:</h2>
+          <p class="kb-body" data-scroll-reveal>Медидея&nbsp;— МИС для частных клиник с&nbsp;возможностью работы в&nbsp;системе ОМС, учётом медикаментов, электронной историей болезни и&nbsp;финансовой аналитикой. В&nbsp;2021&nbsp;году клиент обратился за&nbsp;редизайном работающей системы.</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Причины редизайна:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Интервью с&nbsp;пользователями системы выявили ряд проблем юзабилити;</li>
+            <li>Нужно было выделиться среди конкурентов более свежим дизайном.</li>
+          </ul>
+
+          <h3 class="kb-h3" data-scroll-reveal>Роль:</h3>
+          <p class="kb-body" data-scroll-reveal>Арт-директор. Концепция, прототипы, дизайн интерфейса и&nbsp;UI-кит.</p>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="stages-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="stages-title">Этапы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#stage-1">Концепция для пресейла</a></li>
+            <li><span>#2</span><a href="#stage-2">Прототипы и&nbsp;бизнес-логика</a></li>
+            <li><span>#3</span><a href="#stage-3">Сетка расписания</a></li>
+            <li><span>#4</span><a href="#stage-4">Запись на&nbsp;приём и&nbsp;график врачей</a></li>
+            <li><span>#5</span><a href="#stage-5">Цвет и&nbsp;UI-кит</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Этап #1: концепция ========== -->
+    <section class="kb-section kb-case" id="stage-1" aria-labelledby="stage-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#1</span></p>
+          <h2 class="kb-case__title" id="stage-1-title">Концепция для пресейла: крупные понятные элементы и&nbsp;тёплая стилистика</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/medidea/concept.jpg" alt="Концепт рабочего места врача: сводка дня, расписание, динамика записей и напоминания" width="1024" height="640" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Клиент просил сделать упор на&nbsp;понятные крупные элементы и&nbsp;стилистику в&nbsp;тёплых цветах. Концепт собран на&nbsp;примере рабочего места врача: сводка дня, расписание, динамика записей, напоминания.</p>
+          </div>
+          <p class="kb-results kb-results--text">Концепция была принята клиентом, и&nbsp;началась работа над реальным интерфейсом.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #2: прототипы ========== -->
+    <section class="kb-section kb-case" id="stage-2" aria-labelledby="stage-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#2</span></p>
+          <h2 class="kb-case__title" id="stage-2-title">Прототипы: сначала логика, потом визуал</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/medidea/proto-schedule.jpg" alt="Серый прототип расписания: предпросмотр записи и меню действий" width="1024" height="640" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Каждый раздел сначала проходил через серые прототипы: сетка расписания, поиск времени, график работы врачей, карточка пациента. Рабочие макеты делались под ширину 1280&nbsp;px. В&nbsp;прототипах фиксировались бизнес-правила и&nbsp;открытые вопросы:</p>
+            <ul class="kb-list">
+              <li>При добавлении полиса ОМС система сама отправляет запрос в&nbsp;ТФОМС и&nbsp;подставляет номер полиса и&nbsp;страховую. Любой ответ показывается пользователю, включая ошибку.</li>
+              <li>Плательщик редко отличается от&nbsp;пациента и&nbsp;представителя, поэтому поле скрыто по&nbsp;умолчанию и&nbsp;открывается кнопкой «Указать плательщика».</li>
+              <li>Если пациент отказался от&nbsp;уведомлений, кнопки «Написать» и&nbsp;«Позвонить» недоступны.</li>
+            </ul>
+          </div>
+          <img class="kb-img" src="assets/img/medidea/proto-patient.jpg" alt="Прототип карточки пациента: документы, полисы ОМС и ДМС, контактные данные" width="849" height="1600" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #3: сетка расписания ========== -->
+    <section class="kb-section kb-case" id="stage-3" aria-labelledby="stage-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#3</span></p>
+          <h2 class="kb-case__title" id="stage-3-title">Сетка расписания: шесть итераций главного экрана системы</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/medidea/grid-status.jpg" alt="Расписание на 7 дней с группировкой записей по статусу" width="1024" height="720" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Расписание&nbsp;— основной рабочий экран администратора клиники. Сетка прошла версии от&nbsp;v.0 до&nbsp;v.5, прежде чем ушла в&nbsp;дизайн. Что получилось в&nbsp;итоге:</p>
+            <ul class="kb-list">
+              <li>Три представления: вертикальная сетка, горизонтальная сетка и&nbsp;расписание в&nbsp;строку. Каждое&nbsp;— на&nbsp;1, 3 и&nbsp;7&nbsp;дней.</li>
+              <li>Группировка по&nbsp;статусу: неделя раскладывается в&nbsp;колонки от&nbsp;«Новая запись» до&nbsp;«Клиент ушёл».</li>
+              <li>Карточка записи показывает тип приёма, услугу, кабинет и&nbsp;время. Статус закодирован цветом верхней границы, метки пациента&nbsp;— цветными точками.</li>
+              <li>Нерабочее время заштриховано, линия текущего времени проходит через всю сетку.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Администратор видит поток пациентов по&nbsp;статусам, не&nbsp;открывая записи.</li>
+            <li>Предпросмотр записи показывает карту пациента, услуги с&nbsp;суммой и&nbsp;скидкой, телефон, кнопки СМС и&nbsp;WhatsApp.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/medidea/grid-preview.jpg" alt="Предпросмотр записи: карта пациента, услуги, итог, телефон и кнопки связи" width="1024" height="720" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #4: запись и график ========== -->
+    <section class="kb-section kb-case" id="stage-4" aria-labelledby="stage-4-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#4</span></p>
+          <h2 class="kb-case__title" id="stage-4-title">Запись на&nbsp;приём и&nbsp;график врачей: боковая панель поверх расписания</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/medidea/reception.jpg" alt="Редактирование приёма: пациент, клиника, тип приёма и услуги по источникам оплаты" width="1024" height="720" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Редактирование приёма открывается боковой панелью, расписание остаётся на&nbsp;экране. Слева пациент, клиника и&nbsp;тип приёма, справа услуги, сгруппированные по&nbsp;источнику оплаты: коммерческие, ОМС, ДМС, госконтракт.</p>
+            <p>График работы врачей&nbsp;— месячный календарь со&nbsp;сменами и&nbsp;перерывами. Новый график добавляется в&nbsp;такой&nbsp;же панели: по&nbsp;дням или повторяющийся.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Запись, услуги и&nbsp;оплата собраны в&nbsp;одном месте.</li>
+            <li>Один паттерн панели для приёма и&nbsp;для графика врача.</li>
+          </ul>
+        </div>
+
+        <div class="kb-grid-2 kb-grid-2--tall">
+          <img class="kb-img" src="assets/img/medidea/doctors.jpg" alt="График работы врачей на месяц" loading="lazy" data-scroll-reveal>
+          <img class="kb-img" src="assets/img/medidea/add-schedule.jpg" alt="Панель добавления расписания врача" loading="lazy" data-scroll-reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #5: цвет и UI-кит ========== -->
+    <section class="kb-section kb-case" id="stage-5" aria-labelledby="stage-5-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#5</span></p>
+          <h2 class="kb-case__title" id="stage-5-title">Пять цветовых схем и&nbsp;UI-кит для дальнейшего развития системы</h2>
+        </header>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Перед редизайном было проработано пять вариантов цветовой схемы на&nbsp;одном и&nbsp;том&nbsp;же экране расписания. После того как клиент определился с&nbsp;фирменным цветом, началась работа над остальными разделами.</p>
+            <p>Параллельно собирался UI-кит, из&nbsp;которого построены все экраны системы.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Шрифт Inter, 15&nbsp;текстовых стилей с&nbsp;описанием применения.</li>
+            <li>35&nbsp;наборов компонентов с&nbsp;вариантами и&nbsp;около 50&nbsp;одиночных.</li>
+            <li>Карточки записей в&nbsp;семи статусах для каждого вида сетки.</li>
+            <li>Компонент онбординга с&nbsp;подсказками для новых пользователей.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=3" defer></script>
+</body>
+</html>
