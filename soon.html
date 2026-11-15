@@ -45,7 +45,7 @@
 
   <main class="soon">
     <div class="soon__head">
-      <a class="back-link" href="index.html" data-back>
+      <a class="back-link" href="index.html">
         <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
         Назад
       </a>
@@ -74,15 +74,6 @@
     </footer>
   </main>
 
-  <script>
-    /* «Назад» возвращает туда, откуда пришли, если это страница сайта */
-    document.querySelector('[data-back]').addEventListener('click', (e) => {
-      if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) {
-        e.preventDefault();
-        history.back();
-      }
-    });
-  </script>
-  <script src="js/case.js?v=2" defer></script>
+  <script src="js/case.js?v=3" defer></script>
 </body>
 </html>

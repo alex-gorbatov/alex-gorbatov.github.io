@@ -1,12 +1,9 @@
 /* ==========================================================
-   Главная: мобильное меню, переход «Первый экран → Лента»,
+   Главная: мобильное меню, появление блоков при скролле,
    движение размытых кругов по скроллу
    ========================================================== */
 
-const root = document.documentElement;
 const header = document.querySelector('.header');
-const hero = document.querySelector('.hero');
-const works = document.querySelector('.works');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
 /* ---------------- Мобильное меню ---------------- */
@@ -27,28 +24,11 @@ if (toggle) {
   matchMedia('(min-width: 900px)').addEventListener('change', (e) => { if (e.matches) setMenuOpen(false); });
 }
 
-/* ---------------- Переход между экранами ----------------
-   Как в референсе: контент первого экрана уходит вверх и растворяется,
-   затем элементы ленты по очереди проявляются снизу. Шапка и фон остаются. */
+/* ---------------- Анимации появления ----------------
+   Страница листается обычным скроллом: первый экран, лента проектов, опыт, футер. */
 
-const OUT = { duration: 450, stagger: 40, shift: 40 };
 const IN = { duration: 750, stagger: 90, shift: 60 };
 const EASE_OUT = 'cubic-bezier(.22, .61, .36, 1)';
-const EASE_IN = 'cubic-bezier(.55, .06, .68, .19)';
-
-let mode = root.classList.contains('is-works') ? 'works' : 'hero';
-let busy = false;
-
-const heroItems = () => [...hero.querySelectorAll('[data-reveal]'), hero.querySelector('.hero__bg')];
-
-/* Элементы ленты, которые сейчас в зоне видимости (анимируем только их) */
-const visibleWorksItems = () => {
-  const items = [...works.querySelectorAll('.project__head, .project__frame')];
-  return items.filter((el) => {
-    const r = el.getBoundingClientRect();
-    return r.bottom > 0 && r.top < innerHeight;
-  });
-};
 
 const animateGroup = (els, keyframes, { duration, stagger, easing, fill }) => {
   if (reducedMotion.matches) {
@@ -60,60 +40,12 @@ const animateGroup = (els, keyframes, { duration, stagger, easing, fill }) => {
   ));
 };
 
-const clearAnimations = (els) => els.forEach((el) => el.getAnimations().forEach((a) => a.cancel()));
+/* Первый экран проявляется при загрузке */
+const heroItems = [...document.querySelectorAll('.hero [data-reveal], .hero__bg')];
+animateGroup(heroItems,
+  [{ opacity: 0, transform: `translateY(-${IN.shift}px)` }, { opacity: 1, transform: 'none' }],
+  { ...IN, easing: EASE_OUT, fill: 'backwards' });
 
-const setMode = (next) => {
-  mode = next;
-  root.classList.toggle('is-hero', next === 'hero');
-  root.classList.toggle('is-works', next === 'works');
-  history.replaceState(null, '', next === 'works' ? '#works' : location.pathname + location.search);
-};
-
-async function goToWorks() {
-  if (busy || mode === 'works') return;
-  busy = true;
-  setMenuOpen(false);
-
-  const out = heroItems();
-  await animateGroup(out,
-    [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: `translateY(-${OUT.shift}px)` }],
-    { ...OUT, easing: EASE_IN, fill: 'forwards' });
-
-  setMode('works');
-  scrollTo(0, 0);
-  clearAnimations(out);
-  works.focus({ preventScroll: true });
-
-  const entering = visibleWorksItems();
-  markRevealed(entering);                // их проявит сам переход, а не наблюдатель скролла
-  await animateGroup(entering,
-    [{ opacity: 0, transform: `translateY(${IN.shift}px)` }, { opacity: 1, transform: 'none' }],
-    { ...IN, easing: EASE_OUT, fill: 'backwards' });
-
-  busy = false;
-}
-
-async function goToHero() {
-  if (busy || mode === 'hero') return;
-  busy = true;
-
-  const out = visibleWorksItems();
-  await animateGroup(out,
-    [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: `translateY(${OUT.shift}px)` }],
-    { ...OUT, stagger: 20, easing: EASE_IN, fill: 'forwards' });
-
-  setMode('hero');
-  scrollTo(0, 0);
-  clearAnimations(out);
-  header.classList.remove('is-hidden');
-  hero.focus({ preventScroll: true });
-
-  await animateGroup(heroItems(),
-    [{ opacity: 0, transform: `translateY(-${IN.shift}px)` }, { opacity: 1, transform: 'none' }],
-    { ...IN, easing: EASE_OUT, fill: 'backwards' });
-
-  busy = false;
-}
 
 /* ---------------- Появление карточек при прокрутке ленты ----------------
    Та же анимация, что при переходе на ленту: снизу вверх с проявлением,
@@ -145,95 +77,28 @@ revealTargets.forEach((el) => {
   revealObserver.observe(el);
 });
 
-/* ---------------- Жесты ---------------- */
 
-const atBottom = () => scrollY + innerHeight >= document.documentElement.scrollHeight - 2;
-const atTop = () => scrollY <= 0;
-
-/* Колесо / тачпад. Один жест = серия событий без паузы > 200 мс.
-   Жест, запустивший переход, «съедаем» целиком, чтобы инерция тачпада
-   не пролистала ленту и не вернула экран обратно. */
-let lastWheel = 0;
-let gestureUsed = false;
-let topSince = atTop() ? performance.now() : Infinity;
-
-addEventListener('scroll', () => {
-  if (atTop()) { if (topSince === Infinity) topSince = performance.now(); }
-  else topSince = Infinity;
-}, { passive: true });
-
-addEventListener('wheel', (e) => {
-  if (header.classList.contains('is-open')) return;
-  const now = performance.now();
-  if (now - lastWheel > 200) gestureUsed = false;
-  lastWheel = now;
-
-  if (busy || gestureUsed) { e.preventDefault(); return; }
-
-  if (mode === 'hero' && e.deltaY > 0 && atBottom()) {
-    e.preventDefault(); gestureUsed = true; goToWorks();
-  } else if (mode === 'works' && e.deltaY < 0 && atTop() && now - topSince > 300) {
-    // назад — только если пользователь уже «упёрся» в верх ленты, а не долетел до него по инерции
-    e.preventDefault(); gestureUsed = true; goToHero();
-  }
-}, { passive: false });
-
-/* Тач */
-let touchY = null;
-let touchAtEdge = false;
-
-addEventListener('touchstart', (e) => {
-  touchY = e.touches[0].clientY;
-  touchAtEdge = mode === 'hero' ? atBottom() : atTop();
-}, { passive: true });
-
-addEventListener('touchmove', (e) => {
-  if (touchY === null || busy) { if (busy) e.preventDefault(); return; }
-  const dy = touchY - e.touches[0].clientY;
-  // гасим «резинку» у края, если жест ведёт к переходу
-  if (touchAtEdge && ((mode === 'hero' && dy > 0) || (mode === 'works' && dy < 0))) e.preventDefault();
-}, { passive: false });
-
-addEventListener('touchend', (e) => {
-  if (touchY === null) return;
-  const dy = touchY - e.changedTouches[0].clientY;
-  touchY = null;
-  if (!touchAtEdge || header.classList.contains('is-open')) return;
-  if (mode === 'hero' && dy > 50) goToWorks();
-  else if (mode === 'works' && dy < -70) goToHero();
-}, { passive: true });
-
-/* Клавиатура */
-addEventListener('keydown', (e) => {
-  if (e.target.closest('input, textarea, select, [contenteditable]')) return;
-  if (busy && ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', ' ', 'Home', 'End'].includes(e.key)) {
-    e.preventDefault(); return;
-  }
-  if (mode === 'hero' && atBottom() && ['ArrowDown', 'PageDown', ' ', 'End'].includes(e.key)) {
-    e.preventDefault(); goToWorks();
-  } else if (mode === 'works' && (e.key === 'Home' || (atTop() && ['ArrowUp', 'PageUp'].includes(e.key)))) {
-    e.preventDefault(); goToHero();
-  }
-});
-
-/* Ссылки «Последние работы» и логотип */
-document.querySelectorAll('a[href="#works"]').forEach((a) => a.addEventListener('click', (e) => {
-  e.preventDefault(); goToWorks();
-}));
+/* ---------------- Ссылки на разделы и логотип ---------------- */
 document.querySelectorAll('.logo').forEach((logo) => logo.addEventListener('click', (e) => {
-  if (mode === 'works') { e.preventDefault(); goToHero(); }
+  if (scrollY > 0) { e.preventDefault(); scrollTo({ top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' }); }
 }));
 
-/* ---------------- Шапка на ленте: прячется при скролле вниз ---------------- */
+/* ---------------- Шапка: прячется при скролле вниз, подпись уходит после первого экрана ---------------- */
+const root = document.documentElement;
+const heroEl = document.querySelector('.hero');
 let lastY = scrollY;
-addEventListener('scroll', () => {
+const onScroll = () => {
   const y = scrollY;
-  if (mode === 'works' && !header.classList.contains('is-open')) {
+  if (!header.classList.contains('is-open')) {
     if (y > lastY + 4 && y > 120) header.classList.add('is-hidden');
     else if (y < lastY - 4 || y <= 120) header.classList.remove('is-hidden');
   }
+  root.classList.toggle('is-works', y > heroEl.offsetHeight * 0.5);
   lastY = y;
-}, { passive: true });
+};
+addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
 
 /* ---------------- Размытые круги ----------------
    При скролле ленты каждый круг едет по часовой стрелке вдоль границ экрана.
@@ -263,7 +128,6 @@ let current = 0;
 let rafId = 0;
 
 const scrollProgress = () => {
-  if (mode !== 'works') return 0;
   const max = document.documentElement.scrollHeight - innerHeight;
   return max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
 };
@@ -294,7 +158,6 @@ const updateGlows = () => {
 
 addEventListener('scroll', updateGlows, { passive: true });
 addEventListener('resize', updateGlows);
-new MutationObserver(updateGlows).observe(root, { attributes: true, attributeFilter: ['class'] });
 
 /* ---------------- Волны на обложках: «дышат» при наведении ----------------
    Каждая точка кривой смещается плавным синусоидальным полем, поэтому линия

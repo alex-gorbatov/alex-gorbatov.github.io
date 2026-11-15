@@ -130,3 +130,22 @@ if (lightboxLinks.length) {
     box.showModal();
   }));
 }
+
+/* ---------------- «Назад» ----------------
+   Ведёт туда, откуда пользователь пришёл на эту страницу (если это страница сайта),
+   и возвращает его на прежнее место прокрутки. Переходы по якорям внутри страницы
+   (#stage-1 и т. п.) пропускаем. Если пришли извне или открыли страницу напрямую —
+   работает обычная ссылка из href. */
+let anchorSteps = 0;
+addEventListener('hashchange', () => { anchorSteps += 1; });
+
+document.querySelectorAll('.back-link').forEach((link) => link.addEventListener('click', (e) => {
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+  try {
+    const from = new URL(document.referrer);
+    const sameSite = from.origin === location.origin && from.pathname !== location.pathname;
+    if (!sameSite || history.length < 2) return;
+  } catch { return; }
+  e.preventDefault();
+  history.go(-(anchorSteps + 1));
+}));
