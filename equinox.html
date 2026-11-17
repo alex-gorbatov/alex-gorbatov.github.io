@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EQUINOX — кейс Александра Горбатова</title>
+  <meta name="description" content="UI-кит онлайн-сервиса для поиска, покупки и аренды недвижимости: более 40 экранов и библиотека компонентов.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Александр Горбатов">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://alex-gorbatov.github.io/equinox.html">
+  <meta property="og:title" content="EQUINOX — кейс Александра Горбатова">
+  <meta property="og:description" content="UI-кит онлайн-сервиса для поиска, покупки и аренды недвижимости: более 40 экранов и библиотека компонентов.">
+  <meta property="og:image" content="https://alex-gorbatov.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="soon.html">Опыт</a></li>
+        <li><a class="nav__link" href="soon.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="eq-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="eq-title">EQUINOX</h1>
+        <p class="kb-hero__lead">UI-кит онлайн-сервиса для поиска, покупки и&nbsp;аренды недвижимости: весь путь от&nbsp;первого экрана до&nbsp;оплаты брони. Более 40&nbsp;макетов и&nbsp;библиотека компонентов, на&nbsp;которой продукт можно развивать дальше.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны EQUINOX" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/catalog.jpg" alt="Каталог квартир по городам" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/district.jpg" alt="Страница района" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/apartment.jpg" alt="Страница квартиры" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/map.jpg" alt="Поиск квартир на карте" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/blog.jpg" alt="Блог" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/checkout.jpg" alt="Оплата бронирования" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задача ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задача:</h2>
+          <p class="kb-body" data-scroll-reveal>Создать визуальный язык и&nbsp;готовый набор экранов для сервиса, который помогает понять, что, где и&nbsp;когда покупать, продавать или снимать. Кит должен был покрыть весь сценарий пользователя&nbsp;— от&nbsp;выбора города до&nbsp;бронирования конкретной квартиры&nbsp;— и&nbsp;стать основой для разработки.</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Что было сложного:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Совместить эмоции и&nbsp;утилитарность: недвижимость выбирают глазами, но&nbsp;решение принимают по&nbsp;цене, площади и&nbsp;району;</li>
+            <li>Дать гибкость будущей команде: один и&nbsp;тот&nbsp;же поиск должен работать на&nbsp;главной, в&nbsp;каталоге и&nbsp;на&nbsp;карте;</li>
+            <li>Собрать систему, а&nbsp;не&nbsp;набор красивых экранов: каждый новый макет собирается из&nbsp;уже готовых компонентов.</li>
+          </ul>
+
+          <h3 class="kb-h3" data-scroll-reveal>Роль:</h3>
+          <p class="kb-body" data-scroll-reveal>Дизайнер. Концепция, визуальный стиль, все экраны и&nbsp;библиотека компонентов.</p>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="stages-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="stages-title">Этапы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#stage-1">Первый экран</a></li>
+            <li><span>#2</span><a href="#stage-2">Поиск: города, районы, карта</a></li>
+            <li><span>#3</span><a href="#stage-3">Страница района</a></li>
+            <li><span>#4</span><a href="#stage-4">Квартира и&nbsp;бронирование</a></li>
+            <li><span>#5</span><a href="#stage-5">Блог и&nbsp;служебные страницы</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Этап #1: первый экран ========== -->
+    <section class="kb-section kb-case" id="stage-1" aria-labelledby="stage-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#1</span></p>
+          <h2 class="kb-case__title" id="stage-1-title">Первый экран: 20&nbsp;вариантов из&nbsp;одних и&nbsp;тех&nbsp;же блоков</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/equinox/search-1.jpg" alt="Первый экран с фотографией на всю ширину и поисковой строкой" width="1440" height="810" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Главная&nbsp;— витрина сервиса, и&nbsp;у&nbsp;каждого проекта она своя. Поэтому вместо одного экрана я&nbsp;сделал конструктор: десять вариантов с&nbsp;поиском и&nbsp;десять промо-экранов с&nbsp;подборками жилых комплексов.</p>
+            <p>Фото, поисковая строка, счётчики объектов, кнопка видеотура и&nbsp;слайдер&nbsp;— отдельные блоки. Их&nbsp;можно переставлять, не&nbsp;рисуя экран заново.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Пять вариантов поисковой строки: от&nbsp;полной с&nbsp;фильтрами до&nbsp;компактной на&nbsp;три поля.</li>
+            <li>Светлые, тёмные и&nbsp;акцентные варианты в&nbsp;одной сетке и&nbsp;одной типографике.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/equinox/promo-6.jpg" alt="Промо-экран жилого комплекса с карточкой самой просматриваемой квартиры" width="1440" height="810" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <div class="ribbons kb-ribbon eq-variants" aria-label="Варианты первого экрана">
+      <div class="ribbon ribbon--left" style="--start:-0.3">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-1.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-2.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-3.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-4.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-5.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-6.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-7.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-8.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-9.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/search-10.jpg" alt="Вариант первого экрана с поиском" decoding="async">
+        </div>
+      </div>
+      <div class="ribbon ribbon--right" style="--start:-0.6">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-1.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-2.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-3.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-4.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-5.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-6.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-7.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-8.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-9.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/equinox/promo-10.jpg" alt="Вариант промо-экрана с подборкой" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Этап #2: поиск ========== -->
+    <section class="kb-section kb-case" id="stage-2" aria-labelledby="stage-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#2</span></p>
+          <h2 class="kb-case__title" id="stage-2-title">Поиск: три способа найти квартиру</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/catalog.jpg" alt="Каталог квартир, сгруппированный по городам" width="1440" height="2299" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Люди ищут жильё по-разному: кто-то знает город, кто-то район, кто-то конкретную улицу. Для каждого сценария&nbsp;— свой вход:</p>
+            <ul class="kb-list">
+              <li>Каталог по&nbsp;городам: в&nbsp;каждом ряду лучшие предложения и&nbsp;ссылка на&nbsp;все квартиры города.</li>
+              <li>Карта районов: выбираешь город, кликаешь по&nbsp;району и&nbsp;сразу видишь квартиры в&nbsp;нём.</li>
+              <li>Карта объектов: метки по&nbsp;всему городу и&nbsp;карточки рядом, не&nbsp;уходя со&nbsp;страницы.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Одна и&nbsp;та&nbsp;же поисковая строка на&nbsp;всех экранах&nbsp;— фильтры не&nbsp;сбрасываются при переходе.</li>
+            <li>Единая карточка квартиры: фото, цена, адрес, спальни и&nbsp;санузлы.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/districts-map.jpg" alt="Поиск по районам: интерактивная карта Москвы и квартиры выбранного района" width="1440" height="1277" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/map.jpg" alt="Поиск квартир на карте города с карточками объектов" width="1440" height="1213" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #3: район ========== -->
+    <section class="kb-section kb-case" id="stage-3" aria-labelledby="stage-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#3</span></p>
+          <h2 class="kb-case__title" id="stage-3-title">Район: продаём не&nbsp;метры, а&nbsp;место для жизни</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/district.jpg" alt="Страница района: описание, фотогалерея, квартиры на продажу и в аренду с картой" width="1440" height="2499" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Выбор района часто важнее выбора квартиры. Страница района начинается с&nbsp;атмосферы: большое фото, описание, видеотур и&nbsp;галерея мест, где хочется гулять.</p>
+            <p>Ниже&nbsp;— квартиры на&nbsp;продажу и&nbsp;в&nbsp;аренду, у&nbsp;каждого списка свои фильтры и&nbsp;карта с&nbsp;метками рядом.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Для аренды отдельные поля: даты заезда и&nbsp;выезда, количество гостей.</li>
+            <li>Скидка показана прямо в&nbsp;карточке: старая цена зачёркнута, новая рядом.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #4: квартира ========== -->
+    <section class="kb-section kb-case" id="stage-4" aria-labelledby="stage-4-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#4</span></p>
+          <h2 class="kb-case__title" id="stage-4-title">Квартира и&nbsp;бронирование: решение и&nbsp;оплата в&nbsp;два шага</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/apartment.jpg" alt="Страница квартиры: фото, карта, описание, удобства, форма бронирования и отзывы" width="1440" height="2133" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">На&nbsp;странице квартиры всё, что нужно для решения, видно сразу:</p>
+            <ul class="kb-list">
+              <li>Рейтинг, вместимость и&nbsp;цена за&nbsp;ночь&nbsp;— под заголовком, кнопка брони рядом.</li>
+              <li>Фото и&nbsp;карта в&nbsp;одном ряду: видно и&nbsp;интерьер, и&nbsp;расположение.</li>
+              <li>Форма бронирования сама считает итог по&nbsp;датам и&nbsp;гостям.</li>
+              <li>Отзывы с&nbsp;ответами хозяина&nbsp;— доверие до&nbsp;оплаты.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Оплата на&nbsp;одном экране: слева напоминание, что бронируешь, справа даты, сумма и&nbsp;карта.</li>
+            <li>Никаких лишних шагов между «Забронировать» и&nbsp;подтверждением.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/checkout.jpg" alt="Экран оплаты бронирования: квартира и карта слева, даты, сумма и данные карты справа" width="1440" height="1095" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #5: блог и служебные ========== -->
+    <section class="kb-section kb-case" id="stage-5" aria-labelledby="stage-5-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#5</span></p>
+          <h2 class="kb-case__title" id="stage-5-title">Блог и&nbsp;служебные страницы в&nbsp;том&nbsp;же характере</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/equinox/blog.jpg" alt="Блог: главная статья, свежие публикации, последние посты и видео" width="1440" height="1779" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Блог возвращает пользователей, даже когда они не&nbsp;ищут жильё прямо сейчас. Для него я&nbsp;собрал восемь видов превью статьи, из&nbsp;которых складываются подборки любой длины.</p>
+            <p>Вход, регистрация и&nbsp;страница 404 тоже часть бренда: крупная фотография, короткий текст и&nbsp;одна понятная кнопка.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Вход через почту или соцсети.</li>
+            <li>404 с&nbsp;юмором и&nbsp;быстрым возвратом на&nbsp;главную.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/equinox/signin.jpg" alt="Экран входа: фотография города и форма с входом через соцсети" width="1440" height="810" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg" src="assets/img/equinox/not-found.jpg" alt="Страница 404" width="1440" height="810" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Итоги ========== -->
+    <section class="kb-section kb-case" aria-labelledby="result-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <h2 class="kb-case__title" id="result-title">Итог</h2>
+        </header>
+        <div class="kb-cols" data-scroll-reveal>
+          <p class="kb-body">EQUINOX покрывает весь путь пользователя сервиса недвижимости: от&nbsp;первого впечатления до&nbsp;оплаты. Все экраны собраны из&nbsp;библиотеки компонентов&nbsp;— шапок, поисковых строк, карточек, кнопок, полей и&nbsp;превью статей,&nbsp;— поэтому новые страницы делаются быстро и&nbsp;выглядят как часть одного продукта.</p>
+          <ul class="kb-results">
+            <li>Более 40&nbsp;готовых макетов.</li>
+            <li>20&nbsp;вариантов первого экрана.</li>
+            <li>Более 50&nbsp;вариантов компонентов в&nbsp;библиотеке.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=3" defer></script>
+</body>
+</html>

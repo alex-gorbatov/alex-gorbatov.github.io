@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Онлайн-банкинг — кейс Александра Горбатова</title>
+  <meta name="description" content="Концепт цифровых сервисов банка для частных клиентов: веб-версия интернет-банка в светлой и тёмной теме и сайт банка.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Александр Горбатов">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://alex-gorbatov.github.io/bank.html">
+  <meta property="og:title" content="Онлайн-банкинг — кейс Александра Горбатова">
+  <meta property="og:description" content="Концепт цифровых сервисов банка для частных клиентов: веб-версия интернет-банка в светлой и тёмной теме и сайт банка.">
+  <meta property="og:image" content="https://alex-gorbatov.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="soon.html">Опыт</a></li>
+        <li><a class="nav__link" href="soon.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="bank-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="bank-title">Онлайн-банкинг</h1>
+        <p class="kb-hero__lead">Концепт цифровых сервисов банка для частных клиентов: веб-версия интернет-банка в&nbsp;светлой и&nbsp;тёмной теме и&nbsp;сайт банка. Проект под NDA, название банка скрыто.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны интернет-банка" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/bank/main-light.jpg" alt="Главная интернет-банка, светлая тема" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/bank/utilities-dark.jpg" alt="Оплата коммунальных услуг, тёмная тема" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/bank/payments-light.jpg" alt="Раздел «Платежи»: шаблоны и категории" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/bank/main-dark.jpg" alt="Главная интернет-банка, тёмная тема" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задача ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задача:</h2>
+          <p class="kb-body" data-scroll-reveal>В&nbsp;2021&nbsp;году банк готовил обновление цифровых каналов для частных клиентов. Нужно было предложить концепт веб-версии интернет-банка и&nbsp;нового публичного сайта: показать, как может выглядеть ежедневная работа с&nbsp;деньгами в&nbsp;браузере и&nbsp;как клиент приходит к&nbsp;продукту банка с&nbsp;сайта.</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Что было сложного:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Уместить на&nbsp;одном экране все частые действия: переводы, платежи, пополнение телефона, обмен валют&nbsp;— и&nbsp;не&nbsp;перегрузить его;</li>
+            <li>Сделать интерфейс сразу в&nbsp;двух темах, светлой и&nbsp;тёмной, на&nbsp;одних и&nbsp;тех&nbsp;же компонентах;</li>
+            <li>Объяснить на&nbsp;сайте условия банковских продуктов так, чтобы в&nbsp;них разобрался человек без финансового образования.</li>
+          </ul>
+
+          <h3 class="kb-h3" data-scroll-reveal>Роль:</h3>
+          <p class="kb-body" data-scroll-reveal>Арт-директор. Концепция, структура экранов, визуальный стиль, UI&nbsp;обеих тем и&nbsp;макеты сайта.</p>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="stages-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="stages-title">Этапы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#stage-1">Главная интернет-банка</a></li>
+            <li><span>#2</span><a href="#stage-2">Платежи</a></li>
+            <li><span>#3</span><a href="#stage-3">Тёмная тема</a></li>
+            <li><span>#4</span><a href="#stage-4">Сайт для частных клиентов</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Этап #1: главная ========== -->
+    <section class="kb-section kb-case" id="stage-1" aria-labelledby="stage-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#1</span></p>
+          <h2 class="kb-case__title" id="stage-1-title">Главная: всё, ради чего заходят в&nbsp;банк, на&nbsp;одном экране</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/bank/main-light.jpg" alt="Главная интернет-банка: боковое меню, баннер, кошельки, история транзакций и виджеты быстрых действий" width="1440" height="1548" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Главную я&nbsp;собрал как панель из&nbsp;виджетов. Каждый отвечает за&nbsp;одно действие, и&nbsp;большинство из&nbsp;них можно выполнить, не&nbsp;уходя со&nbsp;страницы:</p>
+            <ul class="kb-list">
+              <li>Кошельки с&nbsp;балансом по&nbsp;каждой карте и&nbsp;история последних операций со&nbsp;статусом.</li>
+              <li>Перевод на&nbsp;карту, пополнение мобильного, поиск получателя платежа и&nbsp;конвертер валют&nbsp;— поле и&nbsp;кнопка прямо в&nbsp;карточке.</li>
+              <li>Под каждым полем&nbsp;— короткая подсказка: какие карты принимаются, по&nbsp;каким реквизитам искать.</li>
+              <li>Кредитные предложения и&nbsp;новости сервиса вынесены вниз, чтобы не&nbsp;мешать повседневным действиям.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Боковое меню на&nbsp;15&nbsp;разделов, у&nbsp;каждого своя цветная иконка: нужный раздел находится взглядом, а&nbsp;не&nbsp;чтением.</li>
+            <li>В&nbsp;шапке&nbsp;— курс доллара, шаблоны и&nbsp;профиль, доступные с&nbsp;любой страницы.</li>
+            <li>Блок поддержки 24/7 всегда под меню.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #2: платежи ========== -->
+    <section class="kb-section kb-case" id="stage-2" aria-labelledby="stage-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#2</span></p>
+          <h2 class="kb-case__title" id="stage-2-title">Платежи: повторить прошлый платёж быстрее, чем найти новый</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/bank/payments-light.jpg" alt="Раздел «Платежи»: шаблоны с лицевым счётом и датой последнего платежа, категории получателей" width="1440" height="1012" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Большинство платежей человек делает каждый месяц одним и&nbsp;тем&nbsp;же получателям. Поэтому в&nbsp;разделе первыми стоят шаблоны: адрес или название услуги, лицевой счёт и&nbsp;дата последнего платежа. Ниже&nbsp;— десять категорий получателей, от&nbsp;коммунальных услуг до&nbsp;штрафов ГИБДД, для всего остального.</p>
+            <p>Самый сложный сценарий&nbsp;— коммунальные платежи. Начисления приходят от&nbsp;нескольких поставщиков, и&nbsp;платить их&nbsp;по&nbsp;одному долго.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Все начисления по&nbsp;адресу собраны в&nbsp;одну таблицу.</li>
+            <li>Оплата всех услуг одной кнопкой с&nbsp;одной карты.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/bank/utilities-light.jpg" alt="Оплата коммунальных услуг: список начислений с суммами к оплате, выбор карты и общая сумма" width="1440" height="1074" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Как устроен экран оплаты:</p>
+            <ul class="kb-list">
+              <li>Сверху адрес, плательщик и&nbsp;период: если у&nbsp;клиента несколько квартир, он&nbsp;переключает адрес в&nbsp;том&nbsp;же месте.</li>
+              <li>Каждая услуга&nbsp;— строка с&nbsp;иконкой, номером лицевого счёта и&nbsp;суммой к&nbsp;оплате. Галочкой выбирают, что оплатить сейчас.</li>
+              <li>Рядом поле для своей суммы, если хочется заплатить больше или пополнить счёт заранее. Строку можно раскрыть и&nbsp;посмотреть детали начисления.</li>
+              <li>Справа закреплена карта списания, итоговая сумма и&nbsp;кнопка оплаты&nbsp;— итог всегда перед глазами.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #3: тёмная тема ========== -->
+    <section class="kb-section kb-case" id="stage-3" aria-labelledby="stage-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#3</span></p>
+          <h2 class="kb-case__title" id="stage-3-title">Тёмная тема: те&nbsp;же экраны, другой контраст</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/bank/main-dark.jpg" alt="Главная интернет-банка в тёмной теме" width="1440" height="1548" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Каждый экран сделан в&nbsp;двух темах. Тёмная&nbsp;— не&nbsp;инверсия светлой: фон почти чёрный, карточки и&nbsp;поля на&nbsp;ступень светлее, поэтому структура страницы читается по&nbsp;слоям, без рамок и&nbsp;теней.</p>
+            <p>Синий акцент, цвета иконок разделов и&nbsp;статусы операций в&nbsp;обеих темах одинаковые. Клиент, переключивший тему, находит кнопки и&nbsp;разделы там&nbsp;же, где привык.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Обе темы построены на&nbsp;одних компонентах: меняются только цвета фона, поверхностей и&nbsp;текста.</li>
+            <li>Отдельно подобраны оттенки для плейсхолдеров и&nbsp;подсказок, чтобы они не&nbsp;терялись на&nbsp;тёмном фоне.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/bank/payments-dark.jpg" alt="Раздел «Платежи» в тёмной теме" width="1440" height="1012" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg" src="assets/img/bank/utilities-dark.jpg" alt="Оплата коммунальных услуг в тёмной теме" width="1440" height="1074" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #4: сайт ========== -->
+    <section class="kb-section kb-case" id="stage-4" aria-labelledby="stage-4-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#4</span></p>
+          <h2 class="kb-case__title" id="stage-4-title">Сайт для частных клиентов: от&nbsp;предложения до&nbsp;заявки</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/bank/site-main.jpg" alt="Главная страница сайта банка: промо кредита, популярные сервисы, предложения, курсы валют и новости" width="1440" height="3501" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Сайт&nbsp;— первое, что видит будущий клиент. Главную я&nbsp;выстроил от&nbsp;предложения к&nbsp;справочной информации:</p>
+            <ul class="kb-list">
+              <li>Первый экран продаёт один продукт: ставка, сумма и&nbsp;срок крупно, кнопка заявки рядом.</li>
+              <li>Сразу под ним&nbsp;— панель быстрого перехода в&nbsp;разделы: вклады, кредиты, ипотека, автокредит, карты, инвестиции.</li>
+              <li>Дальше&nbsp;— популярные сервисы и&nbsp;персональные предложения в&nbsp;карточках с&nbsp;объёмными иллюстрациями, курсы валют и&nbsp;новости банка.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Иллюстрации в&nbsp;одном стиле на&nbsp;всех карточках&nbsp;— банк выглядит дружелюбно, а&nbsp;не&nbsp;строго.</li>
+            <li>Вход в&nbsp;интернет-банк всегда в&nbsp;шапке.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/bank/site-deposit.jpg" alt="Страница вклада: условия, таблица ставок по срокам, калькулятор дохода и список всех вкладов" width="1440" height="2352" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Страница продукта на&nbsp;примере вклада отвечает на&nbsp;вопросы клиента по&nbsp;порядку:</p>
+            <ul class="kb-list">
+              <li>Главные условия&nbsp;— срок и&nbsp;минимальная сумма&nbsp;— сразу под заголовком, с&nbsp;иконками.</li>
+              <li>Ставки сведены в&nbsp;таблицу по&nbsp;семи диапазонам сроков. Отдельной строкой видно, что в&nbsp;интернет-банке ставка выше, чем в&nbsp;офисе.</li>
+              <li>Калькулятор сразу показывает итоговую сумму, доход и&nbsp;ставку для введённых значений.</li>
+              <li>Внизу&nbsp;— все вклады банка, чтобы сравнить и&nbsp;перейти к&nbsp;соседнему продукту.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Кнопка «Открыть в&nbsp;онлайн-банке» повторяется после условий и&nbsp;после расчёта&nbsp;— там, где клиент принимает решение.</li>
+            <li>Шаблон страницы подходит и&nbsp;для других продуктов: кредитов, карт, ипотеки.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Следующий проект ========== -->
+    <section class="kb-next" aria-labelledby="next-title">
+      <a class="kb-next__link" href="equinox.html">
+        <span class="case-label case-label--accent">Следующий проект</span>
+        <span class="kb-next__title" id="next-title">EQUINOX</span>
+        <span class="kb-next__lead">UI-кит онлайн-сервиса для поиска, покупки и&nbsp;аренды недвижимости</span>
+        <img class="kb-next__btn" src="assets/img/sfera/round-button.svg" alt="" width="50" height="50">
+        <span class="kb-next__preview"><img src="assets/img/equinox/search-1.jpg" alt="" loading="lazy"></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=3" defer></script>
+</body>
+</html>

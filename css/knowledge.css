@@ -393,3 +393,6 @@ body:has(.kb-next) .site-footer {
   line-height: 19px;
   color: var(--kb-tag);
 }
+
+/* EQUINOX: ленты вариантов первого экрана между этапами */
+.eq-variants { margin: -20px 0 100px; }
