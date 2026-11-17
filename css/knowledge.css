@@ -315,3 +315,81 @@ body:has(.kb-next) .site-footer {
 /* Текст сразу под заголовком этапа (Медидея) */
 .kb-text { margin-top: 30px; }
 .kb-text .kb-list { margin-top: 20px; }
+
+/* ==========================================================
+   Умней
+   ========================================================== */
+/* Карта сервиса: широкая, прокручивается вбок */
+.um-map {
+  margin-top: 30px;
+  overflow-x: auto;
+  border-radius: 20px;
+  background: #fff;
+  scrollbar-width: thin;
+}
+.um-map img {
+  display: block;
+  height: clamp(360px, 37.5vw, 720px);
+  width: auto;
+  max-width: none;
+}
+.um-map:focus-visible { outline: 2px solid var(--case-accent); outline-offset: 4px; }
+.um-hint {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--kb-tag);
+}
+
+/* Компоненты и таблицы на белом фоне */
+.um-img--light { background: #fff; }
+
+/* Путь заявки */
+.um-h3-top { margin-top: 0; }
+.um-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.um-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 19px;
+  --chip-bg: rgba(149, 186, 243, 0.16);
+  --chip-fg: #95baf3;
+}
+.um-status span {
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--chip-bg);
+  color: var(--chip-fg);
+}
+.um-status:not(:last-child)::after { content: "→"; color: var(--kb-tag); }
+.um-status--error { --chip-bg: rgba(239, 70, 91, 0.16); --chip-fg: #ff7a8b; }
+.um-status--ok { --chip-bg: rgba(178, 211, 62, 0.16); --chip-fg: #c4e05a; }
+.um-note { margin-top: 20px; }
+
+@media (max-width: 599px) {
+  .um-map { border-radius: 12px; }
+}
+.um-card {
+  padding: clamp(12px, 2.6vw, 40px);
+  border-radius: 20px;
+  background: #fff;
+}
+.um-card img { display: block; width: 100%; height: auto; margin: 0 auto; }
+@media (max-width: 599px) { .um-card { border-radius: 12px; } }
+.um-figure { margin: 50px 0 0; }
+.um-figure + .um-figure { margin-top: 30px; }
+.um-figure figcaption {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--kb-tag);
+}

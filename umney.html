@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Умней — кейс Александра Горбатова</title>
+  <meta name="description" content="Умней Workspace: внутренняя система сети учебных центров. Карта сервиса на 85 разделов, сценарий зачисления, три роли, список заявок и дизайн-система.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Александр Горбатов">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://alex-gorbatov.github.io/umney.html">
+  <meta property="og:title" content="Умней — кейс Александра Горбатова">
+  <meta property="og:description" content="Умней Workspace: внутренняя система сети учебных центров. Карта сервиса на 85 разделов, сценарий зачисления, три роли, список заявок и дизайн-система.">
+  <meta property="og:image" content="https://alex-gorbatov.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="soon.html">Опыт</a></li>
+        <li><a class="nav__link" href="soon.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="um-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="um-title">Умней</h1>
+        <p class="kb-hero__lead">Внутренняя система сети учебных центров: приём абитуриентов, заявки на&nbsp;обучение, учебные планы, приказы и&nbsp;переписка между центрами и&nbsp;головным офисом.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны системы Умней" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/umney/filters.jpg" alt="Список заявок с расширенным поиском" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/umney/plan.jpg" alt="Характеристика учебного плана в заявке на зачисление" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/umney/validation.jpg" alt="Заявка с ошибками заполнения и меню действий" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/umney/customer.jpg" alt="Данные заказчика в заявке" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задача ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задача:</h2>
+          <p class="kb-body" data-scroll-reveal>Умней&nbsp;— сеть учебных центров с&nbsp;филиалами по&nbsp;всей стране. Всё, что связано с&nbsp;учениками, проходит через внутреннюю систему Workspace: приём, зачисление, учебные планы, оплата, приказы, выпуск. В&nbsp;2021&nbsp;году систему решили перепроектировать, начав с&nbsp;самого нагруженного процесса&nbsp;— приёма и&nbsp;зачисления абитуриента.</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Что было сложного:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Около 85&nbsp;разделов, накопленных за&nbsp;годы работы системы;</li>
+            <li>Три роли с&nbsp;разными правами: образовательные организации, айдинг-центры в&nbsp;регионах и&nbsp;головной офис;</li>
+            <li>Анкета зачисления на&nbsp;девять блоков, где поля зависят друг от&nbsp;друга и&nbsp;от&nbsp;роли пользователя.</li>
+          </ul>
+
+          <h3 class="kb-h3" data-scroll-reveal>Роль:</h3>
+          <p class="kb-body" data-scroll-reveal>Арт-директор. Карта сервиса, прототипы, дизайн интерфейса, дизайн-система и&nbsp;сопровождение вёрстки.</p>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="stages-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="stages-title">Этапы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#stage-1">Карта сервиса</a></li>
+            <li><span>#2</span><a href="#stage-2">Три роли в&nbsp;одной системе</a></li>
+            <li><span>#3</span><a href="#stage-3">Зачисление абитуриента</a></li>
+            <li><span>#4</span><a href="#stage-4">Ошибки и&nbsp;краевые случаи</a></li>
+            <li><span>#5</span><a href="#stage-5">Список заявок</a></li>
+            <li><span>#6</span><a href="#stage-6">Дизайн-система</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Этап #1: карта сервиса ========== -->
+    <section class="kb-section kb-case" id="stage-1" aria-labelledby="stage-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#1</span></p>
+          <h2 class="kb-case__title" id="stage-1-title">Карта сервиса: сначала собрать всю систему на&nbsp;одном листе</h2>
+        </header>
+
+        <div class="kb-text" data-scroll-reveal>
+          <p class="kb-body">Прежде чем рисовать экраны, я&nbsp;разложил все разделы Workspace в&nbsp;одну карту: 13&nbsp;групп верхнего уровня и&nbsp;около 85&nbsp;разделов внутри&nbsp;— от&nbsp;«Приёма» и&nbsp;«Обучения» до&nbsp;финансов, выпуска и&nbsp;справочников. Карта стала общей точкой опоры для команды и&nbsp;клиента: по&nbsp;ней договаривались о&nbsp;навигации, группировке меню и&nbsp;очерёдности работ.</p>
+        </div>
+
+        <div class="um-map" data-scroll-reveal tabindex="0" role="region" aria-label="Карта сервиса, прокручивается по горизонтали">
+          <img src="assets/img/umney/servicemap.jpg" alt="Карта сервиса Умней Workspace: 13 групп и около 85 разделов" width="4600" height="1330" loading="lazy">
+        </div>
+        <p class="um-hint" aria-hidden="true">Карту можно прокрутить вбок →</p>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Меню в&nbsp;системе разное для каждой роли, поэтому на&nbsp;карте отмечено, какие разделы кому доступны. Отсюда&nbsp;же выросла структура бокового меню: две группы иконок, раскрытое и&nbsp;свёрнутое состояние, вложенные уровни.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Вся система на&nbsp;одном листе.</li>
+            <li>Понятный порядок работ: начали с&nbsp;приёма и&nbsp;зачисления.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #2: роли ========== -->
+    <section class="kb-section kb-case" id="stage-2" aria-labelledby="stage-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#2</span></p>
+          <h2 class="kb-case__title" id="stage-2-title">Три роли в&nbsp;одной системе: каждый видит свою часть процесса</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg um-img--light" src="assets/img/umney/ds-headers.jpg" alt="Шапка системы для трёх ролей: образовательные организации, айдинг-центр, офис-центр" width="1474" height="296" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Айдинг-центр в&nbsp;регионе заводит заявку на&nbsp;абитуриента, головной офис её&nbsp;проверяет и&nbsp;подтверждает приказом. Роль видна сразу в&nbsp;шапке: своя иконка и&nbsp;цвет. Пользователь с&nbsp;доступом к&nbsp;нескольким центрам переключает их&nbsp;в&nbsp;том&nbsp;же месте.</p>
+            <p>Права учтены на&nbsp;уровне полей. Например, у&nbsp;айдинг-центра нет выбора семестра ускорения и&nbsp;фактической приёмной кампании: эти значения появляются только после того, как их&nbsp;проставит офис.</p>
+          </div>
+          <div>
+            <h3 class="kb-h3 um-h3-top">Путь заявки</h3>
+            <ol class="um-statuses" aria-label="Статусы заявки">
+              <li class="um-status"><span>Черновик</span></li>
+              <li class="um-status"><span>Отправлена</span></li>
+              <li class="um-status um-status--error"><span>Отклонена</span></li>
+              <li class="um-status um-status--ok"><span>Исправлена</span></li>
+              <li class="um-status um-status--ok"><span>Проверена</span></li>
+              <li class="um-status um-status--ok"><span>Подтверждена приказом</span></li>
+            </ol>
+            <p class="kb-body um-note">Каждая смена статуса попадает в&nbsp;чат заявки, где центр и&nbsp;офис переписываются и&nbsp;обмениваются файлами, не&nbsp;уходя в&nbsp;почту.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #3: зачисление ========== -->
+    <section class="kb-section kb-case" id="stage-3" aria-labelledby="stage-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#3</span></p>
+          <h2 class="kb-case__title" id="stage-3-title">Зачисление: анкета из&nbsp;девяти блоков, которая подсказывает порядок заполнения</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/plan.jpg" alt="Характеристика учебного плана: подсказка о порядке заполнения, выбранная программа, расчёт семестра ускорения" width="1440" height="1359" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Заявка на&nbsp;зачисление&nbsp;— самый длинный документ в&nbsp;системе: данные абитуриента, образование, перезачёты, учебный план, вступительные испытания, заказчик, воинская обязанность, документы и&nbsp;приказы. Чтобы в&nbsp;нём не&nbsp;потеряться:</p>
+            <ul class="kb-list">
+              <li>Слева&nbsp;— навигация по&nbsp;блокам с&nbsp;вложенными пунктами, блок с&nbsp;ошибкой подсвечивается.</li>
+              <li>Сверху закреплена плашка с&nbsp;номером и&nbsp;датой контракта, статусом заявки и&nbsp;сроком её&nbsp;актуальности.</li>
+              <li>Где поля зависят друг от&nbsp;друга, интерфейс говорит, в&nbsp;каком порядке их&nbsp;заполнять, и&nbsp;сам подбирает образовательную программу.</li>
+              <li>Семестр ускорения считается по&nbsp;кнопке на&nbsp;основе сведений об&nbsp;образовании и&nbsp;перезачётов.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Один шаблон анкеты для трёх сценариев: зачисление, зачисление на&nbsp;курс ДПО и&nbsp;восстановление после отчисления.</li>
+            <li>Около 140&nbsp;экранов и&nbsp;состояний в&nbsp;рабочем файле.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/education.jpg" alt="Сведения об образовании" width="1440" height="1412" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg" src="assets/img/umney/credits.jpg" alt="Перезачёты по дисциплинам" width="1440" height="1514" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg" src="assets/img/umney/exams.jpg" alt="Вступительные испытания" width="1440" height="900" loading="lazy" data-scroll-reveal>
+        <img class="kb-img kb-img--lg" src="assets/img/umney/military.jpg" alt="Сведения о воинской обязанности" width="1440" height="1092" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #4: ошибки ========== -->
+    <section class="kb-section kb-case" id="stage-4" aria-labelledby="stage-4-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#4</span></p>
+          <h2 class="kb-case__title" id="stage-4-title">Ошибки и&nbsp;краевые случаи: продумать то, что обычно всплывает уже в&nbsp;разработке</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/validation.jpg" alt="Заявка с ошибками в обязательных полях, подсказками в шапке и меню действий" width="1440" height="900" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">На&nbsp;каждый сценарий я&nbsp;разрисовывал не&nbsp;только основной путь, но&nbsp;и&nbsp;то, что может пойти не&nbsp;так:</p>
+            <ul class="kb-list">
+              <li>Ошибки под полями и&nbsp;подсветка блока в&nbsp;навигации.</li>
+              <li>Система находит дубль и&nbsp;предлагает продолжить ранее созданную заявку вместо новой.</li>
+              <li>Проверка правильности СНИЛС, подтверждение удаления файла, экран ошибки.</li>
+              <li>Номер контракта появляется не&nbsp;сразу: пока его нет, рядом знак вопроса с&nbsp;пояснением, после&nbsp;— кнопка «Копировать».</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Система не&nbsp;даёт завести дубль заявки.</li>
+            <li>Разработчики получили готовые состояния, а&nbsp;не&nbsp;вопросы «что показать, если…».</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/duplicate.jpg" alt="Окно: заявка с такими же данными уже существует" width="1440" height="900" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #5: список заявок ========== -->
+    <section class="kb-section kb-case" id="stage-5" aria-labelledby="stage-5-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#5</span></p>
+          <h2 class="kb-case__title" id="stage-5-title">Список заявок: фильтры, которые не&nbsp;мешают таблице</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/filters.jpg" alt="Список заявок с открытым расширенным поиском, сгруппированным по блокам" width="1440" height="900" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Сотрудники центров ищут заявки по&nbsp;десяткам признаков. Для фильтров я&nbsp;сделал три варианта. В&nbsp;работу ушёл такой:</p>
+            <ul class="kb-list">
+              <li>Фильтры скрыты по&nbsp;умолчанию, расширенный поиск сгруппирован: данные по&nbsp;студенту, по&nbsp;контракту, по&nbsp;зачислению.</li>
+              <li>Если фильтры свёрнуты, но&nbsp;какой-то из&nbsp;них выбран, это видно и&nbsp;в&nbsp;свёрнутом виде.</li>
+              <li>Строки можно сгруппировать по&nbsp;любому полю.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Колонки переставлены: ФИО сразу за&nbsp;номером контракта, статус и&nbsp;дата актуальности в&nbsp;конце строки.</li>
+            <li>Истёкшая дата актуальности выделяется цветом.</li>
+          </ul>
+        </div>
+
+        <figure class="um-figure" data-scroll-reveal>
+          <figcaption>Было</figcaption>
+          <img class="kb-img um-img--light" src="assets/img/umney/list-before.jpg" alt="Первая версия таблицы заявок" width="1679" height="618" loading="lazy">
+        </figure>
+        <figure class="um-figure" data-scroll-reveal>
+          <figcaption>Стало</figcaption>
+          <img class="kb-img um-img--light" src="assets/img/umney/list-after.jpg" alt="Таблица заявок после перестановки колонок" width="1546" height="618" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== Этап #6: дизайн-система ========== -->
+    <section class="kb-section kb-case" id="stage-6" aria-labelledby="stage-6-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#6</span></p>
+          <h2 class="kb-case__title" id="stage-6-title">Дизайн-система и&nbsp;сопровождение вёрстки</h2>
+        </header>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Все экраны собраны из&nbsp;общей библиотеки компонентов. У&nbsp;каждого компонента описаны состояния: обычное, наведение, нажатие, загрузка, ошибка, недоступно. Прямо в&nbsp;библиотеке оставлены комментарии для вёрстки: например, поле выбора центра растягивается под длину названия, а&nbsp;чат прокручивается так, чтобы до&nbsp;поля ввода всегда оставалось 15&nbsp;px.</p>
+          </div>
+          <ul class="kb-results">
+            <li>17&nbsp;разделов компонентов: от&nbsp;кнопок и&nbsp;полей до&nbsp;таблиц, чата и&nbsp;навигации.</li>
+            <li>Около 60&nbsp;иконок в&nbsp;одном стиле.</li>
+            <li>Цветовая палитра под три роли и&nbsp;статусы.</li>
+          </ul>
+        </div>
+
+        <div class="kb-stack">
+          <div class="um-card" data-scroll-reveal>
+            <img src="assets/img/umney/ds-buttons.jpg" alt="Кнопки: основные, контурные, ссылки и иконки во всех состояниях" width="1230" height="274" loading="lazy">
+          </div>
+          <div class="um-card" data-scroll-reveal>
+            <img src="assets/img/umney/ds-inputs.jpg" alt="Поля ввода, выпадающие списки и выбор дат во всех состояниях" width="1010" height="360" loading="lazy" style="max-width:760px">
+          </div>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/umney/login.jpg" alt="Экран входа в Умней Workspace" width="1440" height="900" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=3" defer></script>
+</body>
+</html>
