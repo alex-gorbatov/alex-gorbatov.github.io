@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DPOinst — кейс Александра Горбатова</title>
+  <meta name="description" content="Маркетплейс курсов дополнительного профессионального образования: 75 макетов в трёх разрешениях и UI-кит.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Александр Горбатов">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://alex-gorbatov.github.io/dpoinst.html">
+  <meta property="og:title" content="DPOinst — кейс Александра Горбатова">
+  <meta property="og:description" content="Маркетплейс курсов дополнительного профессионального образования: 75 макетов в трёх разрешениях и UI-кит.">
+  <meta property="og:image" content="https://alex-gorbatov.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#161721">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body class="case-page">
+
+  <header class="header">
+    <div class="header__brand">
+      <a class="logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <p class="header__tagline">
+        Продуктовый/UX/UI/-дизайнер<br>
+        Руководитель дизайн-команд<br>
+        Преподаватель дизайна
+      </p>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#works" aria-current="page">Портфолио</a></li>
+        <li><a class="nav__link" href="soon.html">Опыт</a></li>
+        <li><a class="nav__link" href="soon.html">Образование</a></li>
+      </ul>
+      <a class="button" href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Связаться со мной</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Первый экран ========== -->
+    <section class="kb-hero" aria-labelledby="dp-title">
+      <div class="kb-hero__bg" aria-hidden="true">
+        <img class="kb-hero__blob" src="assets/img/sfera/knowledge/blob.svg" alt="">
+        <img class="kb-hero__wave" src="assets/img/sfera/knowledge/wave.svg" alt="">
+      </div>
+
+      <a class="back-link" href="index.html#works">
+        <img src="assets/img/sfera/arrow-back.svg" alt="" width="12" height="12">
+        Назад
+      </a>
+
+      <div class="kb-hero__head" data-reveal>
+        <h1 class="kb-hero__title" id="dp-title">DPOinst</h1>
+        <p class="kb-hero__lead">Маркетплейс курсов дополнительного профессионального образования: переподготовка, повышение квалификации, тренинги и&nbsp;вебинары от&nbsp;проверенных учебных центров. Продукт с&nbsp;нуля&nbsp;— от&nbsp;структуры до&nbsp;75&nbsp;макетов в&nbsp;трёх разрешениях и&nbsp;UI-кита.</p>
+      </div>
+    </section>
+
+    <!-- Лента экранов продукта (бесконечная прокрутка) -->
+    <div class="ribbons kb-ribbon" aria-label="Экраны DPOinst" data-reveal>
+      <div class="ribbon ribbon--left" style="--start:-0.7237">
+        <div class="ribbon__track">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/main.jpg" alt="Главная страница" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/catalog.jpg" alt="Каталог курсов с фильтрами" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/course.jpg" alt="Страница курса" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/center.jpg" alt="Страница учебного центра" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/partners.jpg" alt="Страница для партнёров" decoding="async">
+          <img class="ribbon__shot ribbon__shot--top" src="assets/img/dpoinst/about.jpg" alt="О сервисе" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== Задача ========== -->
+    <section class="kb-section kb-tasks" aria-labelledby="tasks-title">
+      <div class="case-container kb-tasks__grid">
+        <div>
+          <h2 class="kb-h2" id="tasks-title" data-scroll-reveal>Задача:</h2>
+          <p class="kb-body" data-scroll-reveal>Рынок дополнительного образования огромный и&nbsp;раздробленный: сотни учебных центров, у&nbsp;каждого свой сайт, свои цены и&nbsp;своя логика. Человеку, которому нужна переподготовка или удостоверение о&nbsp;повышении квалификации, приходится сравнивать программы вручную. Нужно было собрать их&nbsp;в&nbsp;одном месте и&nbsp;сделать выбор курса таким&nbsp;же простым, как выбор товара на&nbsp;маркетплейсе.</p>
+
+          <h3 class="kb-h3" data-scroll-reveal>Что было сложного:</h3>
+          <ul class="kb-list" data-scroll-reveal>
+            <li>Две аудитории с&nbsp;разными целями: слушателю нужен подходящий курс, учебному центру&nbsp;— заявки и&nbsp;продажи;</li>
+            <li>Сложный продукт: у&nbsp;курса десяток параметров&nbsp;— формат, длительность, квалификация, документ, рассрочка&nbsp;— и&nbsp;все важны для решения;</li>
+            <li>Доверие: покупают дорогую и&nbsp;долгую услугу у&nbsp;незнакомой организации, поэтому лицензии, преподаватели и&nbsp;отзывы должны быть на&nbsp;виду;</li>
+            <li>Три разрешения: большая часть трафика&nbsp;— мобильная, и&nbsp;фильтры с&nbsp;десятками пунктов должны работать на&nbsp;экране 320&nbsp;px.</li>
+          </ul>
+
+          <h3 class="kb-h3" data-scroll-reveal>Роль:</h3>
+          <p class="kb-body" data-scroll-reveal>Дизайнер. Структура сервиса, пользовательские сценарии, визуальный стиль, все макеты для десктопа, планшета и&nbsp;мобильных, UI-кит и&nbsp;сопровождение разработки.</p>
+        </div>
+
+        <nav class="kb-cases" aria-labelledby="stages-title" data-scroll-reveal>
+          <h3 class="kb-h3" id="stages-title">Этапы</h3>
+          <ol class="kb-cases__list">
+            <li><span>#1</span><a href="#stage-1">Главная</a></li>
+            <li><span>#2</span><a href="#stage-2">Каталог и&nbsp;фильтры</a></li>
+            <li><span>#3</span><a href="#stage-3">Страница курса</a></li>
+            <li><span>#4</span><a href="#stage-4">Учебные центры и&nbsp;акции</a></li>
+            <li><span>#5</span><a href="#stage-5">Партнёрам и&nbsp;о&nbsp;сервисе</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== Этап #1: главная ========== -->
+    <section class="kb-section kb-case" id="stage-1" aria-labelledby="stage-1-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#1</span></p>
+          <h2 class="kb-case__title" id="stage-1-title">Главная: поиск курса с&nbsp;первого экрана</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/main.jpg" alt="Главная страница: поиск с фильтрами, направления и форматы обучения, популярные курсы, лучшие учебные центры и отзывы" width="1440" height="4602" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Главная работает на&nbsp;две задачи: дать быстрый вход тем, кто знает, что ищет, и&nbsp;подсказать остальным. Поэтому на&nbsp;первом экране&nbsp;— поисковая строка и&nbsp;три быстрых фильтра: цель обучения, вид программы и&nbsp;уровень образования. А&nbsp;ниже страница ведёт от&nbsp;общего к&nbsp;частному:</p>
+            <ul class="kb-list">
+              <li>направления обучения с&nbsp;количеством курсов в&nbsp;каждом;</li>
+              <li>форматы: переподготовка, повышение квалификации, тренинги, вебинары;</li>
+              <li>популярные курсы с&nbsp;переключением по&nbsp;формату и&nbsp;направлению;</li>
+              <li>рейтинг учебных центров и&nbsp;свежие отзывы.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>В&nbsp;строке поиска сменяются востребованные специальности&nbsp;— подсказка, что искать, без лишнего текста.</li>
+            <li>Счётчики курсов и&nbsp;центров подтягиваются из&nbsp;CRM: цифры на&nbsp;сайте всегда реальные.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #2: каталог ========== -->
+    <section class="kb-section kb-case" id="stage-2" aria-labelledby="stage-2-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#2</span></p>
+          <h2 class="kb-case__title" id="stage-2-title">Каталог: сравнить десятки программ за&nbsp;минуту</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/catalog.jpg" alt="Каталог курсов для психологов: фильтры слева, список программ справа" width="1440" height="4711" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Главное в&nbsp;каталоге&nbsp;— карточка курса. Я&nbsp;собрал в&nbsp;неё всё, по&nbsp;чему люди сравнивают программы, и&nbsp;выстроил иерархию так, чтобы взгляд шёл по&nbsp;порядку принятия решения:</p>
+            <ul class="kb-list">
+              <li>формат и&nbsp;название&nbsp;— что это за&nbsp;программа;</li>
+              <li>учебный центр&nbsp;— кто её&nbsp;ведёт;</li>
+              <li>старт, длительность, квалификация и&nbsp;документ&nbsp;— что я&nbsp;получу;</li>
+              <li>цена, скидка и&nbsp;рассрочка&nbsp;— сколько это стоит.</li>
+            </ul>
+            <p class="kb-body">Для быстрого сравнения есть второй вид&nbsp;— компактный список, где параметры выстроены в&nbsp;колонки, как в&nbsp;таблице.</p>
+          </div>
+          <ul class="kb-results">
+            <li>На&nbsp;десктопе фильтры применяются на&nbsp;лету, без перезагрузки, а&nbsp;рядом всплывает подсказка с&nbsp;числом найденных курсов.</li>
+            <li>Карточка выдерживает длинные названия программ&nbsp;— а&nbsp;в&nbsp;ДПО они бывают на&nbsp;три строки.</li>
+            <li>Форма «Не&nbsp;нашли нужную программу?» встроена прямо в&nbsp;выдачу и&nbsp;ловит тех, кто уже готов уйти.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/search.jpg" alt="Результаты поиска: строка поиска с быстрыми фильтрами, фильтры по стоимости, длительности и учебным центрам" width="1440" height="4438" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <p class="kb-body">Фильтры пришлось переосмыслить, когда учебных центров стало много. В&nbsp;свёрнутом виде показываются семь самых популярных, а&nbsp;в&nbsp;развёрнутом появляются поиск, алфавитный указатель и&nbsp;прокрутка внутри блока. На&nbsp;планшете и&nbsp;мобильных кнопки «Применить» и&nbsp;«Очистить» закреплены внизу и&nbsp;не&nbsp;прячутся под панелью браузера.</p>
+          <ul class="kb-results">
+            <li>Один набор фильтров для каталога, поиска, учебных центров и&nbsp;акций.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #3: курс ========== -->
+    <section class="kb-section kb-case" id="stage-3" aria-labelledby="stage-3-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#3</span></p>
+          <h2 class="kb-case__title" id="stage-3-title">Страница курса: всё для решения и&nbsp;кнопка записи всегда рядом</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/course.jpg" alt="Страница курса: параметры программы, чему научитесь, программа по темам, преподаватели, отзывы, документы и форма записи" width="1440" height="5784" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Курс ДПО покупают на&nbsp;месяцы, поэтому человек хочет знать всё заранее. Страница отвечает на&nbsp;вопросы в&nbsp;том порядке, в&nbsp;каком они возникают:</p>
+            <ul class="kb-list">
+              <li>чему научусь и&nbsp;кем смогу работать после обучения;</li>
+              <li>программа по&nbsp;модулям и&nbsp;темам с&nbsp;количеством часов&nbsp;— раскрывается по&nbsp;клику;</li>
+              <li>кто преподаёт и&nbsp;что говорят выпускники;</li>
+              <li>какой документ я&nbsp;получу&nbsp;— с&nbsp;образцом диплома или удостоверения.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Блок с&nbsp;ценой и&nbsp;кнопкой «Записаться» закреплён справа при прокрутке, там&nbsp;же навигация по&nbsp;разделам страницы.</li>
+            <li>Внизу&nbsp;— форма записи с&nbsp;аргументами, почему выгодно учиться через сервис.</li>
+            <li>Для центров с&nbsp;подробным описанием на&nbsp;своём сайте&nbsp;— переход к&nbsp;нему прямо из&nbsp;программы.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Этап #4: учебные центры и акции ========== -->
+    <section class="kb-section kb-case" id="stage-4" aria-labelledby="stage-4-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#4</span></p>
+          <h2 class="kb-case__title" id="stage-4-title">Учебные центры и&nbsp;акции: доверие через прозрачность</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/centers.jpg" alt="Каталог учебных центров с рейтингом, количеством программ и стоимостью обучения" width="1440" height="2846" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div class="kb-body">
+            <p>Многие выбирают сначала организацию, а&nbsp;потом курс. Для них есть рейтинг учебных центров: оценка, число отзывов, количество программ и&nbsp;минимальная стоимость&nbsp;— сравнить можно не&nbsp;открывая ни&nbsp;одной страницы.</p>
+            <p>На&nbsp;странице центра собрано то, что снимает сомнения: описание, преимущества, данные лицензии с&nbsp;её&nbsp;сканом, преподаватели и&nbsp;отзывы. Программы центра можно отфильтровать по&nbsp;формату, не&nbsp;уходя со&nbsp;страницы.</p>
+          </div>
+          <ul class="kb-results">
+            <li>Лицензия с&nbsp;ОГРН и&nbsp;номером бланка на&nbsp;виду: проверить центр в&nbsp;Рособрнадзоре можно за&nbsp;минуту.</li>
+            <li>Короткие названия центров для заголовков и&nbsp;кнопок&nbsp;— предусмотрены в&nbsp;админке.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/center.jpg" alt="Страница учебного центра: программы обучения, описание, лицензия, преподаватели, отзывы и форма записи" width="1440" height="5709" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <p class="kb-body">Акции вынесены в&nbsp;отдельный раздел: скидка&nbsp;— сильный аргумент для тех, кто давно откладывает обучение. Карточки разной высоты, потому что условия у&nbsp;центров разные, а&nbsp;из&nbsp;каждой акции можно сразу перейти к&nbsp;курсам, которые в&nbsp;ней участвуют.</p>
+          <ul class="kb-results">
+            <li>Срок действия акции и&nbsp;список курсов в&nbsp;каждой карточке.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/promo.jpg" alt="Акции учебных центров с фильтрами по центрам, видам программ и направлениям" width="1440" height="3538" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Этап #5: партнёрам и о сервисе ========== -->
+    <section class="kb-section kb-case" id="stage-5" aria-labelledby="stage-5-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <p class="kb-case__tag">Этап <span>#5</span></p>
+          <h2 class="kb-case__title" id="stage-5-title">Вторая сторона маркетплейса: страница для учебных центров</h2>
+        </header>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/partners.jpg" alt="Страница для партнёров: преимущества размещения, этапы подключения, модели оплаты и форма заявки" width="1440" height="4366" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <div>
+            <p class="kb-body">Маркетплейс живёт, пока на&nbsp;нём есть предложения. Страница «Партнёрам» продаёт сервис учебным центрам и&nbsp;отвечает на&nbsp;их&nbsp;главные вопросы:</p>
+            <ul class="kb-list">
+              <li>в&nbsp;чём выгода&nbsp;— трафик из&nbsp;поисковиков и&nbsp;платных каналов;</li>
+              <li>что берёт на&nbsp;себя сервис, а&nbsp;что остаётся за&nbsp;центром&nbsp;— наглядно, в&nbsp;двух колонках;</li>
+              <li>как начать&nbsp;— три шага на&nbsp;графике роста;</li>
+              <li>сколько стоит&nbsp;— без абонентской платы, только за&nbsp;заявку или переход на&nbsp;сайт.</li>
+            </ul>
+          </div>
+          <ul class="kb-results">
+            <li>Первые 50&nbsp;заявок бесплатно&nbsp;— оффер вынесен и&nbsp;на&nbsp;первый экран, и&nbsp;в&nbsp;форму.</li>
+            <li>Показатели сервиса в&nbsp;цифрах: посетители в&nbsp;день, заявки, годы на&nbsp;рынке.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/about.jpg" alt="О сервисе: миссия, направления обучения и предложение для учебных центров" width="1440" height="2730" loading="lazy" data-scroll-reveal>
+
+        <div class="kb-cols" data-scroll-reveal>
+          <p class="kb-body">«О&nbsp;сервисе» объясняет, зачем нужен DPOinst, и&nbsp;мягко разводит аудитории: слушателей&nbsp;— к&nbsp;направлениям обучения, учебные центры&nbsp;— к&nbsp;разделу для партнёров. Служебные страницы&nbsp;— 404, ошибка сервера, заглушка, успешная и&nbsp;неуспешная отправка формы&nbsp;— сделаны в&nbsp;том&nbsp;же характере и&nbsp;всегда предлагают, куда идти дальше.</p>
+          <ul class="kb-results">
+            <li>Онлайн-индикатор у&nbsp;контакта поддержки, чтобы писали смелее.</li>
+            <li>У&nbsp;404 три понятных выхода: на&nbsp;главную, к&nbsp;курсам, в&nbsp;поддержку.</li>
+          </ul>
+        </div>
+
+        <img class="kb-img kb-img--lg" src="assets/img/dpoinst/not-found.jpg" alt="Страница 404 с тремя вариантами действий" width="1440" height="810" loading="lazy" data-scroll-reveal>
+      </div>
+    </section>
+
+    <!-- ========== Итоги ========== -->
+    <section class="kb-section kb-case" aria-labelledby="result-title">
+      <div class="case-container">
+        <header class="kb-case__head" data-scroll-reveal>
+          <h2 class="kb-case__title" id="result-title">Итог</h2>
+        </header>
+        <div class="kb-cols" data-scroll-reveal>
+          <p class="kb-body">DPOinst закрывает обе стороны маркетплейса: слушатель находит и&nbsp;сравнивает курсы разных учебных центров в&nbsp;одном интерфейсе, а&nbsp;учебный центр получает понятный канал продаж с&nbsp;оплатой за&nbsp;результат. Все экраны собраны из&nbsp;общего UI-кита, адаптированы под планшет и&nbsp;мобильные и&nbsp;снабжены комментариями для разработки&nbsp;— как ведут себя фильтры, что закреплено при прокрутке, откуда берутся данные.</p>
+          <ul class="kb-results">
+            <li>75&nbsp;макетов: десктоп, планшет и&nbsp;мобильные.</li>
+            <li>UI-кит, на&nbsp;котором сервис развивается дальше: новые фильтры и&nbsp;страницы собираются из&nbsp;готовых блоков.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <a class="logo site-footer__logo" href="index.html" aria-label="Александр Горбатов — на главную">
+        <span>Александр</span>
+        <span>Горбатов</span>
+      </a>
+
+      <ul class="socials site-footer__socials">
+        <li><a href="https://t.me/alexgorbatow" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://dprofile.ru/alexgorbatov" target="_blank" rel="noopener">DProfile</a></li>
+        <li><a href="https://www.behance.net/alexgorbatov" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://dribbble.com/alexgorbatov" target="_blank" rel="noopener">Dribbble</a></li>
+        <li><a href="https://career.habr.com/kradus" target="_blank" rel="noopener">Хабр</a></li>
+        <li><a href="mailto:alexgorbatow@yandex.ru">alexgorbatow@yandex.ru</a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2026-2027. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/case.js?v=3" defer></script>
+</body>
+</html>
