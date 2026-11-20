@@ -251,6 +251,33 @@
 .lp-products .product-card:hover .product-card__title { color: var(--lp-accent); }
 
 /* ==========================================================
+   Graphene (graphene.html)
+   ========================================================== */
+/* Цифры «лесенкой»: колонки по координатам 0 / 102 / 512 / 717 / 1020 */
+.lp-stats--graphene {
+  grid-template-columns: 102fr 410fr 205fr 303fr;
+  max-width: 1020px;
+  left: 13px;                              /* блок 463–1483 в кадре 1920 */
+}
+.lp-stats--graphene .lp-stat:nth-child(1) { grid-area: 1 / 1 / 2 / 3; }
+.lp-stats--graphene .lp-stat:nth-child(2) { grid-area: 1 / 3 / 2 / 5; }
+.lp-stats--graphene .lp-stat:nth-child(3) { grid-area: 2 / 2 / 3 / 3; }
+.lp-stats--graphene .lp-stat:nth-child(4) { grid-area: 2 / 4 / 3 / 5; }
+.lp-stats--graphene .lp-stat:nth-child(2) .lp-stat__text { width: 287px; }
+.lp-stats--graphene .lp-stat:nth-child(4) .lp-stat__text { width: 212px; }
+
+.lp-point__title--solo { margin-bottom: 0; }
+.lp-area:last-child .lp-area__summary { margin-bottom: 0; }
+
+/* Две половины таблицы сметы: 594 + 596 */
+.lp-shots--estimate { grid-template-columns: 594fr 596fr; align-items: start; }
+
+/* Карточки кейсов: заголовок 170px высотой, отступ 50 */
+.lp-more--cases { padding-top: 100px; }
+.lp-more--cases .lp-more__title { margin-bottom: 50px; }
+.lp-more--cases .project__head { margin-bottom: 20px; }
+
+/* ==========================================================
    Адаптив
    ========================================================== */
 @media (max-width: 1099px) {
@@ -260,8 +287,11 @@
     max-width: 720px;
     left: 0;
   }
-  .lp-stat:nth-child(n) { grid-area: auto; }
-  .lp-stat__text { width: auto; max-width: 235px; }
+  .lp-stat:nth-child(n),
+  .lp-stats--graphene .lp-stat:nth-child(n) { grid-area: auto; }
+  .lp-stat__text,
+  .lp-stats--graphene .lp-stat:nth-child(n) .lp-stat__text { width: auto; max-width: 235px; }
+  .lp-stats--graphene .lp-stat:nth-child(2) .lp-stat__text { max-width: 287px; }
 
   .light-page { --lp-col: 200px; }
 }
@@ -296,7 +326,11 @@
   .lp-point + .lp-point { margin-top: 40px; }
   .lp-point__title { margin-bottom: 20px; }
   .lp-shots--maturity,
-  .lp-shots--rules { grid-template-columns: 1fr; }
+  .lp-shots--rules,
+  .lp-shots--estimate { grid-template-columns: 1fr; }
+  .lp-more--cases { padding-top: 72px; }
+  .lp-more--cases .lp-more__title { margin-bottom: 32px; }
+  .lp-more--cases .works__list { gap: 64px; }
 
   .lp-products { grid-template-columns: 1fr; }
 }
