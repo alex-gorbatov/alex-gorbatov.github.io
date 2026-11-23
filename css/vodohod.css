@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "Lovelace";
+  src: url("../fonts/Lovelace-ExtraLight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lovelace";
+  src: url("../fonts/LovelaceText-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MADE TheArtist Script";
+  src: url("../fonts/MADE-TheArtist-Script.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* Artwork coordinates use the 2800px-wide Figma canvas. Each scene scales
+   independently so the surrounding editorial copy can reflow on small screens. */
+.vodohod-page {
+  --u: calc(100vw / 2800);
+  --moss: #555644;
+  --copy-font: "Gilroy", var(--font);
+  --display-font: "Lovelace", Georgia, serif;
+  --script-font: "MADE TheArtist Script", cursive;
+  background: var(--color-bg);
+  color: #414245;
+}
+.vodohod-page main { overflow: clip; background: #fff; }
+.vodohod-page figure { margin: 0; }
+.vodohod-page .header { color: var(--color-text-dark); }
+.vodohod-page .nav, .vodohod-page .menu-toggle { background: white; }
+.vodohod-page .menu-toggle__bar { background: var(--color-text-dark); }
+.vodohod-page .nav__link:hover { color: #776c61; }
+.vodohod-page section { position: relative; }
+.scene {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 2800 / var(--height);
+}
+.layer {
+  position: absolute;
+  left: calc(var(--x) / 2800 * 100%);
+  top: calc(var(--y) / 28 * 1cqw);
+  width: calc(var(--w) / 2800 * 100%);
+  height: auto;
+  max-width: none;
+}
+/* The case lettering scales with its illustration, including on mobile. */
+.hero-title {
+  position: absolute;
+  top: 16.893cqw;
+  width: 100%;
+  text-align: center;
+  color: #6c5346;
+  font: 200 10cqw/.85714 var(--display-font);
+  letter-spacing: -.02em;
+}
+.hero-lines { display: block; }
+.hero-subtitle, .chapter-note {
+  position: absolute;
+  font: 400 3.429cqw/1.54 var(--script-font);
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+.hero-subtitle {
+  top: 25.78cqw;
+  left: 73.96%;
+  width: max-content;
+  color: #c8a97a;
+  font-size: 9.286cqw;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+.chapter-heading, .thanks-heading { margin: 0 auto; text-align: center; }
+.chapter-title {
+  display: block;
+  position: relative;
+  font: 200 5.143cqw/1.4 var(--display-font);
+}
+.chapter-note {
+  top: 4.75cqw;
+  left: 57%;
+  color: #dfcec0;
+}
+.about .chapter-heading { color: #866857; }
+.about .chapter-title { top: .786cqw; }
+.about .chapter-note { left: 59%; color: #98887d; }
+.design .chapter-note, .decks .chapter-note { color: #bebda6; }
+.thanks-heading .chapter-title {
+  top: 1.65cqw;
+  color: #866857;
+  font-size: 7.143cqw;
+}
+.thanks-heading .chapter-note {
+  top: 10.4cqw;
+  left: 74%;
+  transform: rotate(-15deg);
+  color: #c8a97a;
+}
+.river-caption text {
+  fill: #dcccb5;
+  font: 200 120px var(--display-font);
+}
+.copy {
+  position: relative;
+  max-width: calc(1390 * var(--u));
+  margin-inline: auto;
+  font: 400 clamp(14px, .857vw, 24px)/1.65 var(--copy-font);
+  text-align: center;
+  text-wrap: pretty;
+}
+.v-hero { background: #f4f3ee; }
+.hero-rule { top: max(calc(130 * var(--u)), 102px); }
+.preview-cover { border: 1px solid rgb(255 255 255 / .5); }
+.about { min-height: calc(1800 * var(--u)); background: white; }
+.about-copy { position: relative; z-index: 1; width: 35%; margin: 0 auto; text-align: center; }
+.about-copy .copy { max-width: none; }
+.about-copy h3 {
+  font-family: var(--copy-font);
+  margin: 0 0 .45em;
+  font-size: clamp(11px, .64vw, 18px);
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #927552;
+}
+.about-copy h3 + p + h3 { margin-top: clamp(24px, 3.6vw, 100px); }
+.about-photos { position: absolute; inset: 0; pointer-events: none; }
+.scroll-cue {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: max(100px, 9.9%);
+  margin: clamp(16px, 4vw, 110px) auto 0;
+}
+.scroll-cue img { width: 100%; }
+.wire {
+  padding-top: calc(250 * var(--u));
+  color: white;
+  background: url("../assets/img/vodohod/sand-border.svg") center calc(10 * var(--u)) / 99.3% auto no-repeat,
+              url("../assets/img/vodohod/sand.webp") center top / 100% auto no-repeat,
+              linear-gradient(white 60%, var(--moss) 80%);
+}
+#wire-title { scroll-margin-top: 95px; }
+.wire > .copy { margin-top: calc(45 * var(--u)); }
+.wire-gallery { margin-top: calc(145 * var(--u)); }
+.wire-gallery::before {
+  content: "";
+  position: absolute;
+  inset: 69.3% 0 0;
+  background: var(--moss) url("../assets/img/vodohod/moss.webp") center top / 100% auto;
+}
+.river-photo { border-radius: 50% / 46.67%; outline: 1px solid rgb(255 255 255 / .35); outline-offset: 3px; }
+.design {
+  padding: calc(160 * var(--u)) 0 calc(1993 * var(--u));
+  color: white;
+  background: url("../assets/img/vodohod/moss-border.svg") center top / 99.3% 100% no-repeat,
+              var(--moss) url("../assets/img/vodohod/moss.webp") center top / 100% auto repeat-y;
+}
+.design > .copy { max-width: calc(1432 * var(--u)); margin-top: calc(48 * var(--u)); }
+.design .web-showcase { margin-top: calc(153 * var(--u)); }
+.web-paper { position: absolute; inset: 0 15.7143%; background: #f0f0f0; }
+.atrium { color: #fff; font: 400 calc(36 * var(--u))/1.11 var(--display-font); }
+.decks {
+  padding: calc(692 * var(--u)) 0 calc(447 * var(--u));
+  background: #434345 url("../assets/img/vodohod/stone.webp") center top / 100% auto;
+  color: white;
+}
+.decks .rock { top: calc(-2197.28 * var(--u)); }
+.decks > .copy, .integration > .copy { max-width: calc(1200 * var(--u)); margin-top: calc(42 * var(--u)); }
+.decks .deck-plans { margin-top: calc(150 * var(--u)); }
+.integration {
+  padding-top: calc(70 * var(--u));
+  background: #b8a798;
+  color: white;
+}
+.integration::before {
+  content: "";
+  position: absolute;
+  inset: calc(-800 * var(--u)) 0 auto;
+  height: calc(2980 * var(--u));
+  mask-image: linear-gradient(black 86%, transparent);
+  background: url("../assets/img/vodohod/ridge-border.svg") center top / 99.3% auto no-repeat,
+              url("../assets/img/vodohod/sand-ridge.webp") center top / 100% auto no-repeat;
+  pointer-events: none;
+}
+.integration .devices { margin-top: calc(10 * var(--u)); }
+.ending {
+  padding-top: calc(193 * var(--u));
+  background: #161721 url("../assets/img/vodohod/valley.webp") center top / 100% auto no-repeat;
+  color: white;
+}
+.ending .mist { top: calc(-681 * var(--u)); }
+.next-project {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: clamp(10px, .72vw, 20px);
+  padding: 0 16px;
+  text-align: center;
+}
+.next-label { font-size: 12px; line-height: 1.5; color: var(--color-accent); }
+.next-project h2 { font-size: clamp(36px, 2.3vw, 64px); line-height: 1.2; font-weight: 500; }
+.next-project p { max-width: 46em; font-size: clamp(14px, .8vw, 18px); font-weight: 400; }
+.next-arrow { width: clamp(38px, 1.8vw, 50px); height: auto; transition: transform .35s var(--ease-out); }
+.next-project:is(:hover, :focus-visible) .next-arrow { transform: rotate(45deg); }
+.next-preview {
+  width: 65vw;
+  border-radius: max(10px, .65vw) max(10px, .65vw) 0 0;
+  height: auto;
+  margin-top: calc(30 * var(--u));
+  mask-image: linear-gradient(black 65%, transparent);
+  transition: transform .6s var(--ease-out);
+}
+.next-project:is(:hover, :focus-visible) .next-preview { transform: translateY(-12px); }
+.vodohod-page .site-footer { position: relative; background: #161721; color: white; }
+
+/* On smaller screens the story text sits above each illustration. */
+@media (max-width: 899px) {
+  .hero-rule { top: 0; }
+  .v-hero { padding-top: 84px; }
+  .about { padding: 24px 0 38px; }
+  .chapter-heading { width: min(670px, 148%); left: 50%; margin: 0; transform: translateX(-50%); }
+  .copy, .design > .copy, .decks > .copy, .integration > .copy {
+    max-width: min(560px, calc(100% - 40px));
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .about-copy { width: min(540px, calc(100% - 40px)); margin-top: 20px; }
+  .about-copy .copy { max-width: none; }
+  .about-copy h3 + p + h3 { margin-top: 20px; }
+  .about .about-photos { position: relative; margin-top: 20px; aspect-ratio: 2800 / 1480; }
+  .scroll-cue { margin-top: 0; }
+  .wire { padding-top: 15vw; background-size: 99.3% 83%, 100% 85%, 100% 100%; }
+  .wire > .copy, .design > .copy, .decks > .copy, .integration > .copy { margin-top: 18px; }
+  .wire > .copy, .integration > .copy { color: #352d26; }
+  .wire-gallery, .design .web-showcase { margin-top: 30px; }
+  .design { padding-top: 34px; }
+  .decks { padding-top: max(72px, 25vw); padding-bottom: 29vw; }
+  .decks .deck-plans { margin-top: 22px; }
+  .integration { padding-top: 24px; }
+  .integration .devices { margin-top: 24px; }
+  .next-project { background: linear-gradient(transparent, #161721 60%); }
+  .next-project p { max-width: 36em; }
+  .next-preview { width: min(90vw, 700px); margin-top: 10px; }
+}
+@media (max-width: 599px) {
+  .about { padding-top: 30px; }
+  .chapter-heading { width: 178%; }
+  .about-photos .layer:first-child { top: 24%; }
+  .decks .deck-plans { display: grid; grid-template-columns: repeat(2, 1fr); align-items: start; gap: 25px 18px; padding: 0 18px; aspect-ratio: auto; }
+  .deck-plans .layer { position: static; width: 100%; }
+  .thanks-heading { width: 100%; }
+  .next-project p { max-width: 32ch; }
+}
+@media (min-width: 900px) {
+  .vodohod-page .site-footer {
+    margin-top: max(-4.6vw, -129px);
+    background: linear-gradient(transparent, #161721);
+  }
+}
