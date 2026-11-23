@@ -1,0 +1,150 @@
+/* Страница опыта в ТОДО. Размеры широкого экрана — из кадра Figma 1920 px. */
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/GolosText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+.todo-page {
+  --title-size: clamp(32px, 22.4px + 2.56vw, 64px);
+}
+.header__tagline { line-height: 22px; }
+.light-page .site-footer__inner { border-top-color: var(--color-line); }
+.lp-hero { padding-bottom: clamp(48px, 7vw, 100px); }
+.lp-hero .back-link { display: flex; width: fit-content; }
+.lp-hero__title, .lp-results__title { font-size: var(--title-size); line-height: 1.328125; }
+.lp-hero__lead { margin-top: clamp(32px, 4vw, 50px); }
+
+.todo-stats {
+  --digit-size: clamp(80px, 9vw, 128px);
+  display: grid;
+  grid-template-columns: 512fr 482fr;
+  max-width: 994px;
+  margin: clamp(48px, 7vw, 100px) auto 0;
+}
+.todo-stat {
+  display: grid;
+  grid-template-columns: var(--number-width, 1.1015625em) minmax(0, 1fr); /* 141 px при размере цифр 128 px */
+  align-items: start;
+  font-size: var(--digit-size);
+  gap: clamp(12px, 1.5vw, 20px);
+}
+.todo-stat:nth-child(2) { --number-width: .5546875em; }
+.todo-stat__number {
+  font-size: inherit;
+  font-weight: 400;
+  color: var(--lp-accent);
+  line-height: 1.328125;
+  letter-spacing: -.01em;
+}
+.todo-stat__label {
+  margin-top: calc(.59375 * var(--digit-size));
+  color: var(--lp-muted);
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.35;
+  letter-spacing: -.01em;
+}
+
+.todo-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+.todo-visual__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lp-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.lp-link:hover { color: var(--lp-accent); }
+
+/* Контекст */
+.lp-context { padding: 100px var(--pad-x) 0; }
+.lp-context__row { margin-bottom: 0; }
+.lp-context__text {
+  font-weight: 400;
+  max-width: 760px;
+  margin-top: 20px;
+  color: var(--lp-muted);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Проекты по отраслям */
+.lp-industries { padding: 100px var(--pad-x) 0; }
+.lp-industries__title { margin-bottom: 50px; }
+.lp-industries__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px 30px;
+}
+.lp-industry {
+  padding-top: 30px;
+  border-top: 1px solid var(--lp-line);
+}
+.lp-industry .lp-duty__title { margin-bottom: 30px; }
+.lp-industry__list {
+  font-weight: 400;
+  font-family: var(--font-alt, "Golos Text", var(--font));
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--lp-muted);
+}
+.lp-industry__list li + li { margin-top: 14px; }
+.lp-industry__list b {
+  font-family: var(--font);
+  display: block;
+  color: var(--lp-text);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.lp-industries__note {
+  margin-top: 50px;
+  color: var(--lp-muted);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.lp-context .lp-h, .lp-industries__title { letter-spacing: normal; }
+.lp-duties__body { margin-top: clamp(32px, 4vw, 52px); }
+.lp-more--cases { padding-top: clamp(72px, 9vw, 150px); }
+.lp-more .project__head { min-height: 0; align-items: center; }
+.lp-more .project__title { line-height: 1.325; }
+@media (min-width: 900px) {
+  .lp-results .lp-area:first-of-type .lp-area__summary {
+    grid-template-columns: 31.5833% minmax(0, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .lp-duty:nth-child(2) .lp-list { width: max-content; max-width: calc(100% + var(--pad-x)); }
+  .lp-more .lp-container { position: relative; left: 4px; }
+}
+@media (max-width: 699px) {
+  .todo-stats { grid-template-columns: 1fr; gap: 16px; }
+  .todo-stat {
+    align-items: center;
+    grid-template-columns: 1.15em minmax(0, 1fr);
+    font-size: 72px;
+    gap: 16px;
+  }
+  .todo-stat__number { line-height: 1.1; }
+  .todo-stat__label { margin-top: 0; }
+}
+@media (max-width: 599px) {
+  .lp-context, .lp-industries { padding-top: 64px; }
+  .lp-industries__title { margin-bottom: 32px; }
+  .lp-industries__grid { grid-template-columns: 1fr; gap: 32px; }
+  .lp-industries__note { margin-top: 32px; }
+}
