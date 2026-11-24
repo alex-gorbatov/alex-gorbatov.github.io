@@ -130,7 +130,11 @@
 }
 .v-hero { background: #f4f3ee; }
 .hero-rule { top: max(calc(130 * var(--u)), 102px); }
-.preview-cover { border: 1px solid rgb(255 255 255 / .5); }
+.preview-cover {
+  border: 1px solid rgb(255 255 255 / .5);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
 .about { min-height: calc(1800 * var(--u)); background: white; }
 .about-copy { position: relative; z-index: 1; width: 35%; margin: 0 auto; text-align: center; }
 .about-copy .copy { max-width: none; }
@@ -178,6 +182,7 @@
 }
 .design > .copy { max-width: calc(1432 * var(--u)); margin-top: calc(48 * var(--u)); }
 .design .web-showcase { margin-top: calc(153 * var(--u)); }
+.web-excursions > img, .web-excursions > video { display: block; width: 100%; height: auto; }
 .web-paper { position: absolute; inset: 0 15.7143%; background: #f0f0f0; }
 .atrium { color: #fff; font: 400 calc(36 * var(--u))/1.11 var(--display-font); }
 .decks {

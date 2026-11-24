@@ -67,7 +67,7 @@
         </h1>
         <img class="layer" style="--x:518; --y:1740; --w:1784" src="assets/img/vodohod/ornament.svg" alt="" width="1784" height="1784" loading="lazy">
         <img class="layer" style="--x:440; --y:2082; --w:1940" src="assets/img/vodohod/cover-border.svg" alt="" width="1940" height="1100" loading="lazy">
-        <img class="layer preview-cover" style="--x:450; --y:2092; --w:1920" src="assets/img/vodohod/cover.webp" alt="Первый экран промо-сайта Wild Life с видом на водопад" width="1920" height="1080" loading="lazy">
+        <video class="layer preview-cover" style="--x:450; --y:2092; --w:1920" src="assets/video/vodohod/hero.mp4" poster="assets/img/vodohod/cover.webp" width="1920" height="1080" muted loop playsinline controls preload="none" data-autoplay aria-label="Анимация первого экрана промо-сайта Wild Life"></video>
         <img class="layer" style="--x:0; --y:3478; --w:2800" src="assets/img/vodohod/clouds.webp" alt="" width="2800" height="1510" loading="lazy">
         <img class="layer" style="--x:623; --y:3634; --w:1554" src="assets/img/vodohod/ship.webp" alt="Экспедиционный теплоход на Енисее" width="1554" height="800" loading="lazy">
         <img class="layer" style="--x:2102; --y:3928; --w:38" src="assets/img/vodohod/bird.webp" alt="" width="38" height="26" loading="lazy">
@@ -137,8 +137,12 @@
         <img class="layer web-hero" style="--x:440; --y:0; --w:1920" src="assets/img/vodohod/web-hero.webp" alt="Главная страница Wild Life" width="1920" height="1080" loading="lazy">
         <img class="layer web-history" style="--x:440; --y:11901; --w:1920" src="assets/img/vodohod/web-history.webp" alt="Сибирские петроглифы" width="1920" height="800" loading="lazy">
         <img class="layer web-video" style="--x:490; --y:9967; --w:1820" src="assets/img/vodohod/web-video.webp" alt="Видеопрезентация круиза" width="1820" height="800" loading="lazy">
-        <img class="layer web-cabins" style="--x:440; --y:5765; --w:1920" src="assets/img/vodohod/web-cabins.webp" alt="Категории кают" width="1920" height="800" loading="lazy">
-        <img class="layer web-excursions" style="--x:490; --y:6765; --w:1820" src="assets/img/vodohod/web-excursions.webp" alt="Экскурсионная программа" width="1820" height="1320" loading="lazy">
+        <video class="layer web-cabins" style="--x:440; --y:5765; --w:1920" src="assets/video/vodohod/cabins.mp4" poster="assets/img/vodohod/web-cabins.webp" width="1920" height="800" muted loop playsinline controls preload="none" data-autoplay aria-label="Анимация выбора категории каюты"></video>
+        <div class="layer web-excursions" style="--x:490; --y:6765; --w:1820">
+          <img src="assets/img/vodohod/web-excursions.webp" alt="Мы позаботились о том, чтобы вы получили максимум новых впечатлений и положительных эмоций" width="1820" height="230" loading="lazy">
+          <video src="assets/video/vodohod/guides.mp4" poster="assets/img/vodohod/guides-poster.webp" width="1820" height="1080" muted loop playsinline controls preload="none" data-autoplay aria-label="Экскурсоводы и экскурсионная программа круиза"></video>
+          <img src="assets/img/vodohod/guides-divider.webp" alt="" width="1820" height="10" loading="lazy">
+        </div>
         <img class="layer web-leisure" style="--x:490; --y:10967; --w:2086" src="assets/img/vodohod/web-leisure.webp" alt="Досуг на борту" width="2086" height="734" loading="lazy">
         <img class="layer web-schedule" style="--x:489; --y:12915; --w:1863" src="assets/img/vodohod/web-schedule.webp" alt="Расписание и бронирование" width="1863" height="989" loading="lazy">
         <img class="layer web-reviews" style="--x:489.68; --y:14104; --w:1820.32" src="assets/img/vodohod/web-reviews.webp" alt="Отзывы гостей" width="1820" height="650" loading="lazy">
@@ -224,5 +228,6 @@
     </div>
   </footer>
   <script src="js/case.js?v=3" defer></script>
+  <script src="js/video-autoplay.js" defer></script>
 </body>
 </html>

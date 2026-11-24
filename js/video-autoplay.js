@@ -1,21 +1,20 @@
-/* Шоурил ТОДО играет без звука, пока виден на странице. */
-const todoVideo = document.querySelector('video[data-autoplay]');
+/* Видео кейсов воспроизводятся, пока видны на странице. */
+const motion = matchMedia('(prefers-reduced-motion: reduce)');
 
-if (todoVideo) {
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+document.querySelectorAll('video[data-autoplay]').forEach((video) => {
   let visible = false;
 
   const updatePlayback = () => {
     if (!visible || motion.matches) {
-      todoVideo.pause();
-      todoVideo.controls = motion.matches;
+      video.pause();
+      video.controls = motion.matches;
       return;
     }
 
-    todoVideo.controls = false;
-    todoVideo.muted = true;
-    todoVideo.play().catch((error) => {
-      if (error.name !== 'AbortError') todoVideo.controls = true;
+    video.controls = false;
+    video.muted = true;
+    video.play().catch((error) => {
+      if (error.name !== 'AbortError') video.controls = true;
     });
   };
 
@@ -23,6 +22,6 @@ if (todoVideo) {
     visible = entry.isIntersecting;
     updatePlayback();
   });
-  observer.observe(todoVideo);
+  observer.observe(video);
   motion.addEventListener('change', updatePlayback);
-}
+});
